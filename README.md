@@ -1,2 +1,2 @@
 # blog
-A grrrl powered [data blog](https://infallible-bhabha-be7c5a.netlify.com)
+A grrrl powered [data blog](https://alicia.netlify.com)
