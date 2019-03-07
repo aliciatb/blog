@@ -1,0 +1,69 @@
+---
+title: Census and Coordinate Conundrums in California
+author: ''
+date: '2019-03-06'
+slug: census-and-a-coordinate-conundrums-in-california
+categories:
+  - python
+  - maps
+tags:
+  - census
+  - spatial join
+  - geopandas
+  - shapely
+---
+
+## Background
+
+Over the last couple of years I have had the opportunity to work on projects that provide financial, demographic and indicator data from a geographical perspective so that people can find their location on a map and discover information about their locality and how they compare to their neighbors and ideally peers.
+
+## Geographies of data
+
+In order to associate data like debt burden, population density, and such, we needed some field that identified the locality so that it would show up on the map, ideally in the correct spot. For datasets provided by state agencies, we would typically have the name of the geographic entity and sometimes the geography type like county, city and township. For data sourced from the Census or Bureau of Labor Statistics, a unique identifier like a FIPs code would be present in the dataset.
+
+## Points + Polygons
+
+Choropleths consist of a shape file to show the outlines of a geography plus tabular data to provide the values for each shape which makes it easy to see the differences for an indicator across the same geography type. To get the point coordinates for a geography lots of tools and languages can generate a point `within` or a `centroid` for a polygon. Not knowing better, I thought that generating centroids for my polygons would be a safe bet and I duly joined those generated latitude and longitude coordinates to all of my tabular data by geography identifier.
+
+## Unintended Consquences
+
+Upon review of customers, some of the values for certain entities were not being displayed and we discovered that these geographies had a shape where the centroid didn't actually fall inside it, like a census tract that resembled the letter C or was adjacent to a body of water. As our customers happened to reside in Michigan and California, these scenarios were a legitimate concern.
+
+## Slam dunk Solution
+
+After digging deeper into geospatial information provided by the Census, I learned about the existence of Gazatteer files that provide geographic attributes for all Census entities like land area, water area and Latitude and Longitude points! I had already known about the Cartographic Boundary and Tiger/Line shapefiles provided by the Census and typically used the Cartographic Boundary files for my shapes because they worked best on the Socrata platform due to lower resolution and number of vertices.
+
+## Turns out that San Francisco is kind of a big deal
+
+For a project that included all California cities, our client noticed that no data was showing up for San Francisco and upon inspection of the latitude and longitude provided by the Census data on a map, it very clearly was located in the Pacific ocean. Why Census? Why?
+
+
+## To the Notebook!
+
+To regain credibility, I dug even deeper into spatial matters and was referred to a python library, geopandas by a colleague. Being a huge fan of pandas, I had no doubt that I would love geopandas. My goal was to - 
+
+1. Validata that the coordinates for all California cities fell within their expected polygon
+2. Identify those coordinates that did not so they could be replaced by more accurate coordinates
+
+```{r, echo = F, eval = T}
+library(htmltools)
+# jupyter nbconvert --to html ~/repos/blog-lithium/notebooks/point_polygon_validation.ipynb
+includeHTML("../../notebooks/point_polygon_validation.html")
+```
+
+## The map
+
+- The map layers can be toggled on and off
+- If the Tiger/Line layer is turned off the orange point on the left for San Francisco does not fall within the purple Cartographic layer.
+- When the Tiger/Line layer is turned on, the green shape for San Francisco encompasses the orange point in the ocean
+
+<iframe width="800" height="600" src="https://alicia.data.socrata.com/dataset/4%20California%20Cities%20and%20Tiger%2FLine%20vs%20Cartographic%20Shapefile%20Map/v8jq-5yuj/embed?width=800&height=600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+## Lessons Learned
+- The Census coordinates were not _wrong_ rather my reliance on simplified shapefiles led me into deep waters
+- Many fine folks have created wonderful libraries and tools just waiting to verify that everything is where we think it is and if not show us where it actually is on the map!
+
+## Resources
+* Gazetteer Files -  https://www.census.gov/geo/maps-data/data/gazetteer2017.html
+* Cartographic Boundary shapefiles -  https://www.census.gov/geo/maps-data/data/cbf/cbf_place.html
+* TIGER/Line® shapefiles = https://www.census.gov/cgi-bin/geo/shapefiles/index.php
