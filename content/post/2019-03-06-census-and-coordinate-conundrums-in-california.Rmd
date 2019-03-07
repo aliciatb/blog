@@ -38,7 +38,7 @@ After digging deeper into geospatial information provided by the Census, I learn
 For a project that included all California cities, our client noticed that no data was showing up for San Francisco and upon inspection of the latitude and longitude provided by the Census data on a map, it very clearly was located in the Pacific ocean. Why Census? Why?
 
 
-## To the Notebook!
+## To the [Notebook](https://github.com/aliciatb/blog/blob/master/notebooks/point_polygon_validation.ipynb)!
 
 To regain credibility, I dug even deeper into spatial matters and was referred to a python library, geopandas by a colleague. Being a huge fan of pandas, I had no doubt that I would love geopandas. My goal was to - 
 
@@ -64,6 +64,8 @@ includeHTML("../../notebooks/point_polygon_validation.html")
 - Many fine folks have created wonderful libraries and tools just waiting to verify that everything is where we think it is and if not show us where it actually is on the map!
 
 ## Resources
-* Gazetteer Files -  https://www.census.gov/geo/maps-data/data/gazetteer2017.html
+* Gazetteer Files - https://www.census.gov/geo/maps-data/data/gazetteer2017.html
 * Cartographic Boundary shapefiles -  https://www.census.gov/geo/maps-data/data/cbf/cbf_place.html
 * TIGER/Line® shapefiles = https://www.census.gov/cgi-bin/geo/shapefiles/index.php
+* Notebook - https://github.com/aliciatb/blog/blob/master/notebooks/point_polygon_validation.ipynb
+* Data - https://github.com/aliciatb/blog/tree/master/notebooks/data
