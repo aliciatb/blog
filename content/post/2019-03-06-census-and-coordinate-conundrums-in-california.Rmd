@@ -1,10 +1,6 @@
 ---
 title: Census and Coordinate Conundrums in California
-<<<<<<< HEAD
 author: 'Alicia Brown'
-=======
-author: ''
->>>>>>> 9fa4034fb8e84135a60516a1acb60250be73188b
 date: '2019-03-06'
 slug: census-and-a-coordinate-conundrums-in-california
 categories:
@@ -57,15 +53,9 @@ To regain credibility, I dug even deeper into spatial matters and was referred t
 1. Validata that the coordinates for all California cities fell within their expected polygon
 2. Identify those coordinates that did not so they could be replaced by more accurate coordinates
 
-<<<<<<< HEAD
 ```{r}
 library(htmltools)
 # jupyter nbconvert --to html ~/repos/blog/notebooks/point_polygon_validation.ipynb
-=======
-```{r, echo = F, eval = T}
-library(htmltools)
-# jupyter nbconvert --to html ~/repos/blog-lithium/notebooks/point_polygon_validation.ipynb
->>>>>>> 9fa4034fb8e84135a60516a1acb60250be73188b
 includeHTML("../../notebooks/point_polygon_validation.html")
 ```
 
@@ -84,10 +74,7 @@ includeHTML("../../notebooks/point_polygon_validation.html")
 ## Resources
 * Gazetteer Files - https://www.census.gov/geo/maps-data/data/gazetteer2017.html
 * Cartographic Boundary shapefiles -  https://www.census.gov/geo/maps-data/data/cbf/cbf_place.html
-<<<<<<< HEAD
 * TIGER/Line® shapefiles - https://www.census.gov/cgi-bin/geo/shapefiles/index.php
-=======
-* TIGER/Line® shapefiles = https://www.census.gov/cgi-bin/geo/shapefiles/index.php
->>>>>>> 9fa4034fb8e84135a60516a1acb60250be73188b
+* TIGER/Line® shapefiles - https://www.census.gov/cgi-bin/geo/shapefiles/index.php
 * Notebook - https://github.com/aliciatb/blog/blob/master/notebooks/point_polygon_validation.ipynb
 * Data - https://github.com/aliciatb/blog/tree/master/notebooks/data

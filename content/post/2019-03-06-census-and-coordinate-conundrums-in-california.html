@@ -1,10 +1,6 @@
 ---
 title: Census and Coordinate Conundrums in California
-<<<<<<< HEAD
 author: 'Alicia Brown'
-=======
-author: ''
->>>>>>> 9fa4034fb8e84135a60516a1acb60250be73188b
 date: '2019-03-06'
 slug: census-and-a-coordinate-conundrums-in-california
 categories:
@@ -30,22 +26,33 @@ tags:
 <div id="points-polygons" class="section level2">
 <h2>Points + Polygons</h2>
 <p>Choropleths consist of a shape file to show the outlines of a geography plus tabular data to provide the values for each shape which makes it easy to see the differences for an indicator across the same geography type. To get the point coordinates for a geography lots of tools and languages can generate a point <code>within</code> or a <code>centroid</code> for a polygon. Not knowing better, I thought that generating centroids for my polygons would be a safe bet and I duly joined those generated latitude and longitude coordinates to all of my tabular data by geography identifier.</p>
-</div>
-<<<<<<< HEAD
-<div id="unintended-consquences-of-creating-data" class="section level2">
-<h2>Unintended Consquences of creating data</h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+## Unintended Consquences of creating data</p>
 <p>Upon review of customers, some of the values for certain entities were not being displayed and we discovered that these geographies had a shape where the centroid didn’t actually fall inside it, like a census tract that resembled the letter C or was adjacent to a body of water. As our customers happened to reside in Michigan and California, these scenarios were a legitimate concern.</p>
 </div>
-<div id="census-census-success" class="section level2">
-<h2>Census + Census == Success?</h2>
-=======
+<div id="census-census-success" class="section level1">
+<h1>## Census + Census == Success?</h1>
 <div id="unintended-consquences" class="section level2">
 <h2>Unintended Consquences</h2>
 <p>Upon review of customers, some of the values for certain entities were not being displayed and we discovered that these geographies had a shape where the centroid didn’t actually fall inside it, like a census tract that resembled the letter C or was adjacent to a body of water. As our customers happened to reside in Michigan and California, these scenarios were a legitimate concern.</p>
 </div>
 <div id="slam-dunk-solution" class="section level2">
 <h2>Slam dunk Solution</h2>
->>>>>>> 9fa4034fb8e84135a60516a1acb60250be73188b
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>9fa4034fb8e84135a60516a1acb60250be73188b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>After digging deeper into geospatial information provided by the Census, I learned about the existence of Gazatteer files that provide geographic attributes for all Census entities like land area, water area and Latitude and Longitude points! I had already known about the Cartographic Boundary and Tiger/Line shapefiles provided by the Census and typically used the Cartographic Boundary files for my shapes because they worked best on the Socrata platform due to lower resolution and number of vertices.</p>
 </div>
 <div id="turns-out-that-san-francisco-is-kind-of-a-big-deal" class="section level2">
@@ -59,12 +66,9 @@ tags:
 <li>Validata that the coordinates for all California cities fell within their expected polygon</li>
 <li>Identify those coordinates that did not so they could be replaced by more accurate coordinates</li>
 </ol>
-<<<<<<< HEAD
 <pre class="r"><code>library(htmltools)
 # jupyter nbconvert --to html ~/repos/blog/notebooks/point_polygon_validation.ipynb
 includeHTML(&quot;../../notebooks/point_polygon_validation.html&quot;)</code></pre>
-=======
->>>>>>> 9fa4034fb8e84135a60516a1acb60250be73188b
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -12864,12 +12868,10 @@ div#notebook {
 <ul>
 <li>Gazetteer Files - <a href="https://www.census.gov/geo/maps-data/data/gazetteer2017.html" class="uri">https://www.census.gov/geo/maps-data/data/gazetteer2017.html</a></li>
 <li>Cartographic Boundary shapefiles - <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_place.html" class="uri">https://www.census.gov/geo/maps-data/data/cbf/cbf_place.html</a></li>
-<<<<<<< HEAD
 <li>TIGER/Line® shapefiles - <a href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php" class="uri">https://www.census.gov/cgi-bin/geo/shapefiles/index.php</a></li>
-=======
-<li>TIGER/Line® shapefiles = <a href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php" class="uri">https://www.census.gov/cgi-bin/geo/shapefiles/index.php</a></li>
->>>>>>> 9fa4034fb8e84135a60516a1acb60250be73188b
+<li>TIGER/Line® shapefiles - <a href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php" class="uri">https://www.census.gov/cgi-bin/geo/shapefiles/index.php</a></li>
 <li>Notebook - <a href="https://github.com/aliciatb/blog/blob/master/notebooks/point_polygon_validation.ipynb" class="uri">https://github.com/aliciatb/blog/blob/master/notebooks/point_polygon_validation.ipynb</a></li>
 <li>Data - <a href="https://github.com/aliciatb/blog/tree/master/notebooks/data" class="uri">https://github.com/aliciatb/blog/tree/master/notebooks/data</a></li>
 </ul>
+</div>
 </div>
