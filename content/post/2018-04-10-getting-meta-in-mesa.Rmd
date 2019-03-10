@@ -1,0 +1,19 @@
+---
+title: Getting Meta in Mesa
+author: Alicia Brown
+date: '2018-04-10'
+slug: getting-meta-in-mesa
+categories:
+  - api
+  - fme
+tags:
+  - metadata
+---
+
+Metadata can sometimes be an afterthought in the data publishing process and become a cumbersome task for technology teams when deferred until the end of a project. It is however the most important step for data publishers who aspire to high data discovery and appropriate usage of the data by all consumers. During a mass data migration event, an opportunity presented itself to the city of Mesa to make it a trivial task to review and improve their metadata. Join us in Phoenix to learn more about how the city of Mesa used FME + an excel workbook + Socrata metadata API endpoint to update metadata in bulk and provide validation reports on the completeness and accuracy of their metadata across their data portal.
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/ILfBs8zBXkCeqO" width="800" height="600" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/SafeSoftware/getting-meta-at-mesa" title="Getting Meta at Mesa" target="_blank">Getting Meta at Mesa</a> </strong> from <strong><a href="https://www.slideshare.net/SafeSoftware" target="_blank">Safe Software</a></strong> </div>
+
+## Resources
+- [Mesa, AZ Data Portal](https://data.mesaaz.gov)
+- [Metadata API](https://socratametadataapi.docs.apiary.io/#)
