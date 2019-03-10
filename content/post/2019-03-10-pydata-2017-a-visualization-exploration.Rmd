@@ -1,0 +1,23 @@
+---
+title: 'PyData 2017 - A Visualization Exploration '
+author: Alicia Brown
+date: '2017-08-15'
+slug: pydata-2017-a-visualization-exploration
+categories:
+  - python
+  - visualization
+tags:
+  - matplotlib
+  - bokeh
+  - seaborn
+---
+
+[PyData 2017](https://pydata.org/seattle2017/), held on the Microsoft campus in the summer of 2017 featured many awesome speakers sharing their visualization libraries. Here are some examples using my own data to take them out on a spin.
+
+## Visualization [Notebook](https://github.com/aliciatb/blog/blob/master/notebooks/visualizations_demo.ipynb)!
+
+```{r}
+library(htmltools)
+# jupyter nbconvert --to html ~/repos/blog/notebooks/visualizations_demo.ipynb
+includeHTML("../../notebooks/visualizations_demo.html")
+```

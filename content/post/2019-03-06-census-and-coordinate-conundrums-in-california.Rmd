@@ -1,6 +1,6 @@
 ---
 title: Census and Coordinate Conundrums in California
-author: ''
+author: 'Alicia Brown'
 date: '2019-03-06'
 slug: census-and-a-coordinate-conundrums-in-california
 categories:
@@ -25,11 +25,11 @@ In order to associate data like debt burden, population density, and such, we ne
 
 Choropleths consist of a shape file to show the outlines of a geography plus tabular data to provide the values for each shape which makes it easy to see the differences for an indicator across the same geography type. To get the point coordinates for a geography lots of tools and languages can generate a point `within` or a `centroid` for a polygon. Not knowing better, I thought that generating centroids for my polygons would be a safe bet and I duly joined those generated latitude and longitude coordinates to all of my tabular data by geography identifier.
 
-## Unintended Consquences
+## Unintended Consquences of creating data
 
 Upon review of customers, some of the values for certain entities were not being displayed and we discovered that these geographies had a shape where the centroid didn't actually fall inside it, like a census tract that resembled the letter C or was adjacent to a body of water. As our customers happened to reside in Michigan and California, these scenarios were a legitimate concern.
 
-## Slam dunk Solution
+## Census + Census == Success?
 
 After digging deeper into geospatial information provided by the Census, I learned about the existence of Gazatteer files that provide geographic attributes for all Census entities like land area, water area and Latitude and Longitude points! I had already known about the Cartographic Boundary and Tiger/Line shapefiles provided by the Census and typically used the Cartographic Boundary files for my shapes because they worked best on the Socrata platform due to lower resolution and number of vertices.
 
@@ -45,9 +45,9 @@ To regain credibility, I dug even deeper into spatial matters and was referred t
 1. Validata that the coordinates for all California cities fell within their expected polygon
 2. Identify those coordinates that did not so they could be replaced by more accurate coordinates
 
-```{r, echo = F, eval = T}
+```{r}
 library(htmltools)
-# jupyter nbconvert --to html ~/repos/blog-lithium/notebooks/point_polygon_validation.ipynb
+# jupyter nbconvert --to html ~/repos/blog/notebooks/point_polygon_validation.ipynb
 includeHTML("../../notebooks/point_polygon_validation.html")
 ```
 
@@ -66,6 +66,6 @@ includeHTML("../../notebooks/point_polygon_validation.html")
 ## Resources
 * Gazetteer Files - https://www.census.gov/geo/maps-data/data/gazetteer2017.html
 * Cartographic Boundary shapefiles -  https://www.census.gov/geo/maps-data/data/cbf/cbf_place.html
-* TIGER/Line® shapefiles = https://www.census.gov/cgi-bin/geo/shapefiles/index.php
+* TIGER/Line® shapefiles - https://www.census.gov/cgi-bin/geo/shapefiles/index.php
 * Notebook - https://github.com/aliciatb/blog/blob/master/notebooks/point_polygon_validation.ipynb
 * Data - https://github.com/aliciatb/blog/tree/master/notebooks/data
