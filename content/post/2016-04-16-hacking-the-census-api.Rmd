@@ -1,0 +1,19 @@
+---
+title: Hacking the Census (API)!
+author: Alicia Brown
+date: '2016-04-16'
+slug: hacking-the-census-api
+categories:
+  - fme
+  - api
+tags:
+  - census
+---
+
+At Socrata we help governments and non profits unleash the power of government data to improve society. Often our customers have their data they have collected and simply need a platform to share it. However what is data with context? Being able to benchmark your specific entity against others gives a better understanding for setting goals. Using FME to pull federal data from the census, bls, and bea and transform into a flat, machine readable table. Allowed our customers to not only tell their story, compare themselves with out localities but also comply with the Bloomberg Fund requirements. Lastly it's easy and stable to maintain and share.
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/bCt6VRnz2rVYUy" width="800" height="600" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/SafeSoftware/hack-the-census-unleash-the-power-of-data" title="Hack The Census, Unleash the Power of Data" target="_blank">Hack The Census, Unleash the Power of Data</a> </strong> from <strong><a href="https://www.slideshare.net/SafeSoftware" target="_blank">Safe Software</a></strong> </div>
+
+## Resources
+- [New Orleans, LA Data Portal](https://datadriven.nola.gov/home/)
+- [Census API](https://www.census.gov/developers/)
