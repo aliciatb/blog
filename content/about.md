@@ -19,4 +19,3 @@ It was brought to my attention at the last [RStudio conference](https://resource
 - Love R, Python, Power BI, Tableau and Excel (quite certain that my next gig will likely be in a Data Evangelist role using delightful tools to accelerate data insights)
 - I am an impatient advocate for diversity and dream of the day when people include all people and not merely _guys_
 - I insist on leadership accountability (as well as my own) and envision a day when we tackle issues _now_ rather than later
-

@@ -21,3 +21,7 @@ library(htmltools)
 # jupyter nbconvert --to html ~/repos/blog/notebooks/visualizations_demo.ipynb
 includeHTML("../../notebooks/visualizations_demo.html")
 ```
+
+## Resources
+* Notebook - https://github.com/aliciatb/blog/blob/master/notebooks/visualizations_demo.ipynb
+* Data - [transactions.csv](https://alicia.data.socrata.com/dataset/transactions/mu5n-3buk)

@@ -1,0 +1,27 @@
+---
+title: Oh Data - Discovering insights with OData with Power BI, Excel and Tableau
+author: Alicia Brown
+date: '2018-05-18'
+slug: oh-data-discovering-insights-with-odata-with-all-the-tools
+categories:
+  - api
+  - odata
+tags:
+  - powerbi
+  - tableau
+  - excel
+---
+
+At [Socrata Connect](https://socrata-connect.com/), I had the opportunity to lead a session on loading various datasets from our customers via [OData](https://www.odata.org/) in Tableau, Power BI and Excel.
+
+## Power BI
+
+<iframe src="https://metropolis.demo.socrata.com/stories/s/Power-BI-OData-Demo/ptdz-ihhp//tile" style="width:600px;height:345px;background-color:transparent;overflow:hidden;" scrolling="no" frameborder="0"></iframe>
+
+## Excel
+
+<iframe src="https://metropolis.demo.socrata.com/stories/s/Excel-OData-Demo/eqaf-9fiw//tile" style="width:600px;height:345px;background-color:transparent;overflow:hidden;" scrolling="no" frameborder="0"></iframe>
+
+## Tableau
+
+<iframe src="https://metropolis.demo.socrata.com/stories/s/Tableau-Public-OData-Demo/mbci-hrux//tile" style="width:600px;height:345px;background-color:transparent;overflow:hidden;" scrolling="no" frameborder="0"></iframe>
