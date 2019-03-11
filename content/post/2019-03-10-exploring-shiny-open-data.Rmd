@@ -11,17 +11,20 @@ tags:
   - wesanderson
 ---
 
-I haven't been an active participant of the RStudio Community (yet), but saw in an e-mail that there was a shiny contest, https://community.rstudio.com/t/take-part-in-the-shiny-contest/22445 and shamelessly took the opportunity to submit a couple of the shiny apps that I built last year after being inspired by Michigan's own [Justin Baker](https://twitter.com/AskJustinBaker) when he presented a Flex Dashboard at Socrata Connect, [Using Open Analytics to Improve Government Performance](https://socrata.com/video/using-open-analytics-to-improve-government-performance/).
+I haven't been an active participant of the RStudio Community (yet), but saw in an e-mail that there was a shiny contest, https://community.rstudio.com/t/take-part-in-the-shiny-contest/22445 and took the opportunity to submit a couple of the shiny apps that I built last year after being inspired by Michigan's own [Justin Baker](https://twitter.com/AskJustinBaker) when he presented a Flex Dashboard at Socrata Connect, [Using Open Analytics to Improve Government Performance](https://socrata.com/video/using-open-analytics-to-improve-government-performance/).
 
 ## Discovery API
 
 The [Discovery API](https://socratadiscovery.docs.apiary.io) returns all data found on Socrata client domains. Without any authentication, only public assets will be returned. Credentialed users may query their private assets as well.
 
-
 ## Open Data Explorer
 
 This shiny app, https://alicia.shinyapps.io/OpenDataDiscovereR/ randomly queries a topic to the discovery api and returns top results by page views from the last week, month and ever.
 
+<iframe width="800" height="600" src="https://alicia.shinyapps.io/OpenDataDiscovereR/" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 ## State Data Explorer
 
 This shiny app, https://alicia.shinyapps.io/StateDataExploreR/ returns top assets and metadata visualizations for some of the top state data portals hosted on Socrata.
+
+<iframe width="800" height="600" src="https://alicia.shinyapps.io/StateDataExploreR/" frameborder="0" style="border:0" allowfullscreen></iframe>
