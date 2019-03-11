@@ -24,4 +24,4 @@ includeHTML("../../notebooks/visualizations_demo.html")
 
 ## Resources
 * Notebook - https://github.com/aliciatb/blog/blob/master/notebooks/visualizations_demo.ipynb
-* Data - [transactions.csv](https://alicia.data.socrata.com/dataset/transactions/mu5n-3buk)
+* Data - available on request (1 gb)

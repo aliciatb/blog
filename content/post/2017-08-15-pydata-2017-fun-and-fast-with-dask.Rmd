@@ -23,4 +23,4 @@ library(htmltools)
 
 ## Resources
 * Notebook - https://github.com/aliciatb/blog/blob/master/notebooks/dask_demo.ipynb
-* Data - [transactions.csv](https://alicia.data.socrata.com/dataset/transactions/mu5n-3buk)
+* Data - available on request (1 gb)
