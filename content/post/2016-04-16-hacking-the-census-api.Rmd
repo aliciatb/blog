@@ -14,6 +14,10 @@ Throughout my career at Socrata I often have the opportunity to find ways to get
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/bCt6VRnz2rVYUy" width="800" height="600" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/SafeSoftware/hack-the-census-unleash-the-power-of-data" title="Hack The Census, Unleash the Power of Data" target="_blank">Hack The Census, Unleash the Power of Data</a> </strong> from <strong><a href="https://www.slideshare.net/SafeSoftware" target="_blank">Safe Software</a></strong> </div>
 
+## Lessons Learned
+
+- Variables estimated by the Census may become more granular over time and it's important to check categorical data for all years to either roll them if you want to track the same variable over time. For example, Commute Time (B08303) `< 10 minutes` is now broken into 2 segments, `< 5 minutes` and `5 - 9 minutes`
+
 ## Resources
-- [New Orleans, LA Data Portal](https://datadriven.nola.gov/home/)
+- [New Orleans Data Portal](https://datadriven.nola.gov/home/)
 - [Census API](https://www.census.gov/developers/)

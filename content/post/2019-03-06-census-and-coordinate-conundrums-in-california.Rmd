@@ -67,6 +67,5 @@ includeHTML("../../notebooks/point_polygon_validation.html")
 * Gazetteer Files - https://www.census.gov/geo/maps-data/data/gazetteer2017.html
 * Cartographic Boundary shapefiles -  https://www.census.gov/geo/maps-data/data/cbf/cbf_place.html
 * TIGER/Line® shapefiles - https://www.census.gov/cgi-bin/geo/shapefiles/index.php
-* TIGER/Line® shapefiles - https://www.census.gov/cgi-bin/geo/shapefiles/index.php
 * Notebook - https://github.com/aliciatb/blog/blob/master/notebooks/point_polygon_validation.ipynb
 * Data - https://github.com/aliciatb/blog/tree/master/notebooks/data

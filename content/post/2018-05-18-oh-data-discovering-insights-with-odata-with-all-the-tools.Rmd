@@ -16,12 +16,18 @@ At [Socrata Connect](https://socrata-connect.com/), I had the opportunity to lea
 
 ## Power BI
 
+In this demo I join data from the CDC (Centers for Disease Controls) [500 Cities: Local Data for Better Health,](https://chronicdata.cdc.gov/500-Cities/500-Cities-Local-Data-for-Better-Health-2017-relea/6vp6-wxuq/data) with [Commute Time](https://usc.data.socrata.com/Los-Angeles/Commute-Time-LA-/8bh9-7mmw) for Census Tracts in Los Angeles county and look for relationships via a scatter plot in this [Power BI report](https://app.powerbi.com/view?r=eyJrIjoiOGZiNDc0MjMtMDNkNC00ZTA0LTljMTQtNDBiOWMwOWNmMjUyIiwidCI6IjdjYzVmMGY5LWVlNWItNDEwNi1hNjJkLTFiOWY3YmU0NjExOCIsImMiOjN9).
+
 <iframe src="https://metropolis.demo.socrata.com/stories/s/Power-BI-OData-Demo/ptdz-ihhp//tile" style="width:600px;height:345px;background-color:transparent;overflow:hidden;" scrolling="no" frameborder="0"></iframe>
 
 ## Excel
 
+In this demo, we connect to [Austin Code Task List](https://data.austintexas.gov/Public-Safety/Austin-Code-Task-List/ttd7-isgm) to review Code Cases by Inspector and Status in a pivot table.
+
 <iframe src="https://metropolis.demo.socrata.com/stories/s/Excel-OData-Demo/eqaf-9fiw//tile" style="width:600px;height:345px;background-color:transparent;overflow:hidden;" scrolling="no" frameborder="0"></iframe>
 
 ## Tableau
+
+This demo examines [Seattle Terry Stops](https://data.seattle.gov/Public-Safety/Terry-Stops/28ny-9ts8) data on a [Tableau Dashboard](https://public.tableau.com/profile/alicia3694#!/vizhome/CityofSeattle-PoliceStops/TerryStopDashboard) with a collectio of Tableau visualizations to look for any trends in police stops by Officer and Citizen gender, race and age.
 
 <iframe src="https://metropolis.demo.socrata.com/stories/s/Tableau-Public-OData-Demo/mbci-hrux//tile" style="width:600px;height:345px;background-color:transparent;overflow:hidden;" scrolling="no" frameborder="0"></iframe>

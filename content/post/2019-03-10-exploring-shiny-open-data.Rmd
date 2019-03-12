@@ -19,12 +19,12 @@ The [Discovery API](https://socratadiscovery.docs.apiary.io) returns all data fo
 
 ## Open Data Explorer
 
-This shiny app, https://alicia.shinyapps.io/OpenDataDiscovereR/ randomly queries a topic to the discovery api and returns top results by page views from the last week, month and ever.
+This shiny app, https://alicia.shinyapps.io/OpenDataDiscovereR/ randomly queries a topic like `Employment, Jobs, Income, Earnings, Population, Public Safety, Calls, Crimes, Equity, Homelessness, Opiods, Marijuana, Environment, Air Quality, Water Quality, Finance, Budget, Dashboard, Economy, Permits, Housing, Development, Transit, Bridges, Roads, Bicycle, Pedestrian, Parks, Trails` to the discovery api and returns top results by page views from the last week, month and ever by asset type (dataset, chart, map, story, etc.).
 
 <iframe width="800" height="600" src="https://alicia.shinyapps.io/OpenDataDiscovereR/" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 ## State Data Explorer
 
-This shiny app, https://alicia.shinyapps.io/StateDataExploreR/ returns top assets and metadata visualizations for some of the top state data portals hosted on Socrata.
+This shiny app, https://alicia.shinyapps.io/StateDataExploreR/ returns top assets and metadata visualizations for some of the top state data portals hosted on Socrata. In New York, the most popular public datasets include Winning Lottery numbers. 
 
 <iframe width="800" height="600" src="https://alicia.shinyapps.io/StateDataExploreR/" frameborder="0" style="border:0" allowfullscreen></iframe>

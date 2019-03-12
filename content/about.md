@@ -7,15 +7,13 @@ It was brought to my attention at the last [RStudio conference](https://resource
 
 ## My Story
 
-- Last 4 years have partnered with government and public sector agencies developing Open Data programs and creating a culture of internal data sharing to inform decisions and deliver equitable outcomes
+- Democratizing data for the last 4 years as partner with government and public sector agencies developing data programs and creating a culture of internal data sharing to inform decisions and deliver equitable outcomes
 - My journey to data has included a path as a web developer, technical project manager, data analyst and currently technical solution architect
-- Learning is everything to me!
-- Agile practicioner
+- Advocate and practicioner of Agile and Continuous Improvement methodologies
 
 ## My Prevailing Interests
 
-- Data, all kinds! (Demographic, expenditures, equity, police, weed, sea lions, meta, etc.)
-- People - energized and inspired by the teams I have the privilege to partner with on projects
+- Data, all kinds! (Demographic, economic, equity, financial, police, environmental, weed, sea lions, meta, and performance benchmarks.)
+- People - energized and inspired by the teams I have the privilege to partner with on projects.
 - Love R, Python, Power BI, Tableau, Excel and mixing data with markdown for communication to others and reminders to future me
-- I am an impatient advocate for diversity and dream of the day when people include all people and not merely _guys_
-- I insist on leadership accountability (as well as my own) and envision a day when we tackle issues _now_ rather than later
+- I am an impatient advocate for diversity and inclusivity on teams
