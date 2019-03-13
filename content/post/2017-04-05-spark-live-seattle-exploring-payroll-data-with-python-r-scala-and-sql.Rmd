@@ -1,0 +1,26 @@
+---
+title: Spark Live Seattle - Exploring Payroll data with python, r, scala and sql all together
+author: Alicia Brown
+date: '2017-04-05'
+slug: spark-live-seattle-exploring-payroll-data-with-python-r-scala-and-sql
+categories:
+  - spark
+  - r
+  - sql
+  - python
+tags:
+  - payroll
+  - gender
+---
+
+## Interactive Notebooks with all the languages
+
+Last Wednesday I had the opportunity to attend Spark Live Seattle hosted by Databricks, the company behind the development of Spark. Spark is a computing engine that allows you to analyze, transform and run models on your data. I have been extremely interested in learning more about Spark so that I can use SQL, python and R all in the same interactive notebook AND also run them on a cluster rather than my laptop. I also have been intrigued by Databricks because of the ease to spin up a cluster and their notebooks track revision history and integrate well with source control. I also learned that they offer free Community Edition version of their product that is limited to a single mini cluster, but still capable of sharing and publishing notebooks.
+
+## Happy Equal Pay Day!
+
+Since last Wednesday I have been working on my own notebook, https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1060826840768092/1600818105303949/5631225173667779/latest.html to explore a payroll dataset that I found on the ODN that powers Macoupin County's Open Payroll site. I chose this dataset because it's rich with features like gender, age, race, ethnicity and start date in addition to role, department and type of employment. In honor of Equal Pay Day I have begun my exploration of their data looking at gender and salary.
+
+## To The [Notebook](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1060826840768092/1600818105303949/5631225173667779/latest.html)
+
+<iframe width="800" height="600" src="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1060826840768092/1600818105303949/5631225173667779/latest.html" frameborder="0" style="border:0" allowfullscreen></iframe>
