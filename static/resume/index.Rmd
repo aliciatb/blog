@@ -45,7 +45,7 @@ Experience {data-icon=suitcase}
 
 ### Technical Solution Architect
 
-Tyler Technologies - Data and Insights Division
+Socrata / Tyler Technologies - Data and Insights Division
 
 Seattle, WA
 
