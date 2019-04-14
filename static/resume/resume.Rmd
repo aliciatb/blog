@@ -57,14 +57,14 @@ Seattle, WA
 
 ### Senior Data Analyst
 
-Socrata
+Socrata - Global Services
 
 Seattle, WA
 
 2018 - 2015
 
 - Consulted on best practices on Data Governance, Metadata, Standards and Quality
-- Developed custom ETL (Extract-Transform-Load) via multiple client tools and various source systems
+- Developed custom ETL (Extract-Transform-Load) for multiple client tools and source systems
 - Enabled the automation of data retrieval from external APIs for tracking performance across common indicators and benchmarking against peers
 
 ### Technical Project Manager
@@ -148,11 +148,11 @@ University of Washington
 
 Seattle, WA
 
-### Mastering Software Development in R Specialization
+### FME Certified Professional
 
-Johns Hopkins University
+Safe Software
 
-Coursera
+Vancouver, BC
 
 Education {data-icon=graduation-cap}
 --------------------------------------------------------------------------------
@@ -166,6 +166,6 @@ Fort Worth, TX
 
 ### Texas A&M University
 
-Bachelors of Arts Anthropology
+Bachelors of Arts - Anthropology
 
 College Stations, TX
