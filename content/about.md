@@ -10,7 +10,7 @@ It was brought to my attention at the last [RStudio conference](https://resource
 - Democratizing data for the last 4 years as partner with government and public sector agencies developing data programs and creating a culture of internal data sharing to inform decisions and deliver equitable outcomes
 - My journey to data has included a path as a web developer, technical project manager, data analyst and currently technical solution architect
 - Advocate and practicioner of Agile and Continuous Improvement methodologies
-- [Full Resume](/resume/resume.html)
+- [Full Resume](/resume/) made with [pagedown](https://github.com/rstudio/pagedown#resume-pagedownhtml_resume)! Or download as a [lovely pdf](/resume/alicia_resume.pdf).
 
 ## My Prevailing Interests
 
