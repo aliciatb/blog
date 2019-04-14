@@ -1,0 +1,171 @@
+---
+title: "Alicia Brown's Resume"
+author: Alicia Brown
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    self_contained: true
+---
+
+Aside
+================================================================================
+
+Contact Info {#contact}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-linkedin"></i> [linkedin.com/in/aliciabrown](https://www.linkedin.com/in/aliciabrown/)
+- <i class="fa fa-rss"></i> [msaliciabrown.com](https://msaliciabrown.com)
+- <i class="fa fa-github"></i> [github.com/aliciatb](https://github.com/aliciatb)
+
+Skills {#skills}
+--------------------------------------------------------------------------------
+
+- R, Python, SQL, Microsoft Power BI, Excel, Tableau, Spark, FME
+
+- Data Analysis, Visualization, Democratization, Engineering, Governance
+
+- Scrum, Kanban, Agile Development
+
+Main
+================================================================================
+
+Alicia Brown {#title}
+--------------------------------------------------------------------------------
+
+### 
+
+Hi!
+
+I love data, technology and enabling teams to inform decisons and accelerate transparency. Whether it's through  interactive Notebooks with R, Python, SQL and Markdown, Excel/Power BI's _Get and Transform Data_ or Tableau Public, I take great joy in using the latest libraries and builds to retrieve, reshape and craft delightful and reproducible data experiences and visualizations in the form of Dashboards, Shiny Apps and PDF/Word Reports.
+
+I seek to improve processes and lean on agile frameworks to deliver value to stakeholders and create a high quality culture for developers, engineers and analysts.
+
+Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+### Technical Solution Architect
+
+Tyler Technologies - Data and Insights Division
+
+Seattle, WA
+
+2018 - present
+
+- Partner with public sector agencies and governments to share their data within their organization and community for informed decision-making and transparency
+- Empower the discovery of insights in data by teams via Data Science and Business Intelligence Tools and Programming Languages (Power BI, Tableau, R, Python, SQL, Excel, Power Query)
+- Provides guidance on establishing strong data programs to ensure the integrity, availability and accessibility of data
+
+### Senior Data Analyst
+
+Socrata
+
+Seattle, WA
+
+2018 - 2015
+
+- Consulted on best practices on Data Governance, Metadata, Standards and Quality
+- Developed custom ETL (Extract-Transform-Load) via multiple client tools and various source systems
+- Enabled the automation of data retrieval from external APIs for tracking performance across common indicators and benchmarking against peers
+
+### Technical Project Manager
+
+H.D. Vest Financial Services / Wells Fargo Advisors
+
+Seattle, WA
+
+2013 - 2010
+
+- Led migration of applications, data and files from Wells Fargo servers to new H.D. Vest environment
+- Worked closely with cross functional teams across the organization to ensure successful execution of change requests and migration events
+-	Led sustainability team to improve robustness of portal web applications
+
+### Senior Web Developer
+
+H.D. Vest Financial Services / Wells Fargo Advisors
+
+Dallas, TX
+
+2010 - 2000
+
+-	Led portal team integration project with Wachovia platform (data migration, SSO, login, and application integration)
+-	Full stack developer of web applications using C#, VB.net, VBScript, SQL for Advisor and Client sites
+
+Notable Projects {data-icon=globe}
+--------------------------------------------------------------------------------
+
+### Pierce County Performance Dashboard
+
+[open.piercecountywa.gov](https://open.piercecountywa.gov)
+
+Pierce County, WA
+
+2018
+
+Partnered with departments to identify measurable data to use for analysis of performance, develop sustainable methods for publishing data and retrieving common indicators from census and bls apis.
+
+### Neighborhood Data for Social Change Platform
+
+[ladata.myneighborhooddata.org](https://ladata.myneighborhooddata.org)
+
+Los Angeles, CA
+
+2017
+
+Worked with USC Sol Price Center for Civic Change team to provide data and spatial assets for the to engage community and provide necessary data for researches and local non-profits.
+
+### Michigan Financial & School Dashboards
+
+[micommunityfinancials.michigan.gov](http://micommunityfinancials.michigan.gov)
+
+Lansing, MI
+
+2016
+
+Worked with Michigan Department of Treasury / Schools to monitor financial and enrollment data across localities and educational entities.
+
+### The World Bank, Sudan Evidence Based Programme
+
+[www.sudandata.org](https://www.sudandata.org)
+
+Sudan
+
+2015
+
+Transformed survey data to inform and educate policy makers, academics, students and the public on program progess in Sudan.
+
+Certifications {data-icon=certificate}
+--------------------------------------------------------------------------------
+
+### Certified Scrum Master (CSM®)
+
+Scrum Alliance
+
+Seattle, WA
+
+### BI - Techniques for Decision Making
+
+University of Washington
+
+Seattle, WA
+
+### Mastering Software Development in R Specialization
+
+Johns Hopkins University
+
+Coursera
+
+Education {data-icon=graduation-cap}
+--------------------------------------------------------------------------------
+
+### Texas Christian University
+
+Masters of Business Administration (MBA)
+
+Fort Worth, TX
+
+
+### Texas A&M University
+
+Bachelors of Arts Anthropology
+
+College Stations, TX
