@@ -1,0 +1,47 @@
+---
+title: Visualizing and BenchmaRking Open Data Catalogs
+author: Alicia Brown
+date: '2019-04-21'
+slug: visualizing-and-benchmarking-open-data-catalogs
+categories:
+  - open data
+tags:
+  - powerbi
+  - r
+  - shiny
+  - wesanderson
+---
+
+
+
+<p>A couple of weeks ago I had the opportunity to co-present a session called <em>Visualizing your data, the Power of BI</em> with <a href="https://data.seattle.gov/browse">Seattle’s Open Data</a> manager, <a href="https://www.linkedin.com/in/paulalleydatadriven">Paul Alley</a> at the 2019 <a href="https://www.tylertech.com/tylerconnect/index.html">Tyler Connect conference</a> in Dallas. For our session we wanted to use Power BI to spin up reports on the health of Seattle’s Open Data Catalog because Power BI makes it very easy to connect to data sources, add calculations, visualize the results and drilldown into various facets of the data with an interactive report. As an opportunistic learner, I thought this would be a great opportunity to practice the <a href="https://ideas.darden.virginia.edu/the-learning-launch-how-to-grow-your-business-with-the-scientific-method">Learning Launch</a> method for my <a href="https://www.coursera.org/learn/uva-darden-design-thinking-innovation">Design Thinking for Innovation</a> final assignment.</p>
+<div id="the-score" class="section level2">
+<h2>The Score</h2>
+<p>Paul already had in mind a health calculation based on metadata attributes where in the first iteration of the report, the presence of these attributes would be weighted equally. Attributes would be assigned a value of 1 if it contained any value and 0 if no value existed for it.</p>
+<p><code>Dataset Description</code> + <code>Category</code> + <code>Department Provider</code> + <code>Keywords</code> + <code>Publishing Frequency</code> / 5</p>
+</div>
+<div id="the-data" class="section level2">
+<h2>The Data</h2>
+<p>The first data source we chose is an internal dataset called the <a href="https://data.seattle.gov/dataset/Seattle-Public-Dataset-Asset-Inventory/nymu-ywvk">Asset Inventory</a> that contains total views and downloads, creation and update timestamps and all basic and custom metadata fields. This data is retrievable as a downloaded file or via api call, and in this case we used the OData endpoint, <a href="https://data.seattle.gov/api/odata/v4/nymu-ywvk" class="uri">https://data.seattle.gov/api/odata/v4/nymu-ywvk</a> to connect to in our Power BI report.</p>
+</div>
+<div id="the-report" class="section level2">
+<h2>The Report</h2>
+<p>Here’s the <a href="https://app.powerbi.com/view?r=eyJrIjoiOGVkNmQ0YjctYzA3Mi00MTY5LWIyMzctNjJjNTkwYmI3ZjU1IiwidCI6IjdjYzVmMGY5LWVlNWItNDEwNi1hNjJkLTFiOWY3YmU0NjExOCIsImMiOjN9">report</a> with the data as of 4/8/2019. It was interesting to see that the majority of visits were on a handful of datasets including <a href="https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj">real time fire 911 calls</a>, <a href="https://data.seattle.gov/Public-Safety/Road-Weather-Information-Stations/egc4-d24i">road weather information stations</a>, <a href="https://data.seattle.gov/City-Business/Sold-Fleet-Equipment/y6ef-jf2w">sold fleet equipment</a> and <a href="https://data.seattle.gov/City-Business/City-of-Seattle-Wage-Data/2khk-5ukd">wage data</a>. On the 2nd tab we visualized the views by metaadata score to see if there was any relationship between better metadata and utilization.</p>
+<iframe width="1000" height="700" src="https://app.powerbi.com/view?r=eyJrIjoiOGVkNmQ0YjctYzA3Mi00MTY5LWIyMzctNjJjNTkwYmI3ZjU1IiwidCI6IjdjYzVmMGY5LWVlNWItNDEwNi1hNjJkLTFiOWY3YmU0NjExOCIsImMiOjN9" frameborder="0" style="border:0" allowfullscreen>
+</iframe>
+</div>
+<div id="benchmarking" class="section level2">
+<h2>BenchmaRking</h2>
+<p>Another common task in performance analysis is to benchmark oneself againgst ones peers. We were able to spin up a <a href="https://alicia.shinyapps.io/benchmarkeR/">prototype of the Report</a> as a <a href="https://rmarkdown.rstudio.com/flexdashboard/">R flexdashboard</a> using a different <a href="https://socratadiscovery.docs.apiary.io">datasource</a> that would give us access to all of the public datasets for all data portals on the Socrata platform. The one thing that changed for this iteration of the report was to use only standard metadata fields for all portals and so instead of using Seattle’s custom fields for <code>department provider</code> and <code>publishing frequency</code> we selected <code>source</code> and any value for a <code>custom field</code> to calculate the score. We also added controls to allow changes to the weight of each metadata attribute and as always for my shiny apps, the <a href="https://github.com/karthik/wesanderson">Wes Anderson</a> color pallete package was used for the chart, specifically <code>Zissou1</code> which I thought paired well with the <code>cerulean</code> <a href="https://rmarkdown.rstudio.com/flexdashboard/using.html#appearance">theme</a>.</p>
+<iframe width="1000" height="800" src="https://alicia.shinyapps.io/benchmarkeR/" frameborder="0" style="border:0" allowfullscreen>
+</iframe>
+</div>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
+<ul>
+<li>Presendation Deck and report - <a href="https://github.com/aliciatb/connect#visualizing-your-data-the-power-of-bi" class="uri">https://github.com/aliciatb/connect#visualizing-your-data-the-power-of-bi</a></li>
+<li>Seattle Data Catalog - <a href="https://data.seattle.gov/browse" class="uri">https://data.seattle.gov/browse</a></li>
+<li>View of Public Data Asset Inventory - <a href="https://socratadiscovery.docs.apiary.io" class="uri">https://socratadiscovery.docs.apiary.io</a> <a href="https://data.seattle.gov/dataset/Seattle-Public-Dataset-Asset-Inventory/nymu-ywvk" class="uri">https://data.seattle.gov/dataset/Seattle-Public-Dataset-Asset-Inventory/nymu-ywvk</a></li>
+<li>Discovery API - <a href="https://socratadiscovery.docs.apiary.io" class="uri">https://socratadiscovery.docs.apiary.io</a></li>
+</ul>
+</div>

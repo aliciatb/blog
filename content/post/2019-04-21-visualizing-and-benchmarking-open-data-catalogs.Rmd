@@ -1,0 +1,43 @@
+---
+title: Visualizing and BenchmaRking Open Data Catalogs
+author: Alicia Brown
+date: '2019-04-21'
+slug: visualizing-and-benchmarking-open-data-catalogs
+categories:
+  - open data
+tags:
+  - powerbi
+  - r
+  - shiny
+  - wesanderson
+---
+
+A couple of weeks ago I had the opportunity to co-present a session called _Visualizing your data, the Power of BI_ with [Seattle's Open Data](https://data.seattle.gov/browse) manager, [Paul Alley](https://www.linkedin.com/in/paulalleydatadriven) at the 2019 [Tyler Connect conference](https://www.tylertech.com/tylerconnect/index.html) in Dallas. For our session we wanted to use Power BI to spin up reports on the health of Seattle's Open Data Catalog because Power BI makes it very easy to connect to data sources, add calculations, visualize the results and drilldown into various facets of the data with an interactive report. As an opportunistic learner, I thought this would be a great opportunity to practice the [Learning Launch](https://ideas.darden.virginia.edu/the-learning-launch-how-to-grow-your-business-with-the-scientific-method) method for my [Design Thinking for Innovation](https://www.coursera.org/learn/uva-darden-design-thinking-innovation) final assignment.
+
+## The Score
+
+Paul already had in mind a health calculation based on metadata attributes where in the first iteration of the report, the presence of these attributes would be weighted equally. Attributes would be assigned a value of 1 if it contained any value and 0 if no value existed for it.
+
+`Dataset Description` + `Category` + `Department Provider` + `Keywords` + `Publishing Frequency` / 5
+
+## The Data
+The first data source we chose is an internal dataset called the [Asset Inventory](https://data.seattle.gov/dataset/Seattle-Public-Dataset-Asset-Inventory/nymu-ywvk) that contains total views and downloads, creation and update timestamps and all basic and custom metadata fields. This data is retrievable as a downloaded file or via api call, and in this case we used the OData endpoint, https://data.seattle.gov/api/odata/v4/nymu-ywvk to connect to in our Power BI report. 
+
+## The Report
+
+Here's the [report](https://app.powerbi.com/view?r=eyJrIjoiOGVkNmQ0YjctYzA3Mi00MTY5LWIyMzctNjJjNTkwYmI3ZjU1IiwidCI6IjdjYzVmMGY5LWVlNWItNDEwNi1hNjJkLTFiOWY3YmU0NjExOCIsImMiOjN9) with the data as of 4/8/2019. It was interesting to see that the majority of visits were on a handful of datasets including [real time fire 911 calls](https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj), [road weather information stations](https://data.seattle.gov/Public-Safety/Road-Weather-Information-Stations/egc4-d24i), [sold fleet equipment](https://data.seattle.gov/City-Business/Sold-Fleet-Equipment/y6ef-jf2w) and [wage data](https://data.seattle.gov/City-Business/City-of-Seattle-Wage-Data/2khk-5ukd). On the 2nd tab we visualized the views by metaadata score to see if there was any relationship between better metadata and utilization.
+
+<iframe width="1000" height="700" src="https://app.powerbi.com/view?r=eyJrIjoiOGVkNmQ0YjctYzA3Mi00MTY5LWIyMzctNjJjNTkwYmI3ZjU1IiwidCI6IjdjYzVmMGY5LWVlNWItNDEwNi1hNjJkLTFiOWY3YmU0NjExOCIsImMiOjN9" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+## BenchmaRking
+
+Another common task in performance analysis is to benchmark oneself againgst ones peers. We were able to spin up a [prototype of the Report](https://alicia.shinyapps.io/benchmarkeR/) as a [R flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/) using a different [datasource](https://socratadiscovery.docs.apiary.io) that would give us access to all of the public datasets for all data portals on the Socrata platform. The one thing that changed for this iteration of the report was to use only standard metadata fields for all portals and so instead of using Seattle's custom fields for `department provider` and `publishing frequency` we selected `source` and any value for a `custom field` to calculate the score. We also added controls to allow changes to the weight of each metadata attribute and as always for my shiny apps, the [Wes Anderson](https://github.com/karthik/wesanderson) color pallete package was used for the chart, specifically `Zissou1` which I thought paired well with the `cerulean` [theme](https://rmarkdown.rstudio.com/flexdashboard/using.html#appearance).
+
+<iframe width="1000" height="800" src="https://alicia.shinyapps.io/benchmarkeR/" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+## Resources
+
+* Presendation Deck and report - https://github.com/aliciatb/connect#visualizing-your-data-the-power-of-bi
+* Seattle Data Catalog - https://data.seattle.gov/browse
+* View of Public Data Asset Inventory - https://socratadiscovery.docs.apiary.io https://data.seattle.gov/dataset/Seattle-Public-Dataset-Asset-Inventory/nymu-ywvk
+* Discovery API - https://socratadiscovery.docs.apiary.io

@@ -53,7 +53,7 @@ present - 2018
 
 - Partner with public sector agencies and governments to share their data within their organization and community for informed decision-making and transparency
 - Empower the discovery of insights in data by teams via Data Science and Business Intelligence Tools and Programming Languages (Power BI, Tableau, R, Python, SQL, Excel, Power Query)
-- Provides guidance on establishing strong data programs to ensure the integrity, availability and accessibility of data
+- Provide guidance on establishing strong data programs to ensure the integrity, availability and accessibility of data
 
 ### Senior Data Analyst
 
