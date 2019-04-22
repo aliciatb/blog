@@ -37,6 +37,24 @@ Another common task in performance analysis is to benchmark oneself againgst one
 
 <iframe width="1000" height="800" src="https://alicia.shinyapps.io/benchmarkeR/" frameborder="0" style="border:0" allowfullscreen></iframe>
 
+## Lessons Learned
+
+* A small number of datasets have the majority of visits
+* Datasets with similar names that may contain different years of data
+* Datasets with duplicate names (added group by u_id)
+* Variety in topics for top datasets (911, road stations and city wages)
+* Top datasets aren't always updated frequently
+
+## Next Steps
+
+* Develop report with narrative for primary domain that includes action items and recommendations
+* Extract custom metadata elements for deeper inspection
+* Add trend line for popularity from last 30 days to last 7 days per dataset to spot rising popularity
+* Add data quality analysis (datatypes for analysis, data contents, data completeness)
+* Identify similar datasets by name and fields where they may contain different years of data that could be combined into single dataset
+* Flag duplicate datasets
+* Add data freshness score relative to expected publishing frequency (if that metadata is captured in a custom metadata field)
+
 ## Resources
 
 * Presendation Deck and report - https://github.com/aliciatb/connect#visualizing-your-data-the-power-of-bi
