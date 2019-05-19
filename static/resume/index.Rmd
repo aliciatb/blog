@@ -103,6 +103,16 @@ Pierce County, WA
 
 Partnered with departments to identify measurable data to use for analysis of performance, develop sustainable methods for publishing data and retrieving common indicators from census and bls apis.
 
+### Oakland Equity Indicators
+
+https://data.oaklandnet.com/stories/s/brb2-j4ad
+
+Oakland, CA
+
+2018
+
+The report features 72 indicators across six themes: Economy, Education, Public Health, Housing, Public Safety and Neighborhood and Civic Life to score how equitable Oakland is between groups with the highest and lowest values for a given indicator.
+
 ### Neighborhood Data for Social Change Platform
 
 [ladata.myneighborhooddata.org](https://ladata.myneighborhooddata.org)
@@ -122,16 +132,6 @@ Lansing, MI
 2016
 
 Worked with Michigan Department of Treasury / Schools to monitor financial and enrollment data across localities and educational entities.
-
-### The World Bank, Sudan Evidence Based Programme
-
-[www.sudandata.org](https://www.sudandata.org)
-
-Sudan
-
-2015
-
-Transformed survey data to inform and educate policy makers, academics, students and the public on program progess in Sudan.
 
 Certifications {data-icon=certificate}
 --------------------------------------------------------------------------------
