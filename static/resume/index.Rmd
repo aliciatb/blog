@@ -36,9 +36,7 @@ Alicia Brown {#title}
 
 Hi!
 
-I love data, technology and enabling teams to inform decisons and accelerate transparency. Whether it's through  interactive Notebooks with R, Python, SQL and Markdown, Excel/Power BI's _Get and Transform Data_ or Tableau Public, I take great joy in using the latest libraries and builds to retrieve, reshape and craft delightful and reproducible data experiences and visualizations in the form of Dashboards, Shiny Apps and PDF/Word Reports.
-
-I seek to improve processes and lean on agile frameworks to deliver value to stakeholders and create a high quality culture for developers, engineers and analysts.
+I love data, technology and enabling teams to inform decisons and accelerate transparency. Whether it's through  interactive Notebooks with R, Python, SQL and Markdown, Excel/Power BI's _Get and Transform Data_ or Tableau Public, I take great joy in using the latest libraries and scalable cloud solutions to retrieve, reshape and craft delightful and reproducible data experiences and visualizations in the form of Dashboards, Shiny Apps and Reports.
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
