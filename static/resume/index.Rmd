@@ -17,12 +17,12 @@ Contact Info {#contact}
 - <i class="fa fa-rss"></i> [msaliciabrown.com](https://msaliciabrown.com)
 - <i class="fa fa-github"></i> [github.com/aliciatb](https://github.com/aliciatb)
 
-Skills {#skills}
+Skills / Tools {#skills}
 --------------------------------------------------------------------------------
 
-- R, Python, SQL, Microsoft Power BI, Excel, Tableau, Spark, FME
+- R, Python, Jupyter, Markdown, SQL, Microsoft Power BI, Excel, Tableau, Spark, FME
 
-- Data Analysis, Visualization, Democratization, Engineering, Governance
+- Data Analysis, Visualization, Stories, Dashboards, Governance, Democratization, Engineering, Contextualization
 
 - Scrum, Kanban, Agile Development
 
@@ -36,14 +36,14 @@ Alicia Brown {#title}
 
 Hi!
 
-I love data, technology and enabling teams to inform decisons and accelerate transparency. Whether it's through  interactive Notebooks with R, Python, SQL and Markdown, Excel/Power BI's _Get and Transform Data_ or Tableau Public, I take great joy in using the latest libraries and scalable cloud solutions to retrieve, reshape and craft delightful and reproducible data experiences and visualizations in the form of Dashboards, Shiny Apps and Reports.
+I love data, technology and enabling teams to inform decisons and accelerate transparency. I take great joy in using the latest libraries and scalable cloud technologies to retrieve and reshape data to develop delightful and reproducible stories, visualizations, dashboards, shiny apps, reports and solutions.
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ### Technical Solution Architect
 
-Socrata / Tyler Technologies - Data and Insights Division
+Socrata / Tyler Tech - Data and Insights Division
 
 Seattle, WA
 
@@ -83,10 +83,21 @@ H.D. Vest Financial Services / Wells Fargo Advisors
 
 Dallas, TX
 
-2010 - 2000
+2010 - 2001
 
 -	Led portal team integration project with Wachovia platform (data migration, SSO, login, and application integration)
 -	Full stack developer of web applications using C#, VB.net, VBScript, SQL for Advisor and Client sites
+
+### Webmaster
+
+H.D. Vest Financial Services
+
+Dallas, TX
+
+2001 - 2000
+
+- Supported free online tax platform
+- Managed content on marketing and corporate websites
 
 Notable Projects {data-icon=globe}
 --------------------------------------------------------------------------------
@@ -109,7 +120,7 @@ Oakland, CA
 
 2018
 
-The report features 72 indicators across six themes: Economy, Education, Public Health, Housing, Public Safety and Neighborhood and Civic Life to score how equitable Oakland is between groups with the highest and lowest values for a given indicator.
+Created interactive report featuring 72 indicators across six themes: Economy, Education, Public Health, Housing, Public Safety and Neighborhood and Civic Life to score how equitable Oakland is between groups with the highest and lowest values for a given indicator.
 
 ### Neighborhood Data for Social Change Platform
 
@@ -119,7 +130,7 @@ Los Angeles, CA
 
 2017
 
-Worked with USC Sol Price Center for Civic Change team to provide data and spatial assets for the to engage community and provide necessary data for researches and local non-profits.
+Worked with [USC Sol Price Center for Social Change](https://socialinnovation.usc.edu/) team to provide data and spatial assets for the to engage community and provide necessary data for researches and local non-profits.
 
 ### Michigan Financial & School Dashboards
 
