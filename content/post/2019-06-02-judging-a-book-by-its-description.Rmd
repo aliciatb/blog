@@ -21,8 +21,9 @@ Without further ado, here is the first iteration where I return new books with t
 
 <iframe width="1000" height="700" src="https://alicia.shinyapps.io/author_search" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-## Resources
+## Resources & Appreciations
 
+- [Seattle Mystery Books](https://mysteryish.wordpress.com/) - the original champions of my favorite authors
 - [Text Mining with R: A Tidy Approach](https://smile.amazon.com/dp/B071K9RT9Z) by Julia Silge and David Robinson
 - [Google Books API](https://developers.google.com/books/)
 - [myBookQ repo](https://github.com/aliciatb/mybookq)
