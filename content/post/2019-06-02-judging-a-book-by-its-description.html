@@ -1,0 +1,30 @@
+---
+title: Judging a book by its description
+author: Alicia
+date: '2019-06-02'
+slug: judging-a-book-by-its-description
+categories:
+  - text analysis
+tags:
+  - natural language processing
+---
+
+
+
+<p>I love to read books, especially mystery books by my favorite authors (Louise Penny, Fred Vargas, Kate Atkinson, Nancy Atherton and Jussi Adler-Olsen). They are all authors who have crafted a wonderful cast of thoughtful characters in picturesque settings. I live in Seattle, which is also picturesque (especially in the summer) but I do enjoy considering what life must be like in Quebec, France, England and Denmark.</p>
+<p>Since this group may only reasonably create and publish 1 book a year, I do have a larger group of authors in my reading portfolio because I may read a new book every 2-3 weeks if book releases go my way. Unfortunately I can’t always depend on a book to be my cup of tea because a story may be situated in an unpleasant setting (hunting lodge) or could be a new stand-alone novel that lacks any of my familiar heroines and heros.</p>
+<p>To help me stay up to date on my favorite authors, I have developed a shiny app, <a href="https://alicia.shinyapps.io/author_search">myBookQ</a> that queries the google books api to get the newest books by author. Included with author parameters are positive and negative words as well as words that may indicate a book is part of a series by that author. I am not a fan of true crime or psychological dramas. I also would prefer that innocent cats, dogs, and other creatures, while fictional, not be harmed in a story as you will see by the default word values. The analysis is currently based on the descriptions of the book provided by publishers. I would like to include in the future, reviews by professionals and other readers.</p>
+<div id="to-mybookq" class="section level2">
+<h2>To myBookQ!</h2>
+<p>Without further ado, here is the first iteration where I return new books with the default best mystery authors ever. For the sentiment scores I am using the <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">afinn</a> sentiments dataset, while the comparison cloud features the <a href="https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html">bing</a> sentiments dataset. The anticipation index is made up of the inputs where both positive and continuing series words are assigned a score of 1 and negative words, a value of -1. I will continue to refine my scoring as I apply it to books that I have read recently and regretted as well as ones that were delightful. I think it’s interesting to include wordclouds to quickly see what a book may be about and hopefully see my favorite characters present. Using sentiment analysis for mysteries doesn’t make a lot of sense due to the nature of murder, mystery and mayhem, but since this application can be used for any author, it may help vet a future purchase of books that I would prefer to be more positive than negative.</p>
+<iframe width="1000" height="700" src="https://alicia.shinyapps.io/author_search" frameborder="0" style="border:0" allowfullscreen>
+</iframe>
+</div>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
+<ul>
+<li><a href="https://smile.amazon.com/dp/B071K9RT9Z">Text Mining with R: A Tidy Approach</a> by Julia Silge and David Robinson</li>
+<li><a href="https://developers.google.com/books/">Google Books API</a></li>
+<li><a href="https://github.com/aliciatb/mybookq">myBookQ repo</a></li>
+</ul>
+</div>
