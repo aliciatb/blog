@@ -19,7 +19,7 @@ To help me stay up to date on my favorite authors, I have developed a shiny app,
 
 Without further ado, here is the first iteration where I return new books with the default best mystery authors ever. For the sentiment scores I am using the [afinn](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010) sentiments dataset, while the comparison cloud features the [bing](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html) sentiments dataset. The anticipation index is made up of the inputs where both positive and continuing series words are assigned a score of 1 and negative words, a value of -1. I will continue to refine my scoring as I apply it to books that I have read recently and regretted as well as ones that were delightful. I think it's interesting to include wordclouds to quickly see what a book may be about and hopefully see my favorite characters present. Using sentiment analysis for mysteries doesn't make a lot of sense due to the nature of murder, mystery and mayhem, but since this application can be used for any author, it may help vet a future purchase of books that I would prefer to be more positive than negative.
 
-<iframe width="1000" height="700" src="https://alicia.shinyapps.io/author_search" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe width="1100" height="700" src="https://alicia.shinyapps.io/author_search" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 ## Resources & Appreciations
 
