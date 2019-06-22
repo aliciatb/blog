@@ -22,9 +22,9 @@ Skills / Tools {#skills}
 
 - R, Python, Jupyter, Markdown, SQL, Microsoft Power BI, Excel, Tableau, Spark, FME
 
-- Data Analysis, Visualization, Stories, Dashboards, Governance, Democratization, Engineering, Contextualization
+- Data  Analysis, Engineering, Visualization, Stories, Dashboards, Governance, Contextualization
 
-- Scrum, Kanban, Agile Development
+- Agile Development, Scrum, Kanban, Jira
 
 Main
 ================================================================================
@@ -36,7 +36,7 @@ Alicia Brown {#title}
 
 Hi!
 
-I love data, technology and enabling teams to inform decisons and accelerate transparency. I take great joy in using the latest libraries and scalable cloud technologies to retrieve and reshape data to develop delightful and reproducible stories, visualizations, dashboards, shiny apps, reports and solutions.
+I love democratizing data and analytics and enabling teams to use their data and tools to inform decisonmaking and accelerate transparency. I am an agile practicioner who takes great joy in well written stories and delivering value to customers early and often.
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
