@@ -20,11 +20,11 @@ Contact Info {#contact}
 Skills / Tools {#skills}
 --------------------------------------------------------------------------------
 
-- R, Python, Jupyter, Markdown, SQL, Microsoft Power BI, Excel, Tableau, Spark, FME
+- R, Python, Jupyter, Markdown, SQL, Microsoft Power BI, Excel, Tableau, Shiny, Cloud Solutions
 
-- Data  Analysis, Engineering, Visualization, Stories, Dashboards, Governance, Contextualization
+- Data  Analysis, Engineering, Visualization, Storytelling, Governance, Contextualization
 
-- Agile Development, Scrum, Kanban, Jira
+- Agile Development, Scrum, Kanban
 
 Main
 ================================================================================
@@ -36,7 +36,8 @@ Alicia Brown {#title}
 
 Hi!
 
-I love democratizing data and analytics and enabling teams to use their data and tools to inform decisonmaking and accelerate transparency. I am an agile practicioner who takes great joy in well written stories and delivering value to customers early and often.
+- Democratizer of data, analytics and technology
+- Data storyteller and insights explorer
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
@@ -99,8 +100,18 @@ Dallas, TX
 - Supported free online tax platform
 - Managed content on marketing and corporate websites
 
-Notable Projects {data-icon=globe}
+Projects {data-icon=globe}
 --------------------------------------------------------------------------------
+
+### Seattle Data Catalog Health Dashboard
+
+[alicia.data.socrata.com/stories/s/48mh-jv64](https://alicia.data.socrata.com/stories/s/48mh-jv64)
+
+Seattle, WA
+
+2019
+
+For [Tyler Connect 2019](https://github.com/aliciatb/connect#visualizing-your-data-the-power-of-bi) developed a Power BI Dashboard to evaluate the health of datasets by score based on metadata completion.
 
 ### Pierce County Performance Dashboard
 
@@ -144,6 +155,12 @@ Worked with Michigan Department of Treasury / Schools to monitor financial and e
 
 Certifications {data-icon=certificate}
 --------------------------------------------------------------------------------
+
+### AWS Certified Cloud Practitioner
+
+Amazon Web Services
+
+Seattle, WA
 
 ### Certified Scrum Master (CSM®)
 
