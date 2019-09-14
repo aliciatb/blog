@@ -36,8 +36,9 @@ Alicia Brown {#title}
 
 Hi!
 
-- Democratizer of data, analytics and technology
-- Data storyteller and insights explorer
+- Data, analytics and cloud technologist
+- Agile and design thinking practitioner
+- Public sector specialist
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
