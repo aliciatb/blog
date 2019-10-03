@@ -22,7 +22,7 @@ Skills / Tools {#skills}
 
 - R, Python, Jupyter, Markdown, SQL, Microsoft Power BI, Excel, Tableau, Shiny, Cloud Solutions
 
-- Data  Analysis, Engineering, Visualization, Storytelling, Governance, Contextualization
+- Data Engineering, Analysis, Visualization, Storytelling, Governance, Contextualization
 
 - Agile Development, Scrum, Kanban
 
@@ -36,9 +36,9 @@ Alicia Brown {#title}
 
 Hi!
 
-- Data, analytics and cloud technologist
-- Agile and design thinking practitioner
-- Public sector specialist
+- I love data and the opportunity it provides for insights and improved decisons
+- I am the number 1 fan of my customers and colleagues whose public service mission inspires me
+- I practice agile development and design thinking to provide iterative and informed solutions
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
