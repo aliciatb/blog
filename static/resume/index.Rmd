@@ -36,9 +36,9 @@ Alicia Brown {#title}
 
 Hi!
 
-- I love data and the opportunity it provides for insights and improved decisons
-- I am the number 1 fan of my customers and colleagues whose public service mission inspires me
-- I practice agile development and design thinking to provide iterative and informed solutions
+- I love data and the opportunity it provides for insights and decisons
+- I am the #1 fan of my customers whose public service mission inspires me
+- I practice agile development and design thinking to provide iterative solutions
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
@@ -126,7 +126,7 @@ Partnered with departments to identify measurable data to use for analysis of pe
 
 ### Oakland Equity Indicators
 
-https://data.oaklandnet.com/stories/s/brb2-j4ad
+[data.oaklandnet.com/stories/s/brb2-j4ad](https://data.oaklandnet.com/stories/s/brb2-j4ad)
 
 Oakland, CA
 
