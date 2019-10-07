@@ -38,7 +38,7 @@ Hi!
 
 - I love data and the opportunity it provides for insights and decisons
 - I am the #1 fan of my customers whose public service mission inspires me
-- I practice agile development and design thinking to provide iterative solutions
+- Agile and design thinking practitioner
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
