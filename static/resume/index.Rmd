@@ -104,15 +104,15 @@ Dallas, TX
 Projects {data-icon=globe}
 --------------------------------------------------------------------------------
 
-### Seattle Data Catalog Health Dashboard
+###  California State Auditor's Local Government High-Risk Dashboard
 
-[alicia.data.socrata.com/stories/s/48mh-jv64](https://alicia.data.socrata.com/stories/s/48mh-jv64)
+[highriskcities.auditor.ca.gov](https://highriskcities.auditor.ca.gov)
 
-Seattle, WA
+Sacramento, CA
 
 2019
 
-For [Tyler Connect 2019](https://github.com/aliciatb/connect#visualizing-your-data-the-power-of-bi) developed a Power BI Dashboard to evaluate the health of datasets by score based on metadata completion.
+Dashboard to identify cities that could be facing fiscal challenges by assessing their levels of risk using various financial indicators.
 
 ### Pierce County Performance Dashboard
 
