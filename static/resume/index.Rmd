@@ -36,9 +36,9 @@ Alicia Brown {#title}
 
 Hi!
 
-- I love data and the opportunity it provides for insights and decisons
-- I am the #1 fan of my customers whose public service mission inspires me
-- Agile and design thinking practitioner
+- Data and Analytics Democratizer
+- Metadata Standards and Data Governance Advocate
+- Agile and Design Thinking Practitioner
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
