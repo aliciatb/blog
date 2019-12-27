@@ -15,7 +15,7 @@ output:
 ---
 # Hi
 
-A brief review and relection of 2019 contributions.
+A brief review and reflection of 2019 contributions.
 
 # Q1 - Connecting with customers
 
@@ -37,7 +37,7 @@ In addition to regular client architecting work, I partnered with some of my fav
 
 As a data analyst I have spent a lot of time focusing on the cleaning, reshaping, enrichment and visualization of data on dashboards. However, over the last year, my colleagues and I have been consumed performing audits of customer domains to understand their current state, and needed a way to communicate our findings to many audiences. Until pRoven otheRwise, I am all in on using RMarkdown to develop the most delightful documents with code.
 
-Much of my work was inspired by the [RStudio Conference 2019](https://resources.rstudio.com/rstudio-conf-2019) in lovely Austin where I had the opportunity to learn about all kinds of data communication analysis possibilities along with my colleague, [Ryan](https://github.com/ryan-hall), which we chronicled for our team in this [trip report](https://rstudio-2019-trip-report.netlify.com/.
+Much of my work was inspired by the [RStudio Conference 2019](https://resources.rstudio.com/rstudio-conf-2019) in lovely Austin where I had the opportunity to learn about all kinds of data communication analysis possibilities along with my colleague, [Ryan](https://github.com/ryan-hall), which we chronicled for our team in this [trip report](https://rstudio-2019-trip-report.netlify.com).
 
 ## A [blog](https://msaliciabrown.com/) is born!
 
