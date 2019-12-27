@@ -51,9 +51,9 @@ Seattle, WA
 
 present - 2018
 
-- Partner with public sector agencies and governments to share their data within their organization and community for informed decision-making and transparency
-- Empower the discovery of insights in data by teams via Data Science and Business Intelligence Tools and Programming Languages (Power BI, Tableau, R, Python, SQL, Excel, Power Query)
-- Provide guidance on establishing strong data programs to ensure the integrity, availability and accessibility of data
+- Design data programs and automated integration strategies for clients
+- Develop solutions to bridge gaps between sales, customer success and product development teams
+- Build scalable data products to provide client insights about their community
 
 ### Senior Data Analyst
 
@@ -63,7 +63,8 @@ Seattle, WA
 
 2018 - 2015
 
-- Consulted on best practices on Data Governance, Metadata, Standards and Quality
+- Provide guidance for best practices on Data Governance, Metadata, Standards, Quality
+- Empowered the discovery of insights in data by teams via Data Science and Business Intelligence Tools and Programming Languages (Power BI, Tableau, R, Python, SQL, Excel, Power Query)
 - Developed custom ETL (Extract-Transform-Load) for multiple client tools and source systems
 - Enabled the automation of data retrieval from external APIs for tracking performance across common indicators and benchmarking against peers
 
@@ -132,7 +133,7 @@ Oakland, CA
 
 2018
 
-Created interactive report featuring 72 indicators across six themes: Economy, Education, Public Health, Housing, Public Safety and Neighborhood and Civic Life to score how equitable Oakland is between groups with the highest and lowest values for a given indicator.
+Created interactive report featuring 72 indicators across six themeso score how equitable Oakland is between groups with the highest and lowest values for a given indicator.
 
 ### Neighborhood Data for Social Change Platform
 
