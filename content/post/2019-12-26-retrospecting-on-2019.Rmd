@@ -13,82 +13,81 @@ output:
   blogdown::html_page:
     toc: true
 ---
-A brief review of 2019 contributions before leaping into the new year and new adventures.
+# Hi
 
-# Inspiration
-January kicked off with a bang at the [RStudio Conference 2019](https://resources.rstudio.com/rstudio-conf-2019) in lovely Austin where I had the opportunity to learn about all kinds of data communication analysis possibilities along with my colleague, [Ryan](https://github.com/ryan-hall), which we chronicled for our team in this [trip report](https://rstudio-2019-trip-report.netlify.com).
+A brief review and relection of 2019 contributions.
 
-# Contributions
-
-## Q1 - Connecting with customers
+# Q1 - Connecting with customers
 
 In addition to regular client architecting work, I partnered with some of my favorite clients and colleagues to develop content and labs for [Tyler Connect 2019](https://github.com/aliciatb/connect).
 
-### Meta Analysis and Dashboarding
+## Meta Analysis and Dashboarding
 
 [Paul Alley](https://www.linkedin.com/in/paulalleydatadriven) and I developed dynamic dashboards using Power BI and Shiny that consume multiple APIs to provide insights and overall health of the City of Seattle Open Data catalog. More on our session [Visualizing your data, The Power of BI](https://github.com/aliciatb/connect#visualizing-your-data-the-power-of-bi) in this [post](https://msaliciabrown.com/2019/04/21/visualizing-and-benchmarking-open-data-catalogs/).
 
-### Flexing R Dashboards
+## Flexing R Dashboards
 
-[Justin Baker](https://twitter.com/askjustinbaker), my colleage [Ryan](https://github.com/ryan-hall) teamed up to teach the basics of R and show how easy it is to create commpelling economic reports in [R You Ready to Learn R Socrata](https://github.com/aliciatb/connect#r-you-ready-to-learn-r-socrata).
+[Justin Baker](https://twitter.com/askjustinbaker), my colleage [Ryan](https://github.com/ryan-hall) teamed up to teach the basics of R and show how easy it is to create compelling economic reports in [R You Ready to Learn R Socrata](https://github.com/aliciatb/connect#r-you-ready-to-learn-r-socrata).
 
-### Publishing all things with Python
+## Publishing all things with Python
 
-[Roger Sliva](https://github.com/rsliva) and colleagues [Ryan](https://github.com/ryan-hall) and [Chris](https://github.com/cmsetzer) and I shared examples and data engineering use cases at Mesa, Arizona to [Create and Update Data with Python & APIs](https://github.com/aliciatb/connect#create-and-update-data-with-python--apis). 
+[Roger Sliva](https://github.com/rsliva) and colleagues [Ryan](https://github.com/ryan-hall) and [Chris](https://github.com/cmsetzer) and I shared examples and data engineering use cases at Mesa AZ to [Create and Update Data with Python & APIs](https://github.com/aliciatb/connect#create-and-update-data-with-python--apis). 
 
-## Q2 - Communicating well with data
+# Q2 - Communicating well with data
 
 As a data analyst I have spent a lot of time focusing on the cleaning, reshaping, enrichment and visualization of data on dashboards. However, over the last year, my colleagues and I have been consumed performing audits of customer domains to understand their current state, and needed a way to communicate our findings to many audiences. Until pRoven otheRwise, I am all in on using RMarkdown to develop the most delightful documents with code.
 
-### A [blog](https://msaliciabrown.com/) is born!
+Much of my work was inspired by the [RStudio Conference 2019](https://resources.rstudio.com/rstudio-conf-2019) in lovely Austin where I had the opportunity to learn about all kinds of data communication analysis possibilities along with my colleague, [Ryan](https://github.com/ryan-hall), which we chronicled for our team in this [trip report](https://rstudio-2019-trip-report.netlify.com/.
+
+## A [blog](https://msaliciabrown.com/) is born!
 
 Inspired by [Yihui Xie](https://yihui.org/en/)'s presentation, [pagedown: Creating beautiful PDFs with R Markdown and CSS](https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css) and [David Robinson](https://twitter.com/@drob)'s talk about [The unreasonable effectiveness of public work](https://resources.rstudio.com/rstudio-conf-2019/the-unreasonable-effectiveness-of-public-work) and with further guidance by the book, [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/), I launched my blog, https://msaliciabrown.com.
 
-### Word, reports with data and friendly language for all
+## Word, reports with data and friendly language for all
 
 While I have not yet implemented parameters in my reports, [Mike K Smith](https://twitter.com/@mikeksmith)'s presentation on [The lazy and easily distracted report writer: Using rmarkdown and parameterised reports](https://resources.rstudio.com/rstudio-conf-2019/the-lazy-and-easily-distracted-report-writer-using-rmarkdown-and-parameterised-reports) inspired my first RMarkdown generated Word client-facing data analysis reports.
 
-### Thematic stories with 3rd party data
+## Thematic stories with 3rd party data
 
 With the help of my colleague and fellow architect, [Alex](https://www.linkedin.com/in/alexkrughoff), we crafted recipes around common topics that governments care about like Economic Development and Education. The following Socrata stories included data for Median Income, Employment Status, Median Home Value, and School Enrollment from the [Census](https://www.census.gov/programs-surveys/acs) and GDP data from the [BEA](https://www.bea.gov/data/gdp/gross-domestic-product).
 
 <iframe src="https://alicia-scgc-1.demo.socrata.com/stories/s/Economic-Development/frhu-9kr6//tile" style="width:450px;height:345px;background-color:transparent;overflow:hidden;" scrolling="no" frameborder="0"></iframe><iframe src="https://alicia-scgc-1.demo.socrata.com/stories/s/Education/2khu-sdkh//tile" style="width:450px;height:345px;background-color:transparent;overflow:hidden;" scrolling="no" frameborder="0"></iframe>
 
-## Q3 - Building useful things
+# Q3 - Building useful things
 
 As a Solution Archictect, I often get the chance to bridge the gap between existing product features and temporary ones that serve to solve a specific problem as soon as possible for a customer on behalf of the Customer Success team and in collaboration with the Product Development team to ensure roadmap alignment. 
 
 As an avid reader and a very loyal one to my favorite authors, I often worry about not knowing when the latest installment in a series will be published and fear droughts of new novels. With the demise of my local Seattle Mystery Bookstore a few years ago and my laziness to keep up with their zine, https://mysteryish.wordpress.com/, I have dabbled first in ruby and now shiny to inform me of new books.
 
-### Powering NYC’s annual report with all the analytics data
+## Powering NYC’s annual report with all the analytics data
 
 New York City is all in on Open Data and produces an annual report every year on the state of their program. This summer they requested many numbers around their catalog from size of data to utilitation by asset type and method of consumption. Due to the urgency of the data need, I created scripts to gather much of this data in support of the [2019 Open Data for All Report](https://opendata.cityofnewyork.us/wp-content/uploads/2019/09/2019_OpenDataForAllReport.pdf).
 
-### And again for lots of Federal insights
+## And again for lots of Federal insights
 
 Once one does one thing for one customer, inevitably the word gets out, and I reused script to gather similar data for many of our Federal customers before year end (and product analytics release).
 
-### Queueing up my next reads with an anticipation score
+## Queueing up my next reads with an anticipation score
 
 For both fun and desperate need, I developed a backlog on [github ](https://github.com/aliciatb/mybookq/projects) to help me develop a shiny app that queries the free [google books api](https://developers.google.com/books) querying my favorite authors and also use the [tidytext](https://www.tidytextmining.com/) package to score my likelihood of enjoying their latest books based on coziness and continuity of characters. More on all that in this [post](https://msaliciabrown.com/2019/06/02/judging-a-book-by-its-description/).
 
 <iframe width="1000" height="700" src="https://alicia.shinyapps.io/author_search" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-## Q4 - Unleashing even more data
+# Q4 - Unleashing even more data
 
 One of my primary initiatives has been to help craft reusable scripts to gather valuable 3rd party data for our clients to support their performance programs and break the wheel that my team has continually sought to recreate year after year, client after client, by technology after technology. Luckily, my impatient and very talented colleague [Chris](https://github.com/cmsetzer) packaged and heavily refactored this code into the remarkable python library [autocensus](https://github.com/socrata/autocensus).
 
 However, Census data is just the beginning and at most provides annual estimates for populations big enough to safely estimate. Even more data is available programmatically via APIs. In the coming year I intend to dive deeper into the following sources and their points of greatness and pain, and the many lessons learned.
 
-### BEAutiful economic analysis API
+## BEAutiful economic analysis API
 
 Understanding the economic contributions of a geography can be gleaned from measures like the Gross Domestic Product and through engagements with San Berndino county (largest county in the US), I had the opportunity to interact with the [BEA API](https://apps.bea.gov/API/signup/index.cfm) and I must say, that it has been a complete pleasure. Once a free key is obtained, there are no daily limits to it. Great [documentation](https://apps.bea.gov/api/_pdf/bea_web_service_api_user_guide.pdf) exists and when errors are returned, they include helpful messages about the expected parameters for a particular call. UNPRECENDENTED!
 
-### Untangling a BLS mess
+## Untangling a BLS mess
 
 The [BLS API](https://www.bls.gov/developers/home.htm) provides all kinds of great data at cadences as frequent as a month for many topics and I am thankful for its existence. However, it throttles requests at 500 a day which can be hit quickly if gathering lots of historical data for multiple geographies and surveys. I do appreciate the property latest=true very much.
 
-### Making sense of the Census
+## Making sense of the Census
 
 I love the Census and admire the work they have done to revamp all the things. As an optimistic coder though I have run into peculiarities downstream of the data building visualizations and discovered things like a lack of an esimtate for a given entity and variable and year that returns a value of -666,666,666 and occasionally from year to year a variable code may change in some manner. More to come on this subject!
 
