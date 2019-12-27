@@ -13,9 +13,9 @@ output:
   blogdown::html_page:
     toc: true
 ---
-# Hi
+# Merry New Year!
 
-A brief review and reflection of 2019 contributions.
+As 2019 comes to a close, I thought it would be helpful to review and reflect on both professional and personal contributions before leaping into the new year and adventures.
 
 # Q1 - Connecting with customers
 
@@ -27,7 +27,7 @@ In addition to regular client architecting work, I partnered with some of my fav
 
 ## Flexing R Dashboards
 
-[Justin Baker](https://twitter.com/askjustinbaker), my colleage [Ryan](https://github.com/ryan-hall) teamed up to teach the basics of R and show how easy it is to create compelling economic reports in [R You Ready to Learn R Socrata](https://github.com/aliciatb/connect#r-you-ready-to-learn-r-socrata).
+[Justin Baker](https://twitter.com/askjustinbaker), my colleage [Ryan](https://github.com/ryan-hall) and I teamed up to teach the basics of R and show how easy it is to create compelling economic reports in [R You Ready to Learn R Socrata](https://github.com/aliciatb/connect#r-you-ready-to-learn-r-socrata).
 
 ## Publishing all things with Python
 
@@ -55,9 +55,9 @@ With the help of my colleague and fellow architect, [Alex](https://www.linkedin.
 
 # Q3 - Building useful things
 
-As a Solution Archictect, I often get the chance to bridge the gap between existing product features and temporary ones that serve to solve a specific problem as soon as possible for a customer on behalf of the Customer Success team and in collaboration with the Product Development team to ensure roadmap alignment. 
+As a Solution Architect, I often get the chance to bridge the gap between existing product features and temporary ones that serve to solve a specific problem as soon as possible for a customer on behalf of the Customer Success team and in collaboration with the Product Development team to ensure roadmap alignment. 
 
-As an avid reader and a very loyal one to my favorite authors, I often worry about not knowing when the latest installment in a series will be published and fear droughts of new novels. With the demise of my local Seattle Mystery Bookstore a few years ago and my laziness to keep up with their zine, https://mysteryish.wordpress.com/, I have dabbled first in ruby and now shiny to inform me of new books.
+As an avid reader and a very loyal one to my favorite authors, I often worry about not knowing when the latest installment in a series will be published and fear droughts of new novels. With the demise of my local Seattle Mystery Bookstore a few years ago and my inability to keep up with their zine, https://mysteryish.wordpress.com/, I have dabbled first in ruby and now shiny to inform me of new books.
 
 ## Powering NYC’s annual report with all the analytics data
 
@@ -69,7 +69,7 @@ Once one does one thing for one customer, inevitably the word gets out, and I re
 
 ## Queueing up my next reads with an anticipation score
 
-For both fun and desperate need, I developed a backlog on [github ](https://github.com/aliciatb/mybookq/projects) to help me develop a shiny app that queries the free [google books api](https://developers.google.com/books) querying my favorite authors and also use the [tidytext](https://www.tidytextmining.com/) package to score my likelihood of enjoying their latest books based on coziness and continuity of characters. More on all that in this [post](https://msaliciabrown.com/2019/06/02/judging-a-book-by-its-description/).
+For both fun and desperate need, I created a backlog on [github](https://github.com/aliciatb/mybookq/projects) to help me develop a shiny app that queries the free [google books api](https://developers.google.com/books) querying my favorite authors and also use the [tidytext](https://www.tidytextmining.com/) package to score my likelihood of enjoying their latest books based on coziness and continuity of characters. More on all that in this [post](https://msaliciabrown.com/2019/06/02/judging-a-book-by-its-description/).
 
 <iframe width="1000" height="700" src="https://alicia.shinyapps.io/author_search" frameborder="0" style="border:0" allowfullscreen></iframe>
 
