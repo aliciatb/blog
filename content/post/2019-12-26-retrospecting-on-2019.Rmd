@@ -88,9 +88,7 @@ Once one does one thing for one customer, inevitably the word gets out, and I re
 
 As an avid reader and a very loyal one to my favorite authors, I often worry about not knowing when the latest installment in a series will be published and fear droughts of new novels. With the demise of my local Seattle Mystery Bookstore a few years ago and my inability to keep up with their [zine](https://mysteryish.wordpress.com), I have dabbled first in ruby and now shiny to inform me of new books.
 
-For both fun and desperate need, I created a backlog on [github](https://github.com/aliciatb/mybookq/projects) to help me develop a shiny app that queries the free [google books api](https://developers.google.com/books) querying my favorite authors and also use the [tidytext](https://www.tidytextmining.com/) package to score my likelihood of enjoying their latest books based on coziness and continuity of characters. More on all that in this [post](https://msaliciabrown.com/2019/06/02/judging-a-book-by-its-description/).
-
-<iframe width="1000" height="700" src="https://alicia.shinyapps.io/author_search" frameborder="0" style="border:0" allowfullscreen></iframe>
+For both fun and desperate need, I created a backlog on [github](https://github.com/aliciatb/mybookq/projects) to help me develop a shiny app that queries the free [google books api](https://developers.google.com/books) querying my favorite authors and also use the [tidytext](https://www.tidytextmining.com/) package to score my likelihood of enjoying their latest books based on coziness and continuity of characters. More on [mybookq.com](https://mybookq.com/) that in this [post](https://msaliciabrown.com/2019/06/02/judging-a-book-by-its-description/).
 
 ## Q4 - Unleashing even more Data
 
