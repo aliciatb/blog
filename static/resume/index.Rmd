@@ -51,7 +51,7 @@ present - 2018
 
 - Architect solutions for clients by capturing business requirements from departments and design partners
 - Develop data applications to bridge gaps between sales, customer success and product development teams
-- Provide guidannce to team and clients on developing reusable and scalable solutions
+- Provide guidance to team and clients on developing reusable and scalable solutions
 
 ### Senior Data Analyst
 
