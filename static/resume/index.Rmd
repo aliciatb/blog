@@ -34,11 +34,9 @@ Alicia Brown {#title}
 
 ### 
 
-Hi!
-
 - Data and Analytics Democratizer
-- Metadata Standards and Data Governance Advocate
-- Agile and Design Thinking Practitioner
+- 5+ years consulting experience for governament progams (courts and justice, public safety, social equity, finance)
+- 10+ years web and data application development experience
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
@@ -51,9 +49,9 @@ Seattle, WA
 
 present - 2018
 
-- Design data programs and automated integration strategies for clients
-- Develop solutions to bridge gaps between sales, customer success and product development teams
-- Build scalable data products to provide client insights about their community
+- Architect solutions for clients by capturing business requirements from departments and design partners
+- Develop data applications to bridge gaps between sales, customer success and product development teams
+- Provide guidannce to team and clients on developing reusable and scalable solutions
 
 ### Senior Data Analyst
 
@@ -63,7 +61,7 @@ Seattle, WA
 
 2018 - 2015
 
-- Provide guidance for best practices on Data Governance, Metadata, Standards, Quality
+- Evangelize best practices on Data Governance, Metadata, Standards, Quality, Privacy and Security
 - Empowered the discovery of insights in data by teams via Data Science and Business Intelligence Tools and Programming Languages (Power BI, Tableau, R, Python, SQL, Excel, Power Query)
 - Developed custom ETL (Extract-Transform-Load) for multiple client tools and source systems
 - Enabled the automation of data retrieval from external APIs for tracking performance across common indicators and benchmarking against peers
