@@ -41,13 +41,21 @@ Alicia Brown {#title}
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
+### Solution Architect
+
+King County (KCIT), Data Services
+
+Seattle, WA
+
+present - 2020
+
 ### Technical Solution Architect
 
 Socrata / Tyler Tech - Data and Insights Division
 
 Seattle, WA
 
-present - 2018
+2020 - 2018
 
 - Architect solutions for clients by capturing business requirements from departments and design partners
 - Develop data applications to bridge gaps between sales, customer success and product development teams
@@ -97,8 +105,7 @@ Dallas, TX
 
 2001 - 2000
 
-- Supported free online tax platform
-- Managed content on marketing and corporate websites
+- Content publisher marketing and corporate websites
 
 Projects {data-icon=globe}
 --------------------------------------------------------------------------------
