@@ -1,0 +1,108 @@
+---
+title: dplyr::top_n(rstudio::conf, 5, 2020)
+author: Alicia Brown
+date: '2020-02-01'
+slug: rstudio-conf-top-n-5-2020
+categories:
+  - education
+tags:
+  r
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+# San Francisco is awesome!
+
+It was a no brainer in 2019 after attending the [Austin conference](https://rstudio-2019-trip-report.netlify.com/) to immediately register for the 2020 conference in San Francisco, a short jaunt from Seattle. Upon arriving, I took advantage of the great location at Union Station and nearby [Chinatown](http://www.sanfranciscochinatown.com/) to do a little shopping. I also was excited about the possibility of finding anything Baby Yoda from the Disney store and triumphantly enjoyed the spoils of my opportunistic shopping foray at the delightful [Sam's Cable Car Lounge](https://samscablecarlounge.com/) that not only serves great drinks but provides nuts and popcorn. There was a good vibe to the city days before the Super Bowl too and the nightime red and gold lights on City Hall was a nice touch.
+
+![](/images/rstudio-2020/sanfRan_collage.jpg){width=90%}
+
+# My conference top 5 sessions
+
+I have attended the past 2 conferences and thought there was a different tone to each year. 2019 felt very academic while 2020 seemed more diverse in topics and presenters. At the kickoff happy hour I met a few folks from governnment who had missed the prior year due to the shutdown, so that might have been part of why 2019 felt so different.
+
+My top 5 
+
+```{r my_curriculum, echo=F, message=F, warning=F}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+
+names <- c("Object of type ‘closure’ is not subsettable",
+           "Value in Data Science Beyond Models in Production",
+           "RMarkdown Driven Development",
+           "Of Teacups, Giraffes, & R Markdown",
+           "R + Tidyverse in Sports")
+
+categories <- c("Keynote",
+           "Organizational Thinking",
+           "Workflow",
+           "Education",
+           "Case Study")
+
+speakers <- c("Jenny Bryan",
+              "Eduardo Ariño de la Rubia",
+              "Emily Riederer",
+              "Desiree De Leon",
+              "Namita Nandakumar")
+
+social_media_links <- c("@JennyBryan",
+                        "@earino",
+                        "@EmilyRiederer",
+                        "@dcossyle",
+                        "@nnstats")
+
+videos <- c("object-of-type-closure-is-not-subsettable-jenny-bryan",
+            "value-in-data-science-beyond-models-in-production-eduardo-arino-de-la-rubia",
+            "rmarkdown-driven-development-emily-riederer",
+            "of-teacups-giraffes-and-r-markdown-desiree-de-leon",
+             "r-tidyverse-in-sports-namita-nandakumar")
+
+couRses <- tibble(
+  name = names,
+  speaker = speakers,
+  category = categories,
+  link = social_media_links,
+  video = videos
+)
+
+summary <- couRses %>%
+  select(name, speaker, category)
+
+twitter_base_url <- "http://twitter.com/"
+rstudio_base_url <- "https://resources.rstudio.com/rstudio-conf-2020/"
+
+kable(summary, format = "markdown") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+## Debugging should be Delightful
+
+I love keynotes and the calls to action they often inspire in me. [Jenny's](http://twitter.com/@JennyBryan) [talk](https://resources.rstudio.com/rstudio-conf-2020/object-of-type-closure-is-not-subsettable-jenny-bryan) was no exception and a plea on behalf of humanity for kindness to accompany exception handling messages so that our minds don't have to immediately shut down when presented with bewildering language like [object of type closure is not subsettable](https://www.google.com/search?q=object+of+type+closure+is+not+subsettable).
+
+![](/images/rstudio-2020/error_messages_for_humans.jpg){width=90%}
+
+## It's about providing service and even more so self-service
+
+I was super intrigued by [Eduardo's](http://twitter.com/@earino) [session](https://resources.rstudio.com/rstudio-conf-2020/value-in-data-science-beyond-models-in-production-eduardo-arino-de-la-rubia) and it totally resonated with my own experience as one of the mythical webmasters from the 2000s whose peak dropped at the intersection of data science and analytics. He posed the question of how the data scientist role persists and provides value as data engineers and dev ops deploys data science models that require minor tweaks of parameters. His challenge to focus on deliverying value through the development of 
+
+![](/images/rstudio-2020/how_data_adds_value.jpg){width=90%}
+
+## RMarkdown Driven Development (RmdDD) is possible and is happening!
+
+I love notebooks! Last year it was delightful to discover [Yihui Xie's post](https://yihui.org/en/2018/09/notebook-war/) in defense of Jupyter notebooks. And this year I was galvanize by [Emily Riederer's](http://twitter.com/@EmilyRiederer) [session](https://resources.rstudio.com/rstudio-conf-2020/rmarkdown-driven-development-emily-riederer) on RMarkdown Driven Development. I love starting work with a notebook because of how easy it is to explore the data before committing to a solution, but recognize the difficulty colleagues may have the artifacts because they are ready to just execute the solution and not worry about reviewing the data each time they just need to get something done. Seeing how Emily evolves RMarkdown to R package inspires me to not dismiss notebooks because they can get messy, but commit myself to develop them further into disciplined code packages. Love the [blog post](https://emilyriederer.netlify.app/post/rmarkdown-driven-development/) that led to this talk.
+
+![](/images/rstudio-2020/RmdDD_endpoints.jpg){width=90%}
+
+## Teaching should be Delightful and giraffe-full!
+
+I was enchanted the first time I heard about the [Teacup giraffes](https://emilyriederer.netlify.app/post/rmarkdown-driven-development/) and looked forward to this [session](https://resources.rstudio.com/rstudio-conf-2020/of-teacups-giraffes-and-r-markdown-desiree-de-leon). It was as charming and informative as I had hoped and I appreciated their design for communication as well as resources to develop content like [Pro Create](https://procreate.art/) and [Unsplash.com](https://unsplash.com/). As a technologist I often have to think about how to communicate clearly using language and examples that resonate with all audiences. I love the world that [Desirée De Leon](http://twitter.com/@dcossyle) and Hasse Wallum have shared with us.
+
+![](/images/rstudio-2020/variance_with_giraffes.jpg){width=90%}
+
+## Sports for the Win!
+
+There were several great sports-centric sessions this year and I think I hit everyone of them and love that women dominated this topic. [Namita's](http://twitter.com/@nnstats) [session](https://resources.rstudio.com/rstudio-conf-2020/r-tidyverse-in-sports-namita-nandakumar) was a joyful exploration in hockey goal-scoring using the [Tidyverse](https://www.tidyverse.org/). The intersection of watching sports and data analysis to tease out possible reasons for success is a noble venture that I admire and love to embark on myself, and I thought this talk totally demonstrated how to get started fearlessly. As a Seattlite and future hockey fan, can't wait to see her impact bringing more sports joy via my hoped for  [Kraken](https://twitter.com/NHLSeattle_/status/1233504328792469504).
+
+![](/images/rstudio-2020/what_is_hockey.jpg){width=90%}
