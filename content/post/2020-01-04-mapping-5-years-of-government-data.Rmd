@@ -1,0 +1,16 @@
+---
+title: Mapping 5 years of Government Data
+author: Alicia Brown
+date: '2020-01-04'
+slug: mapping-5-years-of-government-data
+categories:
+  - maps
+  - government
+  - data
+  - consulting
+tags: []
+---
+
+This January I celebrate 5 years consulting with government agencies all across the country and even in Canada and the Netherlands! Below is a map I made of customers by braod topic and type of data product. At one time I believe I was the preeminent data consultant on legal cannabis data with customers on both coasts!
+
+<iframe width="800" height="600" src="https://alicia.data.socrata.com/dataset/Customers-by-State/bkwg-akc3/embed?width=800&height=600" frameborder="0" style="border:0" allowfullscreen></iframe>

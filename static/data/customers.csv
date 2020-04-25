@@ -1,0 +1,51 @@
+Name,Topic,URL,City,State,Location,Zip Codes,States 21basic,Cb 2015 Us County 20m,County (500k)_from_3uux_z8aa
+"Albany, New York - Police Department",public safety,https://data.albanyny.gov/,Albany,NY,POINT (-73.755418 42.651242),2020,21,1635,1635
+"San Fernando, California",finance,,San Fernardino,CA,POINT (-122.42016799999999 37.780080000000005),28852,25,364,364
+"San Bernarndino County, California",performance,https://data.communityvitalsigns.org/,Riverside,CA,POINT (-117.37702499999999 33.980534),12168,25,1964,1964
+"Burleigh, Nebraska",finance,,Burleigh,ND,POINT (-100.4615046 46.9583253),2915,5,536,536
+Department of Justice - Office of Justice Programs,justice,,Washington,DC,POINT (-77.019912 38.892062),5324,29,136,136
+"Mesa, Arizona",open data,https://data.mesaaz.gov,Mesa,AZ,POINT (-111.831498 33.41514),2958,37,2711,2711
+"Oakland, California",equity,https://data.oaklandnet.com/stories/s/Oakland-Equity-Indicators/brb2-j4ad/,Oakland,CA,POINT (-122.27248000000002 37.804828),1489,25,779,779
+"Weatherford, Texas",finance,,Weatherford,TX,POINT (-97.814529 32.757462000000004),10665,41,68,68
+California Office of Emergency Services,public safety,https://dashboarddata.caloes.ca.gov/stories/s/4pit-jp73,Sacramento,CA,POINT (-121.50012 38.582087),12878,25,795,795
+NOAA - Office of the Chief Administrative Office,truck,https://noaa-ocao.data.socrata.com/,Silver Spring,MD,POINT (-77.028121 38.996088),2324,27,556,556
+"College Station, Texas",finance,https://data.cstx.gov/,College Station,TX,POINT (-96.32585 30.622372999999996),23553,41,1297,1297
+"Pierce County, Washington",performance,https://open.piercecountywa.gov/,Tacoma,WA,POINT (-122.44153000000001 47.25308),12600,2,2628,2628
+Data Coalition,finance,,Washington,DC,POINT (-77.019912 38.892062),5324,29,136,136
+"Fort Lauderdale, Florida",open data,https://fortlauderdale.data.socrata.com/,Fort Lauderdale,FL,POINT (-80.143586 26.124163),23784,49,1519,1519
+"Bellevue, Nebraska",finance,,Bellevue,NE,POINT (-95.90025 41.151057),18620,20,731,731
+"Auburn, Washington",open data,https://data.auburnwa.gov/stories/s/cahb-uhn2,Auburn,WA,POINT (-122.22575000000002 47.307522),31845,2,2542,2542
+"Colorado Springs, Colorado",finance,https://coloradosprings.budget.socrata.com/,Colorado Springs,CO,POINT (-104.819798 38.835224),10809,31,774,774
+"Hancock County, Ohio - Family Resource Center",justice,,Findlay,OH,POINT (-83.6503 41.039123),12734,26,2223,2223
+Massachusetts Cannabis Control Commision,marijuana,https://opendata.mass-cannabis-control.com,Worcester,MA,POINT (-71.802278 42.262073),22810,18,2255,2255
+Census,demographics,,Silver Spring,MD,POINT (-77.028121 38.996088),2324,27,556,556
+"Corinth, Texas",finance,,Corinth,TX,POINT (-97.065341 33.154173),20562,41,679,679
+Texas Department of Information Resources,open data,https://data.texas.gov,Austin,TX,POINT (-97.746598 30.264979),2856,41,1735,1735
+Connecticut Treasurer,finance,https://data.ct.gov/,Hartford,CT,POINT (-72.673356 41.765775),15050,15,2648,2648
+"Mount Pleasant, South Carolina",finance,http://budget.empower.tompsc.com/,Mount Pleasant,SC,POINT (-79.8765 32.790438),26783,,1951,1951
+"Costa Mesa, California",finance,https://openbudget.costamesaca.gov/,Costa Mesa,CA,POINT (-117.90476500000001 33.663857),12557,25,725,725
+"Dupont, Washington",public safety,,Dupont,WA,POINT (-122.630533 47.097424),11123,2,2628,2628
+"Evanston, Illinois",open data,https://cityofevanston.data.socrata.com/,Evanston,IL,POINT (-87.68786700000001 42.052157),26293,28,2135,2135
+Michigan Office of Good Government,performance,https://data.michigan.gov,Lansing,MI,POINT (-84.553927 42.733625),21602,50,2956,2956
+"St Paul, Minnesota",demographics,https://information.stpaul.gov,St Paul,MN,POINT (-93.094281 44.943719),13684,11,2733,2733
+Iowa,demographics,https://mydata.iowa.gov,Des Moines,IA,POINT (-93.74659990000002 41.5665849),22209,17,2118,2118
+"Los Angeles, California",parking,https://data.lacity.org/,Los Angeles,CA,POINT (-118.243344 34.052238),22728,25,2084,2084
+"Suwanee, Georgia",finance,http://budget.suwanee.com,Suwanee,GA,POINT (-84.065935 34.058175),23995,45,1187,1187
+"Albany, Oregon",finance,http://budget.cityofalbany.net,Albany,OR,POINT (-123.090339 44.618595),30070,13,1196,1196
+"RDW, Netherlands",parking,https://opendata.rdw.nl/,Veendam,NL,POINT (6.8751 53.1063),,,,
+"Virgina Beach, Virginia",finance,,Virginia Beach,VA,POINT (-75.978 36.8529),2801,35,1132,1132
+"Calgary, Alberta",open data,https://data.calgary.ca/,Calgary,AB,POINT (-114.0719 51.044700000000006),,,,
+Michigan Treasury Department - MiCommunity Financials,insights,http://micommunityfinancials.michigan.gov,Lansing,MI,POINT (-84.553927 42.733625),21602,50,2956,2956
+"Cedar Hill, Texas",finance,,Cedar Hill,TX,POINT (-96.954231 32.589903),183,41,1994,1994
+USC - Neighborhood Data for Social Change,insights,https://ladata.myneighborhooddata.org,Los Angeles,CA,POINT (-118.243344 34.052238),22728,25,2084,2084
+Washington State Liquor and Cannabis Board,marijuana,https://data.lcb.wa.gov/stories/s/WSLCB-Marijuana-Dashboard/hbnp-ia6v/,Olympia,WA,POINT (-122.900827 47.035534),5275,2,1256,1256
+Massachusetts Comptroller,finance,https://www.macomptroller.org/cthru,Boston,MA,POINT (-71.056742 42.358894),9658,18,1685,1685
+California State Auditor - High Risk Dashboard,insights,https://highriskcities.auditor.ca.gov/,Sacramento,CA,POINT (-121.50012 38.582087),12878,25,795,795
+Department of Treasury,finance,,Washington,DC,POINT (-77.019912 38.892062),5324,29,136,136
+Michigan Treasury - MiSchools,insights,http://mischoolfinancials.michigan.gov/,Lansing,MI,POINT (-84.553927 42.733625),21602,50,2956,2956
+"Richmond, California - Police Department",public safety,https://opendata.ci.richmond.ca.us/,Richmond,CA,POINT (-122.34314599999999 37.93786500000001),1506,25,2512,2512
+"Eugene, Oregon",finance,https://budget.eugene-or.gov/,Eugene,OR,POINT (-123.091195 44.052153),30452,13,2096,2096
+Association of Municipalities of Ontario - Gas Tax Awards,energy,https://amo.data.socrata.com/,Toronto,ON,POINT (-79.3832 43.6532),,,,
+World Bank - Sudan Evidence Based Programs,demographics,,Washington,DC,POINT (-77.019912 38.892062),5324,29,136,136
+"Ramsey County, Minnesota",performance,https://opendata.ramseycounty.us/,St Paul,MN,POINT (-93.094281 44.943719),13684,11,2733,2733
+NOAA Fisheries - Alaska,fish,https://noaa-fisheries-afsc.data.socrata.com/,Seattle,WA,POINT (-122.33028000000002 47.603229),18379,2,2542,2542
