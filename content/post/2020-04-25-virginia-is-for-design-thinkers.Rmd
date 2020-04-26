@@ -1,0 +1,33 @@
+---
+title: Virginia is for Design Thinkers!
+author: Alicia Brown
+date: '2020-04-25'
+slug: virginia-is-for-design-thinkers
+categories:
+  - design thinking
+  - agile
+  - scrum
+  - seu
+  - pdu
+tags: []
+---
+
+Due to the fairly new requirement for 20 hours of continuing education to renew ones Certified Scrum Master [certification](https://support.scrumalliance.org/hc/en-us/categories/360000936712-Maintaining-Your-Certification), I have been desperately searching for free, inexpensive but interesting coursework to satisfy that requirement. My first port of call was to check out [Mike Cohn's](https://www.mountaingoatsoftware.com/company/about-mike-cohn) Mountain Goat Software [site](https://www.mountaingoatsoftware.com/) that has served me well as a web developer and tech pm and discovered some sweet [SEU resources](https://www.mountaingoatsoftware.com/training/pdus-and-seus).
+
+I then headed to my favorite online learning haven, [Coursera](https://www.coursera.org) and discovered the course, [Agile Meets Design Thinking](https://www.coursera.org/learn/uva-darden-getting-started-agile/home/welcome) and was pleased to see that it's another [University of Virginia](https://www.coursera.org/uva) [Darden School of Business](https://designatdarden.org/) offering. Last year my mind was blown by their course, [Design Thinking for Innovation](https://www.coursera.org/learn/uva-darden-design-thinking-innovation/home/welcome) and couldn't help think how the philosophies and practices resonate with agile. Having been away from traditional software practices since 2013, it inspired me to  architect solutions in my current role using Design Thinking to listen to customers and stakeholders and experiment with small solutions in iterations to ensure not just initial project success but hopefully long-term utilization, ownership and continued innovation. So of course I enrolled in the class to cover the balance of SEUs needed and even found [page](https://www.coursera.org/learn/uva-darden-getting-started-agile/supplement/QsUvh/getting-project-management-institute-pmi-professional-development-units-pdus) affirming that the course pays out 25 PDUs, which seem to be fairly interchangeable with SEUs. 
+
+More on the course later! Can't wait to get to the [final project](https://docs.google.com/document/d/17fAjZBViZN15e6f7BAd_4IXkqJB6Rry54WjHCmfZDZ8/edit), which are always fun on Coursera because of the opportunity to get human feedback from peers and see their work through grading process.
+
+## Additional Resources
+
+### University of Virginia Design Thinking Courses
+
+* [Design Thinking for Innovation](https://www.coursera.org/learn/uva-darden-design-thinking-innovation/home/welcome)
+* [Agile Meets Design Thinking](https://www.coursera.org/learn/uva-darden-getting-started-agile/home/welcome)
+* [Design at Darden](https://designatdarden.org/)
+
+### Free Courses courtesy of Mountain Goat software
+
+* [Let Go of Knowing](https://www.mountaingoatsoftware.com/training/courses/let-go-of-knowing) - Agile Mile High Keynote 2015
+* [Scrum Foundations](https://www.mountaingoatsoftware.com/exclusive/scrum-foundations)
+* [Conference Videos for PDUs & SEUs](https://www.mountaingoatsoftware.com/training/pdus-and-seus)

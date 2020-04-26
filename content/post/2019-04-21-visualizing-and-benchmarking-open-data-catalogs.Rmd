@@ -5,7 +5,7 @@ date: '2019-04-21'
 slug: visualizing-and-benchmarking-open-data-catalogs
 categories:
   - open data
-  - design thinkibg
+  - design thinking
   - learning launch
 tags:
   - powerbi
