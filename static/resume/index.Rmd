@@ -34,20 +34,23 @@ Alicia Brown {#title}
 
 ### 
 
-- Data and Analytics Democratizer
+- Data and Analytics Evangelist
 - 5+ years consulting experience for governament progams (courts and justice, public safety, social equity, finance)
 - 10+ years web and data application development experience
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
-### Solution Architect
+### Solutions Architect
 
-King County (KCIT), Data Services
+King County, WA - Data Services
 
 Seattle, WA
 
 present - 2020
+
+- Criminal Justice and Equity & Social Justice data hubs
+- PPE allocation algorithm and reporting development 
 
 ### Technical Solution Architect
 
@@ -92,20 +95,10 @@ H.D. Vest Financial Services / Wells Fargo Advisors
 
 Dallas, TX
 
-2010 - 2001
+2010 - 2000
 
 -	Led portal team integration project with Wachovia platform (data migration, SSO, login, and application integration)
 -	Full stack developer of web applications using C#, VB.net, VBScript, SQL for Advisor and Client sites
-
-### Webmaster
-
-H.D. Vest Financial Services
-
-Dallas, TX
-
-2001 - 2000
-
-- Content publisher marketing and corporate websites
 
 Projects {data-icon=globe}
 --------------------------------------------------------------------------------
