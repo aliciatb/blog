@@ -22,7 +22,7 @@ data <- read_csv(here("static", "data", "NFListing.csv")) %>%
   rename(license = nf_license_num, name = nf_name, address = nf_loc_street_address, city = nf_loc_city, beds = TOTAL_Beds_nf_bed_count)
 ```
 
-I unapologetically love excel spreadsheets. As a data analyst I am happy to explore a downloaded file withpower query, calculations and pivot tables to quickly get a grasp of the data situation. As a developer and architect I hate repetitive actions and challenge myself to do better than opening a spreadsheet when I need a quick data answer. But, that's no reason to get down on spreadsheets because they are often the best and only source of data when supporting unplanned software developed in response to a pandemic.
+I unapologetically love excel spreadsheets. As a data analyst I am happy to explore a downloaded file with power query, calculations and pivot tables to quickly get a grasp of the data situation. As a developer and architect I hate repetitive actions and challenge myself to do better than opening a spreadsheet when I need a quick data answer. But, that's no reason to get down on spreadsheets because they are often the best and only source of data when supporting unplanned software developed in response to a pandemic.
 
 In July I had the unique opportunity to contribute to the King County HMAC (Health Medical Area Command) response team by taking over the role of PPE Technical Specialist and support the allocation of [PPE](https://kingcounty.gov/depts/emergency-management/covid-requests.aspx#ppe) to PHKSC (Public Health Seattle King County) agencies, EMS, hospitals, long term care facilities, community based organizations, homeless shelters, dental and health clinics. I rotated in from [KCIT](https://www.linkedin.com/showcase/king-county-it/) to maintain the allocation algorithm, developed by a brilliant epidemiologist at King County, Daniel Casey. It's a Shiny R web application and features the [drake](https://github.com/ropensci/drake) and [data tables](https://github.com/Rdatatable/data.table#why-datatable).
 
@@ -34,7 +34,7 @@ But I am obsessed with data quality, visualization, validation and automating hu
 
 ## Data Driven Documentation
 
-$Bookdown + Excel + DT]= Love$
+$Bookdown + Excel + DT = Love$
 
 When triggered by code validation or manual QA, I would occasionally need to verify a license number for a facility by checking a downloaded file from the Washington State Department of Social and Health Services website, https://fortress.wa.gov/dshs/adsaapps/Lookup/NHAdvLookup.aspx to reconcile a requestor's information to ensure that we accurately retrived active case information. Navigating to the folder of my lookup file and filtering by name wasn't the most onerous process in the world, but also was not delightful or efficient. As a huge fan of [Yihui Xie's](https://yihui.org/) [bookdown](https://github.com/rstudio/bookdown) package, I decided to combine all of the allocation documentation plus lookup files, including the long term care facilities file into a book! I initially used the [readr](https://readr.tidyverse.org/) to read in the same files used by the allocation algorithm code but realized that viewing the data from large files with thousands of records was absolutely not delightful.
 
