@@ -22,7 +22,7 @@ data <- read_csv(here("static", "data", "NFListing.csv")) %>%
   rename(license = nf_license_num, name = nf_name, address = nf_loc_street_address, city = nf_loc_city, beds = TOTAL_Beds_nf_bed_count)
 ```
 
-I unapologetically love excel spreadsheets. As a data analyst I am happy to explore a downloaded file with power query, calculations and pivot tables to quickly get a grasp of the data situation. As a developer and architect I hate repetitive actions and challenge myself to do better than opening a spreadsheet when I need a quick data answer. But, that's no reason to get down on spreadsheets because they are often the best and only source of data when supporting unplanned software developed in response to a pandemic.
+I unapologetically love excel spreadsheets. As a data analyst I am happy to explore a downloaded file with power query, calculations and pivot tables to quickly get a grasp of the data situation. As a developer and architect I hate repetitive actions and challenge myself to do better than opening a spreadsheet when I need a quick data answer. But that's no reason to get down on spreadsheets because they are often the best and only source of data when supporting unplanned software developed in response to a pandemic.
 
 In July I had the unique opportunity to contribute to the King County HMAC (Health Medical Area Command) response team by taking a turn as PPE Technical Specialist and support the allocation of [PPE](https://kingcounty.gov/depts/emergency-management/covid-requests.aspx#ppe) to PHKSC (Public Health Seattle King County) agencies, EMS, hospitals, long term care facilities, community based organizations, homeless shelters, dental and health clinics. I rotated in from [KCIT](https://www.linkedin.com/showcase/king-county-it/) to maintain the allocation algorithm, developed by a brilliant epidemiologist at King County, Daniel Casey. It's a Shiny R web application and features [drake](https://github.com/ropensci/drake) and [data tables](https://github.com/Rdatatable/data.table#why-datatable).
 
@@ -40,8 +40,6 @@ When triggered by code validation or manual QA, I would occasionally need to ver
 
 ***_The [DT](https://rstudio.github.io/DT/) package to the rescue!_***
 
-This package provides a searchable, paginating and downloadable experience that makes data validation an absolute delight! Powered by a JavaScript [html widget](https://bookdown.org/yihui/bookdown/html-widgets.html#html-widgets), it's trivial to create data driven documentation in any R Markdown document with html output. If users prefer pdfs to read the rest of the documentation, as noted in chapter 2.10 [HTML Widgets](https://bookdown.org/yihui/bookdown/html-widgets.html#html-widgets), you can use `webshot::install_phantomjs()` so that a snapshot will be inserted into the pdf output in place of the widget. 
-
 ```{r data, echo=T, warning=F, message=F}
 library(DT)
 datatable(data, extensions = c('Buttons'), 
@@ -51,6 +49,8 @@ datatable(data, extensions = c('Buttons'),
                          lengthMenu = list(c(5,10,25,50,-1),
                                            c(5,10,25,50,"All"))))
 ```
+
+This package provides a searchable, paginating and downloadable experience that makes data validation an absolute delight! Powered by a JavaScript [html widget](https://bookdown.org/yihui/bookdown/html-widgets.html#html-widgets), it's trivial to create data driven documentation in any R Markdown document with html output. If users prefer pdfs to read the rest of the documentation, as noted in chapter 2.10 [HTML Widgets](https://bookdown.org/yihui/bookdown/html-widgets.html#html-widgets), you can use `webshot::install_phantomjs()` so that a snapshot will be inserted into the pdf output in place of the widget.
 
 ## Resources
 
