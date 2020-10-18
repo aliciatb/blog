@@ -1,0 +1,59 @@
+---
+title: Spreadsheet Love
+author: Alicia
+date: '2020-10-11'
+slug: spreadsheet-love
+categories: 
+  - Spreadsheets
+  - COVID
+  - Data Driven Documentation
+tags:
+  - DT
+  - Bookdown
+---
+
+```{r startup, echo=F, warning=F, message=F}
+library(dplyr)
+library(here)
+library(readr)
+
+data <- read_csv(here("static", "data", "NFListing.csv")) %>%
+  select(nf_license_num,nf_name,nf_loc_street_address,nf_loc_city, TOTAL_Beds_nf_bed_count) %>%
+  rename(license = nf_license_num, name = nf_name, address = nf_loc_street_address, city = nf_loc_city, beds = TOTAL_Beds_nf_bed_count)
+```
+
+I unapologetically love excel spreadsheets. As a data analyst I am happy to explore a downloaded file withpower query, calculations and pivot tables to quickly get a grasp of the data situation. As a developer and architect I hate repetitive actions and challenge myself to do better than opening a spreadsheet when I need a quick data answer. But, that's no reason to get down on spreadsheets because they are often the best and only source of data when supporting unplanned software developed in response to a pandemic.
+
+In July I had the unique opportunity to contribute to the King County HMAC (Health Medical Area Command) response team by taking over the role of PPE Technical Specialist and support the allocation of [PPE](https://kingcounty.gov/depts/emergency-management/covid-requests.aspx#ppe) to PHKSC (Public Health Seattle King County) agencies, EMS, hospitals, long term care facilities, community based organizations, homeless shelters, dental and health clinics. I rotated in from [KCIT](https://www.linkedin.com/showcase/king-county-it/) to maintain the allocation algorithm, developed by a brilliant epidemiologist at King County, Daniel Casey. It's a Shiny R web application and features the [drake](https://github.com/ropensci/drake) and [data tables](https://github.com/Rdatatable/data.table#why-datatable).
+
+As a technologist with a love of R, shiny and all things tidyverse I was very excited to get this chance to serve King County and slightly daunted by the responsibility of ensuring the efficient and fair allocation of PPE throughout the county in accordance with [state guidelines](https://www.doh.wa.gov/Portals/1/Documents/1600/coronavirus/PPEPrioritizationofAllocation.pdf) and adhering to the equity direction by the county. During my onboarding I became overwhelmed quickly by all of the things that I needed to keep in mind when reviewing the weekly requests and found myself consulting many documents, websites and spreadsheets to ensure that each request was accurately evaluated for type of entity and current active cases to ensure the greatest needs were met.
+
+## I am not an epidemiologist
+
+But I am obsessed with data quality, visualization, validation and automating human work to reduce opportunities for mistakes. A lot of the data sources that feed into the allocation algorithm come in the form of spreadsheets, some of which involve human data entry via a [public form](https://kingcounty.gov/depts/emergency-management/covid-requests/ppe-form.aspx) or [spreadsheet](https://kingcounty.gov/~/media/depts/emergency-management/documents/covid-logistics-forms/WeeklyPPERequest_KingCounty_Updated.ashx?la=en) open to anyone providing health services in King County, including long term care facilities. Long term care facilities are licensed and are elibible to receive N95s when they have confirmed or suspected COVID-19 cases. Within the allocation algorithm code, the license number entered in the order form will be used to check current reports of cases tracked by Public Health Seattle King County systems. 
+
+## Data Driven Documentation
+
+$Bookdown + Excel + DT]= Love$
+
+When triggered by code validation or manual QA, I would occasionally need to verify a license number for a facility by checking a downloaded file from the Washington State Department of Social and Health Services website, https://fortress.wa.gov/dshs/adsaapps/Lookup/NHAdvLookup.aspx to reconcile a requestor's information to ensure that we accurately retrived active case information. Navigating to the folder of my lookup file and filtering by name wasn't the most onerous process in the world, but also was not delightful or efficient. As a huge fan of [Yihui Xie's](https://yihui.org/) [bookdown](https://github.com/rstudio/bookdown) package, I decided to combine all of the allocation documentation plus lookup files, including the long term care facilities file into a book! I initially used the [readr](https://readr.tidyverse.org/) to read in the same files used by the allocation algorithm code but realized that viewing the data from large files with thousands of records was absolutely not delightful.
+
+***_The [DT](https://rstudio.github.io/DT/) package to the rescue!_***
+
+This package provides a searchable, paginating and downloadable experience that made data validation an absolute delight!
+
+```{r data, echo=T, warning=F, message=F}
+library(DT)
+datatable(data, extensions = c('Buttons'), 
+          options = list(dom = 'Blfrtip',
+                         buttons = c('copy', 'excel', 'csv', 'print'),
+                         pageLength = 5,
+                         lengthMenu = list(c(5,10,25,50,-1),
+                                           c(5,10,25,50,"All"))))
+```
+
+## Resources
+
+* Musings on R blog post, [Vignette: Downloadable tables in RMarkdown with the DT package](https://martinctc.github.io/blog/vignette-downloadable-tables-in-rmarkdown-with-the-dt-package/)
+* Chapter 2.10 [HTML Widgets](https://bookdown.org/yihui/bookdown/html-widgets.html#html-widgets) from [Yihui Xie's](https://yihui.org/) amazing book, [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
+* [Data Tables button options and configuration](https://datatables.net/extensions/buttons/)
