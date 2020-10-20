@@ -1,5 +1,5 @@
 ---
-title: Spreadsheet Love in the Time of COVID-19
+title: Spreadsheet Love (in the time of COVID-19)
 author: Alicia
 date: '2020-10-11'
 slug: spreadsheet-love
