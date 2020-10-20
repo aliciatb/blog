@@ -52,6 +52,10 @@ datatable(data, extensions = c('Buttons'),
 
 This package provides a searchable, paginating and downloadable experience that makes data validation an absolute delight! Powered by a JavaScript [html widget](https://bookdown.org/yihui/bookdown/html-widgets.html#html-widgets), it's trivial to create data driven documentation in any R Markdown document with html output. If users prefer pdfs to read the rest of the documentation, as noted in chapter 2.10 [HTML Widgets](https://bookdown.org/yihui/bookdown/html-widgets.html#html-widgets), you can use `webshot::install_phantomjs()` so that a snapshot will be inserted into the pdf output in place of the widget.
 
+## Playbook Possibilities
+
+I think in future endeavors, the idea of generating documentation with the inclusion of lookup files would be awesome, especially with an automation step to build the documentation whenever code is checked in as a continuous integration task. 
+
 ## Resources
 
 * Musings on R blog post, [Vignette: Downloadable tables in RMarkdown with the DT package](https://martinctc.github.io/blog/vignette-downloadable-tables-in-rmarkdown-with-the-dt-package/)
