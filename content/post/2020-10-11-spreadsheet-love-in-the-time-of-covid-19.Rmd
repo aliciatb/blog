@@ -1,5 +1,5 @@
 ---
-title: Spreadsheet Love (in the time of COVID-19)
+title: Spreadsheet Love in the time of COVID-19
 author: Alicia
 date: '2020-10-11'
 slug: spreadsheet-love
@@ -48,9 +48,9 @@ datatable(data, extensions = c('Buttons'),
 
 This package provides a searchable, paginating and downloadable experience that makes data validation an absolute delight! Powered by a JavaScript [html widget](https://bookdown.org/yihui/bookdown/html-widgets.html#html-widgets), it's trivial to create data driven documentation in any R Markdown document with html output. If users prefer pdfs to read the rest of the documentation, as noted in chapter 2.10 [HTML Widgets](https://bookdown.org/yihui/bookdown/html-widgets.html#html-widgets), you can use `webshot::install_phantomjs()` so that a snapshot will be inserted into the pdf output in place of the widget.
 
-## Playbook Possibilities
+## Dynamic Playbooks
 
-I think in future endeavors, the idea of generating documentation with the inclusion of lookup files would be awesome, especially with an automation step to build the documentation whenever code is checked in as a continuous integration task. 
+As an analyst I love to document the requirements and decisions made and am happy to use One Note and Word. But it is definitely more fun to use Markdown, real data and html widgets to author an interactive playbook that also delights!
 
 ## Resources
 
