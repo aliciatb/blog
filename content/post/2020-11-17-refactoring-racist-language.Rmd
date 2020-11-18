@@ -22,7 +22,7 @@ It was very to awesome to hear how the python community in 2018 removed the use 
 
 ## Gitting it on!
 
-Last month I took a few minutes to update my blog repo, [github.com/aliciatb/blog](https://github.com/aliciatb/blog) following steps outlined in this [article](https://www.techrepublic.com/article/github-to-replace-master-with-main-starting-in-october-what-developers-need-to-know/). Another great resource from R-bloggers, [5 steps to change GitHub default branch from master to main](https://www.r-bloggers.com/2020/07/5-steps-to-change-github-default-branch-from-master-to-main/).
+Last month I took a few minutes to update my blog repo, [github.com/aliciatb/blog](https://github.com/aliciatb/blog) following  the steps outlined in this [article](https://www.techrepublic.com/article/github-to-replace-master-with-main-starting-in-october-what-developers-need-to-know/). Here's another great resource from R-bloggers of the [5 steps to change GitHub default branch from master to main](https://www.r-bloggers.com/2020/07/5-steps-to-change-github-default-branch-from-master-to-main/).
 
 For me, since only I publish to this repo without any pull request nonsense, it was very easy to -
 
@@ -48,6 +48,8 @@ For me, since only I publish to this repo without any pull request nonsense, it 
 
 > `git push origin --delete master`
 
+_Did I just copy and paste git code from the article? Yes, yes I did!_
+
 ## Integration Considerations
 
 If you do have any automated things configured for your code, you will need to update the branch that triggers those actions. As this blog is completely HTML, it is hosted for free on netlify and easily configure in github to deploy upon check-in to my primary branch. After renaming `master` to `main`, I did need to point to new `main` branch to get that integration working again. It had also been 18 months since I initially set up the automatic deployments and discovered that I also needed to specify version hugo version in netlify, found with following function.
@@ -56,7 +58,7 @@ If you do have any automated things configured for your code, you will need to u
 blogdown::hugo_version()
 ```
 
-## Technology is easy, we can do more!
+## Technology changes are easy, let's not stop there!
 
 Updating a repo is a very easy first step towards being a more thoughtful person, developer, and citizen. It's good to take care of the easy things, but shouldn't be wildly celebrated. The real work we need to focus on is to be thoughtful in our daily interactions in the world and insisting on a diverse universe.
 
