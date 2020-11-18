@@ -48,19 +48,19 @@ For me, since only I publish to this repo without any pull request nonsense, it 
 
 > `git push origin --delete master`
 
-_Did I just copy and paste git code from the article? Yes, yes I did!_
+_Did I just copy and paste git code from the article? Yes, yes I did! And, it just worked!_
 
 ## Integration Considerations
 
-If you do have any automated things configured for your code, you will need to update the branch that triggers those actions. As this blog is completely HTML, it is hosted for free on netlify and easily configure in github to deploy upon check-in to my primary branch. After renaming `master` to `main`, I did need to point to new `main` branch to get that integration working again. It had also been 18 months since I initially set up the automatic deployments and discovered that I also needed to specify version hugo version in netlify, found with following function.
+If you do have any automated things configured for your code, you will need to update the branch that triggers those actions. As this blog is completely HTML, it is hosted for free on netlify and easily configured in github to deploy upon check-in to my primary branch. After renaming `master` to `main`, I did need to point to new `main` branch to get that integration working again. It had also been 18 months since I initially set up the automatic deployments and discovered that I also needed to specify hugo version in netlify, found with following function.
 
 ```{r hugo}
 blogdown::hugo_version()
 ```
 
-## Technology changes are easy, let's not stop there!
+## Technology changes are easy, they are not enough!
 
-Updating a repo is a very easy first step towards being a more thoughtful person, developer, and citizen. It's good to take care of the easy things, but shouldn't be wildly celebrated. The real work we need to focus on is to be thoughtful in our daily interactions in the world and insisting on a diverse universe.
+Updating a repo is a very easy first step towards being a more thoughtful person, developer, and citizen. It's good to take care of the easy things, but let's tap the brakes on declaring Mission Accomplished. The real work we need to focus on is to be thoughtful in our daily interactions in the world and persist in our insistence on a diverse universe.
 
 >_[Is It Enough To Remove Words With Racist Connotations From Tech Language? Hint: No](https://www.npr.org/2020/07/09/889502179/is-it-enough-to-remove-words-with-racist-connotations-from-tech-language-hint-no)_
 
