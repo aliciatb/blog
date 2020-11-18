@@ -1,0 +1,82 @@
+---
+title: Refactoring Racist Language
+author: Alicia
+date: '2020-11-17'
+slug: refactoring-racist-language
+categories:
+  - source control
+  - github
+tags:
+  - words, racism
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>Words matter. When used thoughtfully they can include an entire group of a people. They can acknowledge that a person exists, that you know their name and even how they pronounce it.</p>
+<p>Words can be used to put people down deliberately, which obviously isn’t cool, but more dangerously, they can obstinately be retained in everyday language when we don’t consider them in the context of their usage over time. As we learn how words, phrases and sayings have been used in the past, we should all make an effort to understand if they are offensive or a painful relic of suppression, violence and injustice to a group of people or really any species.</p>
+<p>One nice thing about being a technologist is that in addition to fixing coding errors, we can also remediate unfortunate coding decisions.</p>
+<blockquote>
+<p><em><a href="https://bugs.python.org/issue34605">For diversity reasons, it would be nice to try to avoid “master” and “slave” terminology which can be associated to slavery.</a></em> - Issue 34605</p>
+</blockquote>
+<p>It was very to awesome to hear how the python community in 2018 removed the use of “master” and “slave” from its codebase. I remember chatting with my team aobut whether “master” would also be removed from github, but people generally thought that describing the primary source branch as master did not have same troubling history. Nevertheless, <a href="https://github.com/github/renaming#renaming-the-default-branch-from-master">github</a> was on it and is now using <code>main</code> as the default branch as of Octobor 1, 2020, yay!</p>
+<div id="gitting-it-on" class="section level2">
+<h2>Gitting it on!</h2>
+<p>Last month I took a few minutes to update my blog repo, <a href="https://github.com/aliciatb/blog">github.com/aliciatb/blog</a> following steps outlined in this <a href="https://www.techrepublic.com/article/github-to-replace-master-with-main-starting-in-october-what-developers-need-to-know/">article</a>. Another great resource from R-bloggers, <a href="https://www.r-bloggers.com/2020/07/5-steps-to-change-github-default-branch-from-master-to-main/">5 steps to change GitHub default branch from master to main</a>.</p>
+<p>For me, since only I publish to this repo without any pull request nonsense, it was very easy to -</p>
+<ol style="list-style-type: decimal">
+<li>Back up my repo (just in case)</li>
+</ol>
+<blockquote>
+<p>I downloaded from github</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>Create a new branch <code>main</code> off <code>master</code></li>
+</ol>
+<blockquote>
+<p><code>git branch -m master main</code></p>
+</blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>Push new branch</li>
+</ol>
+<blockquote>
+<p><code>git push -u origin main</code></p>
+</blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li>Point the HEAD to retain commits</li>
+</ol>
+<blockquote>
+<p><code>git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main</code></p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Update default branch in github</p></li>
+<li><p>And finally delete <code>master</code>.</p></li>
+</ol>
+<blockquote>
+<p><code>git push origin --delete master</code></p>
+</blockquote>
+</div>
+<div id="integration-considerations" class="section level2">
+<h2>Integration Considerations</h2>
+<p>If you do have any automated things configured for your code, you will need to update the branch that triggers those actions. As this blog is completely HTML, it is hosted for free on netlify and easily configure in github to deploy upon check-in to my primary branch. After renaming <code>master</code> to <code>main</code>, I did need to point to new <code>main</code> branch to get that integration working again. It had also been 18 months since I initially set up the automatic deployments and discovered that I also needed to specify version hugo version in netlify, found with following function.</p>
+<pre class="r"><code>blogdown::hugo_version()</code></pre>
+<pre><code>## [1] &#39;0.68.3&#39;</code></pre>
+</div>
+<div id="technology-is-easy-we-can-do-more" class="section level2">
+<h2>Technology is easy, we can do more!</h2>
+<p>Updating a repo is a very easy first step towards being a more thoughtful person, developer, and citizen. It’s good to take care of the easy things, but shouldn’t be wildly celebrated. The real work we need to focus on is to be thoughtful in our daily interactions in the world and insisting on a diverse universe.</p>
+<blockquote>
+<p><em><a href="https://www.npr.org/2020/07/09/889502179/is-it-enough-to-remove-words-with-racist-connotations-from-tech-language-hint-no">Is It Enough To Remove Words With Racist Connotations From Tech Language? Hint: No</a></em></p>
+</blockquote>
+</div>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
+<ul>
+<li><a href="https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/">GitHub to replace “master” with alternative term to avoid slavery references</a></li>
+<li><a href="https://github.com/github/renaming#renaming-the-default-branch-from-master">Renaming the default branch from master</a></li>
+<li><a href="https://www.r-bloggers.com/2020/07/5-steps-to-change-github-default-branch-from-master-to-main/">5 steps to change GitHub default branch from master to main</a></li>
+<li><a href="https://www.techrepublic.com/article/github-to-replace-master-with-main-starting-in-october-what-developers-need-to-know/">GitHub to replace master with main starting in October: What developers need to do now</a></li>
+<li><a href="https://bookdown.org/yihui/blogdown/netlify.html#fig:netlify-settings">Blogdown Netlify settings</a></li>
+<li><a href="https://www.hackthegap.com/">HACK &lt;+he&gt; GAP</a> - <em>hacking the gender gap, one hackathon at a time</em></li>
+</ul>
+</div>

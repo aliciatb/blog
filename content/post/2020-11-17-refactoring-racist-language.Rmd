@@ -1,0 +1,72 @@
+---
+title: Refactoring Racist Language
+author: Alicia
+date: '2020-11-17'
+slug: refactoring-racist-language
+categories:
+  - source control
+  - github
+tags:
+  - words, racism
+---
+
+Words matter. When used thoughtfully they can include an entire group of a people. They can acknowledge that a person exists, that you know their name and even how they pronounce it. 
+
+Words can be used to put people down deliberately, which obviously isn't cool, but more dangerously, they can obstinately be retained in everyday language when we don't consider them in the context of their usage over time. As we learn how words, phrases and sayings have been used in the past, we should all make an effort to understand if they are offensive or a painful relic of suppression, violence and injustice to a group of people or really any species.
+
+One nice thing about being a technologist is that in addition to fixing coding errors, we can also remediate unfortunate coding decisions.
+
+>_[For diversity reasons, it would be nice to try to avoid "master" and "slave" terminology which can be associated to slavery.](https://bugs.python.org/issue34605)_ - Issue 34605
+
+It was very to awesome to hear how the python community in 2018 removed the use of "master" and "slave" from its codebase. I remember chatting with my team aobut whether "master" would also be removed from github, but people generally thought that describing the primary source branch as master did not have same troubling history. Nevertheless, [github](https://github.com/github/renaming#renaming-the-default-branch-from-master) was on it and is now using `main` as the default branch as of Octobor 1, 2020, yay!
+
+## Gitting it on!
+
+Last month I took a few minutes to update my blog repo, [github.com/aliciatb/blog](https://github.com/aliciatb/blog) following steps outlined in this [article](https://www.techrepublic.com/article/github-to-replace-master-with-main-starting-in-october-what-developers-need-to-know/). Another great resource from R-bloggers, [5 steps to change GitHub default branch from master to main](https://www.r-bloggers.com/2020/07/5-steps-to-change-github-default-branch-from-master-to-main/).
+
+For me, since only I publish to this repo without any pull request nonsense, it was very easy to -
+
+1. Back up my repo (just in case)
+
+> I downloaded from github
+
+2. Create a new branch `main` off `master`
+
+> `git branch -m master main`
+
+3. Push new branch
+
+> `git push -u origin main`
+
+4. Point the HEAD to retain commits
+
+> `git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main`
+
+5. Update default branch in github
+
+6. And finally delete `master`.
+
+> `git push origin --delete master`
+
+## Integration Considerations
+
+If you do have any automated things configured for your code, you will need to update the branch that triggers those actions. As this blog is completely HTML, it is hosted for free on netlify and easily configure in github to deploy upon check-in to my primary branch. After renaming `master` to `main`, I did need to point to new `main` branch to get that integration working again. It had also been 18 months since I initially set up the automatic deployments and discovered that I also needed to specify version hugo version in netlify, found with following function.
+
+```{r hugo}
+blogdown::hugo_version()
+```
+
+## Technology is easy, we can do more!
+
+Updating a repo is a very easy first step towards being a more thoughtful person, developer, and citizen. It's good to take care of the easy things, but shouldn't be wildly celebrated. The real work we need to focus on is to be thoughtful in our daily interactions in the world and insisting on a diverse universe.
+
+>_[Is It Enough To Remove Words With Racist Connotations From Tech Language? Hint: No](https://www.npr.org/2020/07/09/889502179/is-it-enough-to-remove-words-with-racist-connotations-from-tech-language-hint-no)_
+
+## Resources
+
+* [GitHub to replace "master" with alternative term to avoid slavery references](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/)
+* [Renaming the default branch from master](https://github.com/github/renaming#renaming-the-default-branch-from-master)
+* [5 steps to change GitHub default branch from master to main](https://www.r-bloggers.com/2020/07/5-steps-to-change-github-default-branch-from-master-to-main/)
+* [GitHub to replace master with main starting in October: What developers need to do now](https://www.techrepublic.com/article/github-to-replace-master-with-main-starting-in-october-what-developers-need-to-know/)
+* [Blogdown Netlify settings](https://bookdown.org/yihui/blogdown/netlify.html#fig:netlify-settings)
+* [HACK <+he> GAP	](https://www.hackthegap.com/) - _hacking the gender gap, one hackathon at a time_
