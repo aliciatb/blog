@@ -18,13 +18,13 @@ One nice thing about being a technologist is that in addition to fixing coding e
 
 >_[For diversity reasons, it would be nice to try to avoid "master" and "slave" terminology which can be associated to slavery.](https://bugs.python.org/issue34605)_ - Issue 34605
 
-It was very to awesome to hear how the python community in 2018 removed the use of "master" and "slave" from its codebase. I remember chatting with my team aobut whether "master" would also be removed from github, but people generally thought that describing the primary source branch as master did not have same troubling history. Nevertheless, [github](https://github.com/github/renaming#renaming-the-default-branch-from-master) was on it and is now using `main` as the default branch as of Octobor 1, 2020, yay!
+It was very to awesome to hear how the python community in 2018 removed the use of "master" and "slave" from its codebase. I remember chatting with my team aobut whether "master" would also be removed from github, but people generally thought that describing the primary source branch as master did not have same troubling connotation. Nevertheless, [github](https://github.com/github/renaming#renaming-the-default-branch-from-master) was on it and is now using `main` as the default branch as of Octobor 1, 2020, yay!
 
-## Gitting it on!
+## Git on it!
 
-Last month I took a few minutes to update my blog repo, [github.com/aliciatb/blog](https://github.com/aliciatb/blog) following  the steps outlined in this [article](https://www.techrepublic.com/article/github-to-replace-master-with-main-starting-in-october-what-developers-need-to-know/). Here's another great resource from R-bloggers of the [5 steps to change GitHub default branch from master to main](https://www.r-bloggers.com/2020/07/5-steps-to-change-github-default-branch-from-master-to-main/).
+Last month I took a few minutes to update this repo, [github.com/aliciatb/blog](https://github.com/aliciatb/blog) following  the steps outlined in this [article](https://www.techrepublic.com/article/github-to-replace-master-with-main-starting-in-october-what-developers-need-to-know/). R-bloggers also has gReat article outlining the [5 steps to change GitHub default branch from master to main](https://www.r-bloggers.com/2020/07/5-steps-to-change-github-default-branch-from-master-to-main/).
 
-For me, since only I publish to this repo without any pull request nonsense, it was very easy to -
+As I am the only publisher to this repo and don't have any pull request nonsense to deal with, it was very easy to -
 
 1. Back up my repo (just in case)
 
@@ -58,7 +58,7 @@ If you do have any automated things configured for your code, you will need to u
 blogdown::hugo_version()
 ```
 
-## Technology changes are easy, they are not enough!
+## Technology changes are easy
 
 Updating a repo is a very easy first step towards being a more thoughtful person, developer, and citizen. It's good to take care of the easy things, but let's tap the brakes on declaring Mission Accomplished. The real work we need to focus on is to be thoughtful in our daily interactions in the world and persist in our insistence on a diverse universe.
 
