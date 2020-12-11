@@ -24,7 +24,7 @@ Skills / Tools {#skills}
 
 - Data Engineering, Analysis, Visualization, Storytelling, Governance, Contextualization
 
-- Agile Development, Scrum, Kanban
+- Agile Development, Scrum, Kanban, Design Thinking
 
 Main
 ================================================================================
@@ -35,7 +35,8 @@ Alicia Brown {#title}
 ### 
 
 - Data and Analytics Evangelist
-- 5+ years consulting experience for governament progams (courts and justice, public safety, social equity, finance)
+- 5+ years consulting experience for government data programs
+- 10+ years leading technical and data architecture projects
 - 10+ years web and data application development experience
 
 Experience {data-icon=suitcase}
@@ -75,7 +76,7 @@ Seattle, WA
 - Evangelize best practices on Data Governance, Metadata, Standards, Quality, Privacy and Security
 - Empowered the discovery of insights in data by teams via Data Science and Business Intelligence Tools and Programming Languages (Power BI, Tableau, R, Python, SQL, Excel, Power Query)
 - Developed custom ETL (Extract-Transform-Load) for multiple client tools and source systems
-- Enabled the automation of data retrieval from external APIs for tracking performance across common indicators and benchmarking against peers
+- Enabled the automation of data retrieval from external APIs for tracking performance across common indicators and bench marking against peers
 
 ### Technical Project Manager
 
@@ -125,13 +126,13 @@ Partnered with departments to identify measurable data to use for analysis of pe
 
 ### Oakland Equity Indicators
 
-[data.oaklandnet.com/stories/s/brb2-j4ad](https://data.oaklandnet.com/stories/s/brb2-j4ad)
+[]()
 
 Oakland, CA
 
 2018
 
-Created interactive report featuring 72 indicators across six themeso score how equitable Oakland is between groups with the highest and lowest values for a given indicator.
+Created interactive report featuring 72 indicators across six themes score how equitable Oakland is between groups with the highest and lowest values for a given indicator.
 
 ### Neighborhood Data for Social Change Platform
 
