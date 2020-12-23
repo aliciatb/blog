@@ -34,7 +34,7 @@ tags:
 <script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
 
 
-<p>Recently I resumed PPE allocation duties for a couple of weeks and took the opportunity to automate a checklist of the orders sorted by region to help with their packaging for delivery. As a data person, I couldn’t help but also sort the names of agencies after region. The resulting data surprised me when I noticed that the secondary sort by agency names placed agencies with names in ALL CAPS came before other agencies with Title Case names.</p>
+<p>Recently I resumed PPE allocation duties for a couple of weeks and took the opportunity to automate a checklist of the orders sorted by region to help with their packaging for delivery. As a data person, I couldn’t help but also sort the names of agencies after region. The resulting data surprised me when I noticed that the secondary sort by agency names placed agencies with names in ALL CAPS before other agencies with Title Case names.</p>
 <p>This led me to wonder -</p>
 <ol style="list-style-type: decimal">
 <li>Do different libraries sort character values differently? I’m typically on #TeamDataverse because <a href="https://dplyr.tidyverse.org/">dplyr</a> makes it a snap to do things and just make sense to human brains.</li>
@@ -42,7 +42,7 @@ tags:
 </ol>
 <div id="a-review-of-the-data" class="section level2">
 <h2>A review of the data</h2>
-<p>This data was downloaded from the Washington State Department of Social and Health Services <a href="https://fortress.wa.gov/dshs/adsaapps/Lookup/NHAdvLookup.aspx">website</a> filtered for King County using <a href="https://readr.tidyverse.org/#usage"><code>readr::read_csv</code></a>. When the search results are returned by the website, it is sorted by Agency name as one would expect, where the case does not matter, though it would be nice if the names could have been consistently formatted and makes me wonder about how the data gets to the state. Does one data entry person enter names in ALL CAPS or do the providers enter their names in ALL CAPS? All other data fields across agencies appears “properly” Title Cased, even Admin names.</p>
+<p>This data was downloaded from the Washington State Department of Social and Health Services <a href="https://fortress.wa.gov/dshs/adsaapps/Lookup/NHAdvLookup.aspx">website</a> filtered for King County. When the search results are returned by the website, it is sorted by Agency name as one would expect, where the case does not matter, though it would be nice if the names could have been consistently formatted and makes me wonder about how the data gets to the state. Does one data entry person enter names in ALL CAPS or do the providers enter their names in ALL CAPS? All other data fields across agencies appears “properly” Title Cased, even Admin names.</p>
 <pre class="r"><code>library(DT)
 library(here)
 library(knitr)
@@ -67,7 +67,6 @@ data %&gt;%
 <pre class="r"><code>data %&gt;%
   arrange(city, name) %&gt;%
   select(city, name) %&gt;%
-  head(40) %&gt;%
   kable()</code></pre>
 <table>
 <thead>
@@ -237,9 +236,53 @@ data %&gt;%
 <td align="left">SEATTLE</td>
 <td align="left">HEARTHSTONE, THE</td>
 </tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">KIN ON HEALTH CARE CENTER</td>
+</tr>
+<tr class="even">
+<td align="left">SEATTLE</td>
+<td align="left">MIRABELLA</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">PARK SHORE</td>
+</tr>
+<tr class="even">
+<td align="left">SEATTLE</td>
+<td align="left">Park West Care Center</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">PROVIDENCE MOUNT ST VINCENT</td>
+</tr>
+<tr class="even">
+<td align="left">SEATTLE</td>
+<td align="left">QUEEN ANNE HEALTHCARE</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">THE TERRACES AT SKYLINE</td>
+</tr>
+<tr class="even">
+<td align="left">Shoreline</td>
+<td align="left">FIRCREST SCHOOL PAT N</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoreline</td>
+<td align="left">Park Ridge Care Center</td>
+</tr>
+<tr class="even">
+<td align="left">Shoreline</td>
+<td align="left">RICHMOND BEACH REHAB</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoreline</td>
+<td align="left">SHORELINE HEALTH AND REHABILITATION</td>
+</tr>
 </tbody>
 </table>
-<p><strong><em>Verdict:</em></strong>: Title Case city names precede ALL CAPS city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Also true for REDMOND CARE AND REHABILITATION CENTER in REDMOND.</p>
+<p><strong><em>Observation:</em></strong>: Title Case city names precede ALL CAPS city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Also true for REDMOND CARE AND REHABILITATION CENTER in REDMOND.</p>
 </div>
 <div id="data.table-take-1" class="section level2">
 <h2>Data.Table &gt; Take 1</h2>
@@ -248,7 +291,7 @@ data %&gt;%
 dt_data  &lt;- fread(here(&quot;static&quot;, &quot;data&quot;, &quot;NFListing.csv&quot;))
 da_table &lt;- dt_data[,.(city = nf_loc_city, name = nf_name)]
 setorder(da_table, city, name)
-da_table[1:40] %&gt;%
+da_table %&gt;%
   kable()</code></pre>
 <table>
 <thead>
@@ -418,9 +461,53 @@ da_table[1:40] %&gt;%
 <td align="left">SEATTLE</td>
 <td align="left">THE TERRACES AT SKYLINE</td>
 </tr>
+<tr class="odd">
+<td align="left">Seattle</td>
+<td align="left">BAILEY-BOUSHAY HOUSE</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Ballard Center</td>
+</tr>
+<tr class="odd">
+<td align="left">Seattle</td>
+<td align="left">SAINT ANNE NURSING AND REHABILITATION CENTER</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">SEA MAR COMMUNITY CARE CENTER</td>
+</tr>
+<tr class="odd">
+<td align="left">Seattle</td>
+<td align="left">Seattle Medical Post Acute Care</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Transitional Care Center of Seattle</td>
+</tr>
+<tr class="odd">
+<td align="left">Seattle</td>
+<td align="left">Washington Care Center</td>
+</tr>
+<tr class="even">
+<td align="left">Shoreline</td>
+<td align="left">FIRCREST SCHOOL PAT N</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoreline</td>
+<td align="left">Park Ridge Care Center</td>
+</tr>
+<tr class="even">
+<td align="left">Shoreline</td>
+<td align="left">RICHMOND BEACH REHAB</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoreline</td>
+<td align="left">SHORELINE HEALTH AND REHABILITATION</td>
+</tr>
 </tbody>
 </table>
-<p><strong><em>Verdict:</em></strong>: ALL CAPS city names precede Title Case city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Things seem even weirder for REDMOND and RENTON where the 2 agencies with ALL CAPS cities precede the other 2 agencies in Redmond and Renton.</p>
+<p><strong><em>Observation:</em></strong>: ALL CAPS city names precede Title Case city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Things seem even weirder for REDMOND and RENTON where the 2 agencies with ALL CAPS cities precede the other 2 agencies in Redmond and Renton.</p>
 </div>
 <div id="what-to-do" class="section level2">
 <h2>What to do?</h2>
@@ -428,7 +515,7 @@ da_table[1:40] %&gt;%
 </div>
 <div id="tidyverse-take-2" class="section level2">
 <h2>#Tidyverse &gt; Take 2</h2>
-<p>Rather than tackle agency names which likely have legitimate UPPER CASE initials and acronyms, formatting the city names will at least reveal where <code>dplyr::arrange</code> puts AVALON CARE CENTER - FEDERAL WAY, LLC once FEDERAL WAY is formatted. To <a href="https://stringr.tidyverse.org/reference/case.html">stringr::str_to_title</a>!</p>
+<p>Rather than tackle agency names which may have initials and acronyms in ALL CAPS, formatting the city names will at least reveal where <code>dplyr::arrange</code> puts AVALON CARE CENTER - FEDERAL WAY, LLC once FEDERAL WAY is formatted.</p>
 <pre class="r"><code>library(stringr)
 data %&gt;%
   mutate(city_formatted = str_to_title(city)) %&gt;%
@@ -647,7 +734,8 @@ data %&gt;%
 </tr>
 </tbody>
 </table>
-<p><strong><em>Verdict:</em></strong>: With my city data now formatted as Title Case, the secondary sorting of names is returned as hoped for both Federal Way, Redmond and Seattle agencies. <strong><em>WINNER WINNER (TOFU DINNER!)</em></strong></p>
+<p><strong><em>Verdict:</em></strong>: <strong><em>WINNER</em></strong></p>
+<p>With my city data now formatted as Title Case, the secondary sorting of names is returned as hoped for both Federal Way, Redmond and Seattle agencies.</p>
 </div>
 <div id="data.table-take-2" class="section level2">
 <h2>Data.Table &gt; Take 2</h2>
@@ -869,17 +957,10 @@ da_table[1:40,.(city, city_formatted, name)] %&gt;%
 </tr>
 </tbody>
 </table>
-<p><strong><em>Verdict:</em></strong>: BETTER, but not all there yet. Secondary sort on mixed case names results in agency names starting with a given letter in ALL CAPS preceding other Title Cased names of same letter. <strong><em>RUNNER UP</em></strong>.</p>
+<p><strong><em>Verdict:</em></strong>: <strong><em>BETTER</em></strong></p>
+<p>Secondary sort on mixed case names results in agency names starting with a given letter in ALL CAPS preceding other Title Cased names of same letter.</p>
 </div>
 <div id="a-sorted-affair" class="section level2">
 <h2>A Sorted Affair</h2>
-<p>As often is the case, thinking that a simple ordering of data is at most a 5 minute task, inconsistent data may quickly beckon one down a rabbit hole. An interesting, but also frustrating one.</p>
-<p><strong><em>Tidyverse: 1 Data.Table: 0</em></strong></p>
-</div>
-<div id="conclusions" class="section level2">
-<h2>Conclusions</h2>
-<ol style="list-style-type: decimal">
-<li>Yes, there is inconsistency between <code>dplyr::arrange</code> and <code>data.table::setorder</code> when sorting by mixed case characters.</li>
-<li>Unless you know the software it may be not be obvious whether ALL CAPS has better chance of showing up first in the data, but much to my surprise, it seems like it’s a solid gamble to upper cases likely sorted fields.</li>
-</ol>
+<p>As often is the case, thinking that a simple ordering of data is at most a 5 minute task, inconsistent data may quickly beckon one down a rabbit hole. An interesting, but also frustrating one. There is an inconsistency between <code>dplyr::arrange</code> and <code>data.table::setorder</code> when sorting by mixed case characters where the Tidyverse sorts Title Case data before ALL CAPS data and VICE VERSA for data.tables.</p>
 </div>

@@ -15,7 +15,7 @@ tags:
   - arrange
 ---
 
-Recently I resumed PPE allocation duties for a couple of weeks and took the opportunity to automate a checklist of the orders sorted by region to help with their packaging for delivery. As a data person, I couldn't help but also sort the names of agencies after region. The resulting data surprised me when I noticed that the  secondary sort by agency names placed agencies with names in ALL CAPS came before other agencies with Title Case names. 
+Recently I resumed PPE allocation duties for a couple of weeks and took the opportunity to automate a checklist of the orders sorted by region to help with their packaging for delivery. As a data person, I couldn't help but also sort the names of agencies after region. The resulting data surprised me when I noticed that the secondary sort by agency names placed agencies with names in ALL CAPS  before other agencies with Title Case names. 
 
 This led me to wonder -
 
@@ -24,7 +24,7 @@ This led me to wonder -
 
 ## A review of the data
 
-This data was downloaded from the Washington State Department of Social and Health Services [website](https://fortress.wa.gov/dshs/adsaapps/Lookup/NHAdvLookup.aspx) filtered for King County using [`readr::read_csv`](https://readr.tidyverse.org/#usage). When the search results are returned by the website, it is sorted by Agency name as one would expect, where the case does not matter, though it would be nice if the names could have been consistently formatted and makes me wonder about how the data gets to the state. Does one data entry person enter names in ALL CAPS or do the providers enter their names in ALL CAPS? All other data fields across agencies appears "properly" Title Cased, even Admin names.
+This data was downloaded from the Washington State Department of Social and Health Services [website](https://fortress.wa.gov/dshs/adsaapps/Lookup/NHAdvLookup.aspx) filtered for King County. When the search results are returned by the website, it is sorted by Agency name as one would expect, where the case does not matter, though it would be nice if the names could have been consistently formatted and makes me wonder about how the data gets to the state. Does one data entry person enter names in ALL CAPS or do the providers enter their names in ALL CAPS? All other data fields across agencies appears "properly" Title Cased, even Admin names.
 
 ```{r just_the_data, echo=T, warning=F, message=F}
 library(DT)
@@ -52,11 +52,10 @@ In the Tidyverse, we can [arrange](https://dplyr.tidyverse.org/reference/arrange
 data %>%
   arrange(city, name) %>%
   select(city, name) %>%
-  head(40) %>%
   kable()
 ```
 
-***Verdict:***: Title Case city names precede ALL CAPS city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Also true for REDMOND CARE AND REHABILITATION CENTER in REDMOND.
+***Observation:***: Title Case city names precede ALL CAPS city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Also true for REDMOND CARE AND REHABILITATION CENTER in REDMOND.
 
 ## Data.Table > Take 1
 
@@ -67,11 +66,11 @@ library(data.table)
 dt_data  <- fread(here("static", "data", "NFListing.csv"))
 da_table <- dt_data[,.(city = nf_loc_city, name = nf_name)]
 setorder(da_table, city, name)
-da_table[1:40] %>%
+da_table %>%
   kable()
 ```
 
-***Verdict:***: ALL CAPS city names precede Title Case city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Things seem even weirder for REDMOND and RENTON where the 2 agencies with ALL CAPS cities precede the other 2 agencies in Redmond and Renton. 
+***Observation:***: ALL CAPS city names precede Title Case city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Things seem even weirder for REDMOND and RENTON where the 2 agencies with ALL CAPS cities precede the other 2 agencies in Redmond and Renton. 
 
 ## What to do? 
 
@@ -79,7 +78,7 @@ As a consultant, when discussing data quality, I would advocate for non-shouty d
 
 ## #Tidyverse > Take 2
 
-Rather than tackle agency names which likely have legitimate UPPER CASE initials and acronyms, formatting the city names will at least reveal where `dplyr::arrange` puts AVALON CARE CENTER - FEDERAL WAY, LLC once FEDERAL WAY is formatted. To  [stringr::str_to_title](https://stringr.tidyverse.org/reference/case.html)! 
+Rather than tackle agency names which may have initials and acronyms in ALL CAPS, formatting the city names will at least reveal where `dplyr::arrange` puts AVALON CARE CENTER - FEDERAL WAY, LLC once FEDERAL WAY is formatted. 
 
 ```{r tidyverseFormatCity, warning=F, message=F}
 library(stringr)
@@ -91,7 +90,9 @@ data %>%
   kable()
 ```
 
-***Verdict:***: With my city data now formatted as Title Case, the secondary sorting of names is returned as hoped for both Federal Way, Redmond and Seattle agencies. ***WINNER WINNER (TOFU DINNER!)***
+***Verdict:***: ***WINNER***
+
+With my city data now formatted as Title Case, the secondary sorting of names is returned as hoped for both Federal Way, Redmond and Seattle agencies. 
 
 ## Data.Table > Take 2
 
@@ -105,15 +106,10 @@ da_table[1:40,.(city, city_formatted, name)] %>%
   kable()
 ```
 
-***Verdict:***: BETTER, but not all there yet. Secondary sort on mixed case names results in agency names starting with a given letter in ALL CAPS preceding other Title Cased names of same letter. ***RUNNER UP***.
+***Verdict:***: ***BETTER***
+
+Secondary sort on mixed case names results in agency names starting with a given letter in ALL CAPS preceding other Title Cased names of same letter. 
 
 ## A Sorted Affair
 
-As often is the case, thinking that a simple ordering of data is at most a 5 minute task, inconsistent data may quickly beckon one down a rabbit hole. An interesting, but also frustrating one. 
-
-***Tidyverse: 1 Data.Table: 0***
-
-## Conclusions
-
-1. Yes, there is inconsistency between `dplyr::arrange` and `data.table::setorder` when sorting by mixed case characters.
-2. Unless you know the software it may be not be obvious whether ALL CAPS has better chance of showing up first in the data, but much to my surprise, it seems like it's a solid gamble to upper cases likely sorted fields.
+As often is the case, thinking that a simple ordering of data is at most a 5 minute task, inconsistent data may quickly beckon one down a rabbit hole. An interesting, but also frustrating one. There is an inconsistency between `dplyr::arrange` and `data.table::setorder` when sorting by mixed case characters where the Tidyverse sorts Title Case data before ALL CAPS data and VICE VERSA for data.tables.
