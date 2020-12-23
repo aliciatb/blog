@@ -16,25 +16,9 @@ tags:
 ---
 
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
-<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
-<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
-<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
-<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
-<script src="/rmarkdown-libs/jszip/jszip.min.js"></script>
-<link href="/rmarkdown-libs/dt-ext-buttons/css/buttons.dataTables.min.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/dt-ext-buttons/js/dataTables.buttons.min.js"></script>
-<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.flash.min.js"></script>
-<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.html5.min.js"></script>
-<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.colVis.min.js"></script>
-<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.print.min.js"></script>
-<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
 
 
-<p>Recently I resumed PPE allocation duties for a couple of weeks and took the opportunity to automate a checklist of the orders sorted by region to help with their packaging for delivery. As a data person, I couldn’t help but also sort the names of agencies after region. The resulting data surprised me when I noticed that the secondary sort by agency names placed agencies with names in ALL CAPS before other agencies with Title Case names.</p>
+<p>Recently I resumed PPE allocation duties for a couple of weeks and took the opportunity to automate a checklist of the orders sorted by region to help with their packaging for delivery. As a data person, I couldn’t help but also sort the names of facilities after region. The resulting data surprised me when I noticed that the secondary sort by facility names placed facilities with names in ALL CAPS before other facilities with Title Case names.</p>
 <p>This led me to wonder -</p>
 <ol style="list-style-type: decimal">
 <li>Do different libraries sort character values differently? I’m typically on #TeamDataverse because <a href="https://dplyr.tidyverse.org/">dplyr</a> makes it a snap to do things and just make sense to human brains.</li>
@@ -42,28 +26,18 @@ tags:
 </ol>
 <div id="a-review-of-the-data" class="section level2">
 <h2>A review of the data</h2>
-<p>This data was downloaded from the Washington State Department of Social and Health Services <a href="https://fortress.wa.gov/dshs/adsaapps/Lookup/NHAdvLookup.aspx">website</a> filtered for King County. When the search results are returned by the website, it is sorted by Agency name as one would expect, where the case does not matter, though it would be nice if the names could have been consistently formatted and makes me wonder about how the data gets to the state. Does one data entry person enter names in ALL CAPS or do the providers enter their names in ALL CAPS? All other data fields across agencies appears “properly” Title Cased, even Admin names.</p>
-<pre class="r"><code>library(DT)
-library(here)
+<p>This data was downloaded from the Washington State Department of Social and Health Services <a href="https://fortress.wa.gov/dshs/adsaapps/Lookup/NHAdvLookup.aspx">website</a> filtered for Nursing facilities in King County. When the search results are returned by the website, it is sorted by facility name as one would expect, where the case does not matter, though it would be nice if the names could have been consistently formatted and makes me wonder about how the data gets to the state. Does one data entry person enter names in ALL CAPS or do the providers enter their names in ALL CAPS? All other data fields across facilities appears “properly” Title Cased, even Admin names.</p>
+<pre class="r"><code>library(here)
 library(knitr)
 library(tidyverse)
 
 data &lt;- read_csv(here(&quot;static&quot;, &quot;data&quot;, &quot;NFListing.csv&quot;)) %&gt;%
   select(nf_name,nf_loc_city) %&gt;%
-  rename(name = nf_name, city = nf_loc_city) 
-  
-data %&gt;%
-  select(name, city) %&gt;%
-  datatable(extensions = c(&#39;Buttons&#39;), 
-          options = list(dom = &#39;Blfrtip&#39;,
-          buttons = c(&#39;excel&#39;,&#39;copy&#39;),
-          pageLength = 20))</code></pre>
-<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","extensions":["Buttons"],"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51"],["Advanced Post Acute","AVALON CARE CENTER - FEDERAL WAY, LLC","BAILEY-BOUSHAY HOUSE","Ballard Center","BAYVIEW MANOR","BENSON HEIGHTS REHABILITATION CENTER","Briarwood at Timber Ridge","Burien Nursing and Rehabilitation Center","Canterbury House","CAROLINE KLINE GALLAND HOME, THE","COLUMBIA LUTHERAN HOME","CORWIN CENTER AT EMERALD HEIGHTS","COVENANT SHORES HEALTH CENTER","Enumclaw Health and Rehabilitation Center","FIRCREST SCHOOL PAT N","FOSS HOME AND VILLAGE","Garden Terrace Healthcare Center of Federal Way","HALLMARK MANOR","HEARTHSTONE, THE","Issaquah Nursing &amp; Rehabilitation Center","JUDSON PARK HEALTH CENTER","KIN ON HEALTH CARE CENTER","Lea Hill Rehabilitation and Care Center","LIFE CARE CENTER OF FEDERAL WAY","LIFE CARE CENTER OF KIRKLAND","MIRABELLA","MISSION HEALTHCARE AT BELLEVUE","Mission Healthcare at Renton","North Auburn Rehabilitation &amp; Health Center","Park Ridge Care Center","PARK SHORE","Park West Care Center","PROVIDENCE MARIANWOOD","PROVIDENCE MOUNT ST VINCENT","QUEEN ANNE HEALTHCARE","REDMOND CARE AND REHABILITATION CENTER","Regency North Bend Rehabilitation and Nursing Center","Renton Nursing and Rehabilitation Center","RICHMOND BEACH REHAB","SAINT ANNE NURSING AND REHABILITATION CENTER","SEA MAR COMMUNITY CARE CENTER","Seattle Medical Post Acute Care","SHORELINE HEALTH AND REHABILITATION","STAFFORD HEALTHCARE","SUNRISE HAVEN","Talbot Center for Rehabilitation and Healthcare","THE SPRINGS AT PACIFIC REGENT","THE TERRACES AT SKYLINE","Transitional Care Center of Seattle","Washington Care Center","WESLEY HOMES HEALTH CENTER"],["Auburn","FEDERAL WAY","Seattle","Seattle","SEATTLE","KENT","Issaquah","BURIEN","Auburn","SEATTLE","SEATTLE","REDMOND","Mercer Island","Enumclaw","Shoreline","SEATTLE","Federal Way","Federal Way","SEATTLE","ISSAQUAH","DES MOINES","SEATTLE","Auburn","Federal Way","Kirkland","SEATTLE","BELLEVUE","Renton","Auburn","Shoreline","SEATTLE","SEATTLE","ISSAQUAH","SEATTLE","SEATTLE","Redmond","NORTH BEND","Renton","Shoreline","Seattle","Seattle","Seattle","Shoreline","DES MOINES","KENT","RENTON","BELLEVUE","SEATTLE","Seattle","Seattle","DES MOINES"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>city<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Blfrtip","buttons":["excel","copy"],"pageLength":20,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+  rename(name = nf_name, city = nf_loc_city) </code></pre>
 </div>
 <div id="teamtidyverse-take-1" class="section level2">
 <h2>#TeamTidyverse &gt; Take 1</h2>
-<p>In the Tidyverse, we can <a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a> data by multiple fields and see if the case matters. Our first opportunity to check the data occurs for Federal Way since there are both Title Case and ALL CAPS city and agency names.</p>
+<p>In the Tidyverse, we can <a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a> data by multiple fields and see if the case matters. Our first opportunity to check the data occurs for Federal Way since there are both Title Case and ALL CAPS city and facility names.</p>
 <pre class="r"><code>data %&gt;%
   arrange(city, name) %&gt;%
   select(city, name) %&gt;%
@@ -507,7 +481,7 @@ da_table %&gt;%
 </tr>
 </tbody>
 </table>
-<p><strong><em>Observation:</em></strong>: ALL CAPS city names precede Title Case city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Things seem even weirder for REDMOND and RENTON where the 2 agencies with ALL CAPS cities precede the other 2 agencies in Redmond and Renton.</p>
+<p><strong><em>Observation:</em></strong>: ALL CAPS city names precede Title Case city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Things seem even weirder for REDMOND and RENTON where the 2 facilities with ALL CAPS cities precede the other 2 facilities in Redmond and Renton.</p>
 </div>
 <div id="what-to-do" class="section level2">
 <h2>What to do?</h2>
@@ -515,13 +489,12 @@ da_table %&gt;%
 </div>
 <div id="tidyverse-take-2" class="section level2">
 <h2>#Tidyverse &gt; Take 2</h2>
-<p>Rather than tackle agency names which may have initials and acronyms in ALL CAPS, formatting the city names will at least reveal where <code>dplyr::arrange</code> puts AVALON CARE CENTER - FEDERAL WAY, LLC once FEDERAL WAY is formatted.</p>
+<p>Rather than tackle facility names which may have initials and acronyms in ALL CAPS, formatting the city names will at least reveal where <code>dplyr::arrange</code> puts AVALON CARE CENTER - FEDERAL WAY, LLC once FEDERAL WAY is formatted.</p>
 <pre class="r"><code>library(stringr)
 data %&gt;%
   mutate(city_formatted = str_to_title(city)) %&gt;%
   arrange(city_formatted, name) %&gt;%
   select(city, city_formatted, name) %&gt;%
-  head(40) %&gt;%
   kable()</code></pre>
 <table>
 <thead>
@@ -732,10 +705,65 @@ data %&gt;%
 <td align="left">Seattle</td>
 <td align="left">PROVIDENCE MOUNT ST VINCENT</td>
 </tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">QUEEN ANNE HEALTHCARE</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">SAINT ANNE NURSING AND REHABILITATION CENTER</td>
+</tr>
+<tr class="odd">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">SEA MAR COMMUNITY CARE CENTER</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">Seattle Medical Post Acute Care</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">THE TERRACES AT SKYLINE</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">Transitional Care Center of Seattle</td>
+</tr>
+<tr class="odd">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">Washington Care Center</td>
+</tr>
+<tr class="even">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">FIRCREST SCHOOL PAT N</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">Park Ridge Care Center</td>
+</tr>
+<tr class="even">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">RICHMOND BEACH REHAB</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">SHORELINE HEALTH AND REHABILITATION</td>
+</tr>
 </tbody>
 </table>
 <p><strong><em>Verdict:</em></strong>: <strong><em>WINNER</em></strong></p>
-<p>With my city data now formatted as Title Case, the secondary sorting of names is returned as hoped for both Federal Way, Redmond and Seattle agencies.</p>
+<p>With my city data now formatted as Title Case, the secondary sorting of names is returned as hoped for both Federal Way, Redmond and Seattle facilities.</p>
 </div>
 <div id="data.table-take-2" class="section level2">
 <h2>Data.Table &gt; Take 2</h2>
@@ -744,7 +772,7 @@ da_table &lt;- dt_data[,.(city = nf_loc_city, name = nf_name)]
 da_table[,city_formatted := str_to_title(city)]
 
 setorder(da_table, city_formatted, name)
-da_table[1:40,.(city, city_formatted, name)] %&gt;%
+da_table[,.(city, city_formatted, name)] %&gt;%
   kable()</code></pre>
 <table>
 <thead>
@@ -955,12 +983,347 @@ da_table[1:40,.(city, city_formatted, name)] %&gt;%
 <td align="left">Seattle</td>
 <td align="left">Park West Care Center</td>
 </tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">QUEEN ANNE HEALTHCARE</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">SAINT ANNE NURSING AND REHABILITATION CENTER</td>
+</tr>
+<tr class="odd">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">SEA MAR COMMUNITY CARE CENTER</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">Seattle Medical Post Acute Care</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">THE TERRACES AT SKYLINE</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">Transitional Care Center of Seattle</td>
+</tr>
+<tr class="odd">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">Washington Care Center</td>
+</tr>
+<tr class="even">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">FIRCREST SCHOOL PAT N</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">Park Ridge Care Center</td>
+</tr>
+<tr class="even">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">RICHMOND BEACH REHAB</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">SHORELINE HEALTH AND REHABILITATION</td>
+</tr>
 </tbody>
 </table>
 <p><strong><em>Verdict:</em></strong>: <strong><em>BETTER</em></strong></p>
-<p>Secondary sort on mixed case names results in agency names starting with a given letter in ALL CAPS preceding other Title Cased names of same letter.</p>
+<p>Secondary sort on mixed case names results in facility names starting with a given letter in ALL CAPS preceding other Title Cased names of same letter.</p>
+</div>
+<div id="data.table-take-3" class="section level2">
+<h2>Data.Table &gt; Take 3</h2>
+<pre class="r"><code># start over again with pre-ordered data.table
+da_table &lt;- dt_data[,.(city = nf_loc_city, name = nf_name)]
+da_table[,city_formatted := str_to_title(city)]
+
+da_table[base::order(city_formatted, name),.(city, city_formatted, name)] %&gt;%
+  kable</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">city</th>
+<th align="left">city_formatted</th>
+<th align="left">name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Auburn</td>
+<td align="left">Auburn</td>
+<td align="left">Advanced Post Acute</td>
+</tr>
+<tr class="even">
+<td align="left">Auburn</td>
+<td align="left">Auburn</td>
+<td align="left">Canterbury House</td>
+</tr>
+<tr class="odd">
+<td align="left">Auburn</td>
+<td align="left">Auburn</td>
+<td align="left">Lea Hill Rehabilitation and Care Center</td>
+</tr>
+<tr class="even">
+<td align="left">Auburn</td>
+<td align="left">Auburn</td>
+<td align="left">North Auburn Rehabilitation &amp; Health Center</td>
+</tr>
+<tr class="odd">
+<td align="left">BELLEVUE</td>
+<td align="left">Bellevue</td>
+<td align="left">MISSION HEALTHCARE AT BELLEVUE</td>
+</tr>
+<tr class="even">
+<td align="left">BELLEVUE</td>
+<td align="left">Bellevue</td>
+<td align="left">THE SPRINGS AT PACIFIC REGENT</td>
+</tr>
+<tr class="odd">
+<td align="left">BURIEN</td>
+<td align="left">Burien</td>
+<td align="left">Burien Nursing and Rehabilitation Center</td>
+</tr>
+<tr class="even">
+<td align="left">DES MOINES</td>
+<td align="left">Des Moines</td>
+<td align="left">JUDSON PARK HEALTH CENTER</td>
+</tr>
+<tr class="odd">
+<td align="left">DES MOINES</td>
+<td align="left">Des Moines</td>
+<td align="left">STAFFORD HEALTHCARE</td>
+</tr>
+<tr class="even">
+<td align="left">DES MOINES</td>
+<td align="left">Des Moines</td>
+<td align="left">WESLEY HOMES HEALTH CENTER</td>
+</tr>
+<tr class="odd">
+<td align="left">Enumclaw</td>
+<td align="left">Enumclaw</td>
+<td align="left">Enumclaw Health and Rehabilitation Center</td>
+</tr>
+<tr class="even">
+<td align="left">FEDERAL WAY</td>
+<td align="left">Federal Way</td>
+<td align="left">AVALON CARE CENTER - FEDERAL WAY, LLC</td>
+</tr>
+<tr class="odd">
+<td align="left">Federal Way</td>
+<td align="left">Federal Way</td>
+<td align="left">Garden Terrace Healthcare Center of Federal Way</td>
+</tr>
+<tr class="even">
+<td align="left">Federal Way</td>
+<td align="left">Federal Way</td>
+<td align="left">HALLMARK MANOR</td>
+</tr>
+<tr class="odd">
+<td align="left">Federal Way</td>
+<td align="left">Federal Way</td>
+<td align="left">LIFE CARE CENTER OF FEDERAL WAY</td>
+</tr>
+<tr class="even">
+<td align="left">Issaquah</td>
+<td align="left">Issaquah</td>
+<td align="left">Briarwood at Timber Ridge</td>
+</tr>
+<tr class="odd">
+<td align="left">ISSAQUAH</td>
+<td align="left">Issaquah</td>
+<td align="left">Issaquah Nursing &amp; Rehabilitation Center</td>
+</tr>
+<tr class="even">
+<td align="left">ISSAQUAH</td>
+<td align="left">Issaquah</td>
+<td align="left">PROVIDENCE MARIANWOOD</td>
+</tr>
+<tr class="odd">
+<td align="left">KENT</td>
+<td align="left">Kent</td>
+<td align="left">BENSON HEIGHTS REHABILITATION CENTER</td>
+</tr>
+<tr class="even">
+<td align="left">KENT</td>
+<td align="left">Kent</td>
+<td align="left">SUNRISE HAVEN</td>
+</tr>
+<tr class="odd">
+<td align="left">Kirkland</td>
+<td align="left">Kirkland</td>
+<td align="left">LIFE CARE CENTER OF KIRKLAND</td>
+</tr>
+<tr class="even">
+<td align="left">Mercer Island</td>
+<td align="left">Mercer Island</td>
+<td align="left">COVENANT SHORES HEALTH CENTER</td>
+</tr>
+<tr class="odd">
+<td align="left">NORTH BEND</td>
+<td align="left">North Bend</td>
+<td align="left">Regency North Bend Rehabilitation and Nursing Center</td>
+</tr>
+<tr class="even">
+<td align="left">REDMOND</td>
+<td align="left">Redmond</td>
+<td align="left">CORWIN CENTER AT EMERALD HEIGHTS</td>
+</tr>
+<tr class="odd">
+<td align="left">Redmond</td>
+<td align="left">Redmond</td>
+<td align="left">REDMOND CARE AND REHABILITATION CENTER</td>
+</tr>
+<tr class="even">
+<td align="left">Renton</td>
+<td align="left">Renton</td>
+<td align="left">Mission Healthcare at Renton</td>
+</tr>
+<tr class="odd">
+<td align="left">Renton</td>
+<td align="left">Renton</td>
+<td align="left">Renton Nursing and Rehabilitation Center</td>
+</tr>
+<tr class="even">
+<td align="left">RENTON</td>
+<td align="left">Renton</td>
+<td align="left">Talbot Center for Rehabilitation and Healthcare</td>
+</tr>
+<tr class="odd">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">BAILEY-BOUSHAY HOUSE</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">Ballard Center</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">BAYVIEW MANOR</td>
+</tr>
+<tr class="even">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">CAROLINE KLINE GALLAND HOME, THE</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">COLUMBIA LUTHERAN HOME</td>
+</tr>
+<tr class="even">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">FOSS HOME AND VILLAGE</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">HEARTHSTONE, THE</td>
+</tr>
+<tr class="even">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">KIN ON HEALTH CARE CENTER</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">MIRABELLA</td>
+</tr>
+<tr class="even">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">PARK SHORE</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">Park West Care Center</td>
+</tr>
+<tr class="even">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">PROVIDENCE MOUNT ST VINCENT</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">QUEEN ANNE HEALTHCARE</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">SAINT ANNE NURSING AND REHABILITATION CENTER</td>
+</tr>
+<tr class="odd">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">SEA MAR COMMUNITY CARE CENTER</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">Seattle Medical Post Acute Care</td>
+</tr>
+<tr class="odd">
+<td align="left">SEATTLE</td>
+<td align="left">Seattle</td>
+<td align="left">THE TERRACES AT SKYLINE</td>
+</tr>
+<tr class="even">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">Transitional Care Center of Seattle</td>
+</tr>
+<tr class="odd">
+<td align="left">Seattle</td>
+<td align="left">Seattle</td>
+<td align="left">Washington Care Center</td>
+</tr>
+<tr class="even">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">FIRCREST SCHOOL PAT N</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">Park Ridge Care Center</td>
+</tr>
+<tr class="even">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">RICHMOND BEACH REHAB</td>
+</tr>
+<tr class="odd">
+<td align="left">Shoreline</td>
+<td align="left">Shoreline</td>
+<td align="left">SHORELINE HEALTH AND REHABILITATION</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Verdict:</em></strong>: <strong><em>WINNER</em></strong></p>
+<p>Specifying <code>base::order</code> makes the data.table sorting experience with dplyr and more importantly, sort more sensibly in spite of case differences across facility names. When reading all of the <a href="https://www.rdocumentation.org/packages/data.table/versions/1.13.2/topics/setorder">documentation</a>, it notes that -</p>
+<blockquote>
+<p>data.table always reorders in “C-locale”. As a consequence, the ordering may be different to that obtained by base::order.</p>
+</blockquote>
 </div>
 <div id="a-sorted-affair" class="section level2">
 <h2>A Sorted Affair</h2>
-<p>As often is the case, thinking that a simple ordering of data is at most a 5 minute task, inconsistent data may quickly beckon one down a rabbit hole. An interesting, but also frustrating one. There is an inconsistency between <code>dplyr::arrange</code> and <code>data.table::setorder</code> when sorting by mixed case characters where the Tidyverse sorts Title Case data before ALL CAPS data and VICE VERSA for data.tables.</p>
+<p>As often is the case, thinking that a simple task to sort data won’t take more than 5 minutes can quickly lead one down a rabbit hole when data is inconsistent. Standardizing data formats for character values would not only be easier on human eyes, but also result in more expected sorting behavior.</p>
 </div>
