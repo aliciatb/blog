@@ -424,11 +424,11 @@ da_table[1:40] %&gt;%
 </div>
 <div id="what-to-do" class="section level2">
 <h2>What to do?</h2>
-<p>As a consultant when discussing data quality, I would advocate for non-shouty data if source system flexibility makes that possible and doesn’t impact prior data reporting. But sometimes when you are downstream from data, you may find yourself getting inconsistently formatted data and you have to make the decision on how much you care about maddening cases and determine if you even have the time to invest in attempting to format names, which is often a tricky business.</p>
+<p>As a consultant, when discussing data quality, I would advocate for non-shouty data if source system flexibility makes that possible and doesn’t impact prior data reporting. But sometimes when you are downstream from data, you may find yourself getting inconsistently formatted data and you have to make the decision on how much you care about maddening cases and determine if you even have the time to invest in attempting to format names, which is often a tricky business.</p>
 </div>
 <div id="tidyverse-take-2" class="section level2">
 <h2>#Tidyverse &gt; Take 2</h2>
-<p>Rather than tackle agency names which likely have legitimate UPPER CASE initials and acronyms, formatting the city names will at least reveal where <code>dplyr::arrange</code> puts AVALON CARE CENTER - FEDERAL WAY, LLC once FEDERAL WAY is formatted. To <code>[stringr::str_to_title](https://stringr.tidyverse.org/reference/case.html)</code>!</p>
+<p>Rather than tackle agency names which likely have legitimate UPPER CASE initials and acronyms, formatting the city names will at least reveal where <code>dplyr::arrange</code> puts AVALON CARE CENTER - FEDERAL WAY, LLC once FEDERAL WAY is formatted. To <a href="https://stringr.tidyverse.org/reference/case.html">stringr::str_to_title</a>!</p>
 <pre class="r"><code>library(stringr)
 data %&gt;%
   mutate(city_formatted = str_to_title(city)) %&gt;%
@@ -647,7 +647,7 @@ data %&gt;%
 </tr>
 </tbody>
 </table>
-<p><strong><em>Verdict:</em></strong>: With my city data now formatted as Title Case, the secondary sorting of names is returned as hoped for both Federal Way, Redmond and Seattle agencies. <strong><em>WINNER</em></strong></p>
+<p><strong><em>Verdict:</em></strong>: With my city data now formatted as Title Case, the secondary sorting of names is returned as hoped for both Federal Way, Redmond and Seattle agencies. <strong><em>WINNER WINNER (TOFU DINNER!)</em></strong></p>
 </div>
 <div id="data.table-take-2" class="section level2">
 <h2>Data.Table &gt; Take 2</h2>

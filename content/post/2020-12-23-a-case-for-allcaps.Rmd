@@ -75,11 +75,11 @@ da_table[1:40] %>%
 
 ## What to do? 
 
-As a consultant when discussing data quality, I would advocate for non-shouty data if source system flexibility makes that possible and doesn't impact prior data reporting. But sometimes when you are downstream from data, you may find yourself getting inconsistently formatted data and you have to make the decision on how much you care about maddening cases and determine if you even have the time to invest in attempting to format names, which is often a tricky business.
+As a consultant, when discussing data quality, I would advocate for non-shouty data if source system flexibility makes that possible and doesn't impact prior data reporting. But sometimes when you are downstream from data, you may find yourself getting inconsistently formatted data and you have to make the decision on how much you care about maddening cases and determine if you even have the time to invest in attempting to format names, which is often a tricky business.
 
 ## #Tidyverse > Take 2
 
-Rather than tackle agency names which likely have legitimate UPPER CASE initials and acronyms, formatting the city names will at least reveal where `dplyr::arrange` puts AVALON CARE CENTER - FEDERAL WAY, LLC once FEDERAL WAY is formatted. To  `[stringr::str_to_title](https://stringr.tidyverse.org/reference/case.html)`! 
+Rather than tackle agency names which likely have legitimate UPPER CASE initials and acronyms, formatting the city names will at least reveal where `dplyr::arrange` puts AVALON CARE CENTER - FEDERAL WAY, LLC once FEDERAL WAY is formatted. To  [stringr::str_to_title](https://stringr.tidyverse.org/reference/case.html)! 
 
 ```{r tidyverseFormatCity, warning=F, message=F}
 library(stringr)
@@ -91,7 +91,7 @@ data %>%
   kable()
 ```
 
-***Verdict:***: With my city data now formatted as Title Case, the secondary sorting of names is returned as hoped for both Federal Way, Redmond and Seattle agencies. ***WINNER***
+***Verdict:***: With my city data now formatted as Title Case, the secondary sorting of names is returned as hoped for both Federal Way, Redmond and Seattle agencies. ***WINNER WINNER (TOFU DINNER!)***
 
 ## Data.Table > Take 2
 
