@@ -15,11 +15,11 @@ tags:
   - arrange
 ---
 
-Recently I resumed PPE allocation duties for a couple of weeks and took the opportunity to automate a checklist of the orders sorted by region to help with their packaging for delivery. As a data person, I couldn't help but also sort the names of facilities after region. The resulting data surprised me when I noticed that the secondary sort by facility names placed facilities with names in ALL CAPS  before other facilities with Title Case names. 
+Recently I resumed PPE allocation duties for a couple of weeks and took the opportunity to automate a checklist of the orders sorted by region to help track weekly orders by the Warehouse team. As a data person, I couldn't help but add scope creep by adding a secondary sort by facility name. The resulting data surprised me when I noticed that the secondary sort placed facilities with names in ALL CAPS  before other facilities with Title Case names. 
 
 This led me to wonder -
 
-1. Do different libraries sort character values differently? I'm typically on #TeamDataverse because [dplyr](https://dplyr.tidyverse.org/) makes it a snap to do things and just make sense to human brains. 
+1. Do different libraries sort character values differently?
 2. Is there an advantage to use ALL CAPS if there's a chance to be sorted first in a mixed case data environment? As someone whose first and last names are at the beginning of the alphabet, I have wondered whether that's been an advantage to me or if I've been lucky on the occasions where I was selected in contests and seat upgrades. 
 
 ## A review of the data
@@ -32,26 +32,25 @@ library(knitr)
 library(tidyverse)
 
 data <- read_csv(here("static", "data", "NFListing.csv")) %>%
-  select(nf_name,nf_loc_city) %>%
-  rename(name = nf_name, city = nf_loc_city) 
+  select(nf_loc_city,nf_name) %>%
+  rename(city = nf_loc_city, name = nf_name) 
 ```
 
 ## #TeamTidyverse > Take 1
 
-In the Tidyverse, we can [arrange](https://dplyr.tidyverse.org/reference/arrange.html) data by multiple fields and see if the case matters. Our first opportunity to check the data occurs for Federal Way since there are both Title Case and ALL CAPS city and facility names.
+In the [#Tidyverse](https://twitter.com/search?q=%23tidyverse&src=typed_query), one can [arrange](https://dplyr.tidyverse.org/reference/arrange.html) data by multiple fields and see if the case matters. The first set of mixed case city and names occurs for Federal Way. I am including all 51 rows of data to show all wrinkles in sorting for Redmond, Renton and Seattle facilities.
 
 ```{r tidyverse_}
 data %>%
   arrange(city, name) %>%
-  select(city, name) %>%
   kable()
 ```
 
-***Observation:***: Title Case city names precede ALL CAPS city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Also true for REDMOND CARE AND REHABILITATION CENTER in REDMOND.
+***Observation:*** Title Case city names precede ALL CAPS city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Also true for REDMOND CARE AND REHABILITATION CENTER in REDMOND.
 
 ## Data.Table > Take 1
 
-My colleague who developed the allocation algorithm is on #TeamData.Table for zippy processing. To order data in a data.table we specify columns in  [setorder](https://www.rdocumentation.org/packages/data.table/versions/1.13.2/topics/setorder).
+My colleague who developed the allocation algorithm is on [#TeamData.Table](https://twitter.com/search?q=%23rdatatable&src=typed_query) for zippy processing. One way to order data in a data.table is through [setorder](https://www.rdocumentation.org/packages/data.table/versions/1.13.2/topics/setorder).
 
 ```{r datatable, warning=F, message=F}
 library(data.table)
@@ -62,7 +61,7 @@ da_table %>%
   kable()
 ```
 
-***Observation:***: ALL CAPS city names precede Title Case city names per AVALON CARE CENTER - FEDERAL WAY, LLC in FEDERAL WAY. Things seem even weirder for REDMOND and RENTON where the 2 facilities with ALL CAPS cities precede the other 2 facilities in Redmond and Renton. 
+***Observation:*** ALL CAPS city names precede Title Case city names as seen for Seattle facilities. Things get even weirder for Redmand and Renton where even the cities aren't grouped in order.
 
 ## What to do? 
 
@@ -70,7 +69,7 @@ As a consultant, when discussing data quality, I would advocate for non-shouty d
 
 ## #Tidyverse > Take 2
 
-Rather than tackle facility names which may have initials and acronyms in ALL CAPS, formatting the city names will at least reveal where `dplyr::arrange` puts AVALON CARE CENTER - FEDERAL WAY, LLC once FEDERAL WAY is formatted. 
+Rather than tackle facility names which may have initials and acronyms in ALL CAPS, formatting the city names will at least reveal how [dplyr::arrange](https://dplyr.tidyverse.org/reference/arrange.html) sorts data using `city_formmatted` in place of `city`. 
 
 ```{r tidyverseFormatCity, warning=F, message=F}
 library(stringr)
@@ -81,14 +80,15 @@ data %>%
   kable()
 ```
 
-***Verdict:***: ***WINNER***
+***Verdict:*** ***WINNER***
 
 With my city data now formatted as Title Case, the secondary sorting of names is returned as hoped for both Federal Way, Redmond and Seattle facilities. 
 
 ## Data.Table > Take 2
 
+The next test is to see how using the formatted city name impacts sort of facilities by [setorder](https://www.rdocumentation.org/packages/data.table/versions/1.13.2/topics/setorder).
+
 ```{r datatableFormatCity, warning=F, message=F}
-# start over again with pre-ordered data.table
 da_table <- dt_data[,.(city = nf_loc_city, name = nf_name)]
 da_table[,city_formatted := str_to_title(city)]
 
@@ -97,14 +97,19 @@ da_table[,.(city, city_formatted, name)] %>%
   kable()
 ```
 
-***Verdict:***: ***BETTER***
+***Verdict:*** ***BETTER***
 
-Secondary sort on mixed case names results in facility names starting with a given letter in ALL CAPS preceding other Title Cased names of same letter. 
+Secondary sort on mixed case names results in facility names starting with a given letter in ALL CAPS preceding other Title Cased names of same letter. The data looks pretty good until seeing where Ballad Center and Park West Care Center show up under Seattle facilities.
 
 ## Data.Table > Take 3
 
+When reading all of the [documentation](https://www.rdocumentation.org/packages/data.table/versions/1.13.2/topics/setorder), it notes that -  
+
+> data.table always reorders in "C-locale". As a consequence, the ordering may be different to that obtained by base::order.
+
+For final test, will try `base::order` on the data.table and sort by `city_formatted` and `name`.
+
 ```{r datatableOrder, warning=F, message=F}
-# start over again with pre-ordered data.table
 da_table <- dt_data[,.(city = nf_loc_city, name = nf_name)]
 da_table[,city_formatted := str_to_title(city)]
 
@@ -114,9 +119,7 @@ da_table[base::order(city_formatted, name),.(city, city_formatted, name)] %>%
 
 ***Verdict:***: ***WINNER***
 
-Specifying `base::order` makes the data.table sorting experience with dplyr and more importantly, sort more sensibly in spite of case differences across facility names. When reading all of the [documentation](https://www.rdocumentation.org/packages/data.table/versions/1.13.2/topics/setorder), it notes that -  
-
-> data.table always reorders in "C-locale". As a consequence, the ordering may be different to that obtained by base::order.
+Specifying `base::order` makes the data.table sorting experience consistent with dplyr and more importantly, sort more human-sensibly in spite of case differences across facility names.
 
 ## A Sorted Affair
 
