@@ -112,7 +112,7 @@ Sacramento, CA
 
 2019
 
-Dashboard to identify cities that could be facing fiscal challenges by assessing their levels of risk using various financial indicators.
+Fiscal Health Indicator Dashboard for California cities
 
 ### Pierce County Performance Dashboard
 
@@ -122,17 +122,17 @@ Pierce County, WA
 
 2018
 
-Partnered with departments to identify measurable data to use for analysis of performance, develop sustainable methods for publishing data and retrieving common indicators from census and bls apis.
+Performance Management Data and Dashboards for County Services and Community Indicators
 
 ### Oakland Equity Indicators
 
-[]()
+[data.oaklandca.gov/stories/s/brb2-j4ad](https://data.oaklandca.gov/stories/s/brb2-j4ad)
 
 Oakland, CA
 
 2018
 
-Created interactive report featuring 72 indicators across six themes score how equitable Oakland is between groups with the highest and lowest values for a given indicator.
+Interactive report of Equity Scores for 72 indicators across six themes highlighting opportunities for city investments
 
 ### Neighborhood Data for Social Change Platform
 
@@ -142,7 +142,7 @@ Los Angeles, CA
 
 2017
 
-Worked with [USC Sol Price Center for Social Change](https://socialinnovation.usc.edu/) team to provide data and spatial assets for the to engage community and provide necessary data for researches and local non-profits.
+Community Data, Dashboards and Storytelling platform for researchers and local non-profits in Southern California
 
 ### Michigan Financial & School Dashboards
 
@@ -152,7 +152,7 @@ Lansing, MI
 
 2016
 
-Worked with Michigan Department of Treasury / Schools to monitor financial and enrollment data across localities and educational entities.
+Dashboards built for the Michigan Department of Treasury / Schools to monitor financial and enrollment data across localities and educational entities
 
 Certifications {data-icon=certificate}
 --------------------------------------------------------------------------------

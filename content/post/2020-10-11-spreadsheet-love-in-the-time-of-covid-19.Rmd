@@ -50,7 +50,7 @@ This package provides a searchable, paginating and downloadable experience that 
 
 ## Dynamic Playbooks
 
-As an analyst I love to document requirements and decisions made in One Note and Word to enable collaboration with others. I also think that migrating requirements to Markdowon and referencing real data with html widgets to author an interactive playbook is most delightful!
+As an analyst I love to document requirements and decisions made in One Note and Word to enable collaboration with others. I also think that migrating requirements to Markdown and referencing real data with html widgets to author an interactive playbook is most delightful!
 
 ## Resources
 
