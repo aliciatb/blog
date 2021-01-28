@@ -1,0 +1,11 @@
+hi
+intro
+why-open-data
+what-is-data
+tabular
+spatial
+surveys
+reports
+it-about-info
+how-do-we-find-data
+the-struggle-of-search-results
