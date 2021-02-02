@@ -78,7 +78,7 @@
 
 \title{A Field Guide to Open Data}
 \author{Alicia Brown}
-\date{2021-02-01}
+\date{2021-02-02}
 
 \begin{document}
 \maketitle
@@ -99,12 +99,12 @@ The book is organized into 3 parts -
 \item
   Part 1 provides an overview of what Open Data is, how it is used and who uses it.
 \item
-  Part 2 questions the usefulness of Open Data to its producers, how use is measured and what are the challenges faced by producers and consumers of it.
+  Part 2 questions the usefulness of Open Data to its producers, how use is measured and the challenges faced by producers and consumers of data.
 \item
-  Part 3 imagines how information provided by Open Data may be shared, discovered and improved.
+  Part 3 imagines practices to increase the discovery and sharing of Open Data to deliver the promised insights and information for all.
 \end{itemize}
 
-I have had the great honor to work with many amazing organizations, agencies and governments to implement technology solutions that enabled the unleashing of data and analytics to power decision making and transparency.\footnote{\citet{blog5years}} The purpose for this book is to synthesize what I have learned working in the field with customers and present examples and ideas to grow the Open Data ecosystem.
+I have had the great honor to work with many amazing organizations, agencies and governments to implement technology solutions that enabled the unleashing of data and analytics to power decision making and transparency.\footnote{\citet{blog5years}} The purpose for this book is to synthesize what I have learned working in the field with customers and present examples and ideas to grow the Open Data ecosystem. I also hope to provide context to the state of data and organizational roles so that there is an understanding of why data may be as it is and perspective on the concerns of the different groups involved in creating a successful program.
 
 \hypertarget{overview}{%
 \chapter{An Open Data Primer}\label{overview}}
@@ -123,26 +123,26 @@ I have had the great honor to work with many amazing organizations, agencies and
 
 Popular data topics include emergency calls for service, budget, revenue, expenditures, property tax, permits, food inspections, government service calls, lost and found pets, crime incidents, jail bookings, voting registration and election results. When this data includes date, time and location, it can be valuable for performance management and refining staffing for services. When it includes demographic information it makes it possible to analyze differences in data by gender, race and ethnicity, and age and can help inform where there should be more outreach and consider mode of communication that may be most effective.
 
-\hypertarget{types}{%
-\subsection{Types}\label{types}}
+\hypertarget{databases}{%
+\subsection{Databases}\label{databases}}
 
-\begin{itemize}
-\tightlist
-\item
-  Tabular
-\item
-  Spatial
-\item
-  Dashboards
-\item
-  Stories
-\item
-  Visualizations
-\item
-  Surveys
-\item
-  Reports
-\end{itemize}
+Data is commonly sourced from the transactional systems used to manage government services from relational databases.
+Spatial data of boundaries and locations of places exist in geodatabases as well as on open data platforms so that non-cartographers within governments and citizens may find where services exist on a map. While transactional data may have a geographic component like an address, it's no easy feat to join non-spatial data with spatial data and results in multiple open data sites. Date and time features in transactional data adds an extra twist as multiple years of data requires some consideration before joining to maps as boundaries and locations may change over time or even completely disappear. While it may make sense to have versions of maps by year, the delivery of open data on web servers would be compromised by needing to load a new map as users toggle through different years of data. In my experience when presenting data with a map, the most recent spatial boundaries and point location are used for all years of data to ensure zippy user experience.
+
+\hypertarget{files}{%
+\subsection{Files}\label{files}}
+
+Data is also found in spreadsheets and text files when ad-hoc or short term programs may be created to support some service or business process that may not warrant the involvement of information technology initially. There may not be budget to support the purchase or internal development of software. Department analysts, scientists and administrators may choose to spin up a solution with the business software or statistical programming language they are already experts at to enable the success of these programs and efficiently deliver needed services to internal audiences and the public. Negative consequences from these ventures may only arise when there is a need for reporting data or if files are owned by an individual who leaves their job without saving files to a shared network drive.
+
+\hypertarget{reports}{%
+\subsection{Reports}\label{reports}}
+
+Departments may publish annual reports to share what they accomplished that year that contain tables and charts of the data they use to measure their performance or as a benchmark against peers or some standard. This is the perfect data to include in performance management which often is made up of annual measures.
+
+\hypertarget{dashboards}{%
+\subsection{Dashboards}\label{dashboards}}
+
+Departments with a need for reporting data frequently may purchase Business Intelligence and Visualization tools that are powerful and intuitive. These tools connect to many data sources including spreadsheets, text files, web page, pdfs and even from copy/paste operations into a table. Depending on security policies, dashboards published publicly may enable the download of the data presented in it and occasionally be the sole source of some data.
 
 \hypertarget{how-is-it-used}{%
 \section{How is it used?}\label{how-is-it-used}}
@@ -164,11 +164,20 @@ Popular data topics include emergency calls for service, budget, revenue, expend
   Insights and data mining
 \end{itemize}
 
-\hypertarget{news}{%
-\subsection{News}\label{news}}
-
 \hypertarget{civic}{%
 \subsection{Civic}\label{civic}}
+
+\begin{itemize}
+\tightlist
+\item
+  Apps
+\item
+  Grant applications
+\item
+  Journalism
+\item
+  Contests (Kaggle)
+\end{itemize}
 
 \hypertarget{who-uses-it}{%
 \section{Who uses it?}\label{who-uses-it}}
@@ -186,16 +195,42 @@ Popular data topics include emergency calls for service, budget, revenue, expend
 \hypertarget{personas}{%
 \subsection{Personas}\label{personas}}
 
-There are many people and roles across organizations that require data. Here are some personas based on individuals I have met and worked with to get the data they need to perform their jobs. Please note that the names are made up and intended to reflect any specific gender.
+\hypertarget{government}{%
+\subsubsection{Government}\label{government}}
 
 \begin{itemize}
 \tightlist
 \item
-  Alex the Analyst
+  Executive sponsor - from IT or business unit
 \item
-  Pat the Performance Manager
+  Analysts, Scientists
 \item
-  the Executive
+  Program Managers
+\item
+  Managers
+\item
+  Equity officers
+\item
+  Security
+\item
+  Communications
+\item
+  Information technology
+\end{itemize}
+
+\hypertarget{public}{%
+\subsubsection{Public}\label{public}}
+
+\begin{itemize}
+\tightlist
+\item
+  Civic advocate
+\item
+  Data journalists
+\item
+  Residents
+\item
+  Students
 \end{itemize}
 
 \hypertarget{use}{%
