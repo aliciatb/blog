@@ -115,7 +115,7 @@ I have had the great honor to work with many amazing organizations, agencies and
 \begin{quote}
 ``Open data is information or content made freely available to use and redistribute, subject only to the requirement to attribute it to the source.''
 
---- Gartner\footnote{\citet{gartner_opendata_def}}
+--- Gartner\footnote{\citet{gartner_opendata}}
 \end{quote}
 
 \hypertarget{topics}{%
@@ -127,7 +127,7 @@ Popular data topics include emergency calls for service, budget, revenue, expend
 \subsection{Databases}\label{databases}}
 
 Data is commonly sourced from the transactional systems used to manage government services from relational databases.
-Spatial data of boundaries and locations of places exist in geodatabases as well as on open data platforms so that non-cartographers within governments and citizens may find where services exist on a map. While transactional data may have a geographic component like an address, it's no easy feat to join non-spatial data with spatial data and results in multiple open data sites. Date and time features in transactional data adds an extra twist as multiple years of data requires some consideration before joining to maps as boundaries and locations may change over time or even completely disappear. While it may make sense to have versions of maps by year, the delivery of open data on web servers would be compromised by needing to load a new map as users toggle through different years of data. In my experience when presenting data with a map, the most recent spatial boundaries and point location are used for all years of data to ensure zippy user experience.
+Spatial data of boundaries and locations of places exist in geodatabases as well as on open data platforms so that non-cartographers within governments and citizens may find where services exist on a map. While transactional data may have a geographic component like an address, it's no easy feat to join non-spatial data with spatial data. Date and time features in transactional data adds an extra twist as multiple years of data requires some consideration before joining to maps as boundaries and locations may change over time or even completely disappear. While it may make sense to have versions of maps by year, the delivery of open data on web servers would be compromised by needing to load a new map as users toggle through different years of data. In my experience when presenting data with a map, the most recent spatial boundaries and point location are used for all years of data to ensure zippy user experience.
 
 \hypertarget{files}{%
 \subsection{Files}\label{files}}
@@ -147,25 +147,19 @@ Departments with a need for reporting data frequently may purchase Business Inte
 \hypertarget{how-is-it-used}{%
 \section{How is it used?}\label{how-is-it-used}}
 
-\hypertarget{organizational-goals}{%
-\subsection{Organizational Goals}\label{organizational-goals}}
+\hypertarget{organizational-motivations}{%
+\subsection{Organizational Motivations}\label{organizational-motivations}}
 
-\begin{itemize}
-\tightlist
-\item
-  Public information
-\item
-  Transparency
-\item
-  Fine tune staffing and location
-\item
-  Equity and performance measurement
-\item
-  Insights and data mining
-\end{itemize}
+While government employees may have access to department level data, gaining access to data from other departments may be difficult, even when content is not protected or confidential. By opening up high value departmental datasets, governments help break down silos internally and make it easy to share with the public. When an Open Data portal exists, it is also can be used to publish data requested from Public Information Requests especially for popular data and reduce the overhead required by manually filling these requests.
 
-\hypertarget{civic}{%
-\subsection{Civic}\label{civic}}
+The software used by departments to manage their operations may not have extensive reporting features and require users to develop their own reports through queries to the underlying database or periodic exports of data files at the convenience of system administrators. Open Data platforms can be used as destination for automated extracts and provide users visualizations to quickly examine their data and gain operation insights. Viewing data on a map or over time makes it possible to fine tune staffing decisions. Datasets on Open Data can also be accessed programatically through APIs (Application Programming Interface) which enable users to use their favorite tools like Excel, Power BI, and Tableau with the ability to refresh data as needed.
+
+Informational Technology teams can leverage Open Data to offset downloads from internal server infrastructure to handle the traffic caused by applications built by civic developers relying on transit, public safety and other large datasets.
+
+\hypertarget{civic-concerns}{%
+\subsection{Civic Concerns}\label{civic-concerns}}
+
+Concerned citizens have used Open Data to dig deeper into news stories like when learning that tips for taxi drivers suddenly increased after a software update.\footnote{\citet{iquantny2020}} Open Payroll sites have made it easy to check the highest paid state employees and see where sports coaches rank in Connecticut.\footnote{\citet{ctpayroll2019}}
 
 \begin{itemize}
 \tightlist
@@ -174,23 +168,44 @@ Departments with a need for reporting data frequently may purchase Business Inte
 \item
   Grant applications
 \item
-  Journalism
-\item
   Contests (Kaggle)
 \end{itemize}
 
-\hypertarget{who-uses-it}{%
-\section{Who uses it?}\label{who-uses-it}}
+\hypertarget{who-use-open-data}{%
+\section{Who Use Open Data?}\label{who-use-open-data}}
 
-\begin{itemize}
-\tightlist
-\item
-  Producer organizations
-\item
-  Community users (civic)
-\item
-  Academic
-\end{itemize}
+\hypertarget{top-cities}{%
+\subsection{Top Cities}\label{top-cities}}
+
+Of the top 20 cities in population as of the 2019 Census American Community Survey, 19 of them have one or more portals.
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+City & State & Population & Open Data Site\tabularnewline
+\midrule
+\endhead
+New York & New York & 8,336,817 & \href{https://opendata.cityofnewyork.us/}{opendata.cityofnewyork.us}\tabularnewline
+Los Angeles & California & 3,979,537 & \href{https://data.lacity.org/}{data.lacity.org}\tabularnewline
+Chicago & Illinois & 2,693,959 & \href{https://data.cityofchicago.org/}{data.cityofchicago.org}\tabularnewline
+Houston & Texas & 2,316,797 & \href{https://cohgis-mycity.opendata.arcgis.com/}{cohgis-mycity.opendata.arcgis.com}\tabularnewline
+Phoenix & Arizona & 1,680,988 & \href{https://www.phoenixopendata.com/}{phoenixopendata.com}\tabularnewline
+Philadelphia & Pennsylvania & 1,584,064 & \href{https://www.opendataphilly.org/}{opendataphilly.org}\tabularnewline
+San Antonio & Texas & 1,547,250 & \href{https://data.sanantonio.gov/}{data.sanantonio.gov}\tabularnewline
+San Diego & California & 1,423,852 & \href{https://data.sandiego.gov/}{data.sandiego.gov}\tabularnewline
+Dallas city & Texas & 1,343,565 & \href{https://www.dallasopendata.com/}{dallasopendata.com}\tabularnewline
+San Jose & California & 1,021,786 & \href{https://data.sanjoseca.gov/}{data.sanjoseca.gov}\tabularnewline
+Austin & Texas & 979,263 & \href{https://data.austintexas.gov/}{data.austintexas.gov}\tabularnewline
+Fort Worth & Texas & 913,656 & \href{https://data.fortworthtexas.gov/}{data.fortworthtexas.gov}\tabularnewline
+Jacksonville & Florida & 911,528 & \href{}{}\tabularnewline
+Columbus & Ohio & 902,073 & \href{https://opendata.columbus.gov/}{opendata.columbus.gov}\tabularnewline
+Charlotte & North Carolina & 885,707 & \href{https://data.charlottenc.gov/}{data.charlottenc.gov}\tabularnewline
+San Francisco & California & 881,549 & \href{https://datasf.org/opendata/}{datasf.org/opendata}\tabularnewline
+Indianapolis & Indiana & 870,340 & \href{https://data.indy.gov/}{data.indy.gov}\tabularnewline
+Seattle & Washington & 753,655 & \href{https://data.seattle.gov/}{data.seattle.gov}\tabularnewline
+Denver & Colorado & 727,211 & \href{https://www.denvergov.org/opendata}{denvergov.org/opendata}\tabularnewline
+Washington & District of Columbia & 705,749 & \href{https://opendata.dc.gov/}{opendata.dc.gov}\tabularnewline
+\bottomrule
+\end{longtable}
 
 \hypertarget{roles}{%
 \subsection{Roles}\label{roles}}
@@ -232,236 +247,6 @@ Departments with a need for reporting data frequently may purchase Business Inte
 \item
   Students
 \end{itemize}
-
-\hypertarget{top-cities}{%
-\subsubsection{Top Cities}\label{top-cities}}
-
-\begin{longtable}[]{@{}cccc@{}}
-\toprule
-City & State & Population & Open Data Site\tabularnewline
-\midrule
-\endhead
-New York & New York & 8,336,817 & \href{https://opendata.cityofnewyork.us/}{opendata.cityofnewyork.us}\tabularnewline
-Los Angeles & California & 3,979,537 & \href{https://data.lacity.org/}{data.lacity.org}\tabularnewline
-Chicago & Illinois & 2,693,959 & \href{https://data.cityofchicago.org/}{data.cityofchicago.org}\tabularnewline
-Houston & Texas & 2,316,797 & \href{}{}\tabularnewline
-Phoenix & Arizona & 1,680,988 & \href{https://www.phoenixopendata.com/}{phoenixopendata.com}\tabularnewline
-Philadelphia & Pennsylvania & 1,584,064 & \href{https://www.opendataphilly.org/}{opendataphilly.org}\tabularnewline
-San Antonio & Texas & 1,547,250 & \href{https://data.sanantonio.gov/}{data.sanantonio.gov}\tabularnewline
-San Diego & California & 1,423,852 & \href{https://data.sandiego.gov/}{data.sandiego.gov}\tabularnewline
-Dallas city & Texas & 1,343,565 & \href{https://www.dallasopendata.com/}{dallasopendata.com}\tabularnewline
-San Jose & California & 1,021,786 & \href{https://data.sanjoseca.gov/}{data.sanjoseca.gov}\tabularnewline
-Austin & Texas & 979,263 & \href{https://data.austintexas.gov/}{data.austintexas.gov}\tabularnewline
-Fort Worth & Texas & 913,656 & \href{https://data.fortworthtexas.gov/}{data.fortworthtexas.gov}\tabularnewline
-Jacksonville & Florida & 911,528 & \href{}{}\tabularnewline
-Columbus & Ohio & 902,073 & \href{https://opendata.columbus.gov/}{opendata.columbus.gov}\tabularnewline
-Charlotte & North Carolina & 885,707 & \href{https://data.charlottenc.gov/}{data.charlottenc.gov}\tabularnewline
-San Francisco & California & 881,549 & \href{https://datasf.org/opendata/}{datasf.org/opendata}\tabularnewline
-Indianapolis & Indiana & 870,340 & \href{https://data.indy.gov/}{data.indy.gov}\tabularnewline
-Seattle & Washington & 753,655 & \href{https://data.seattle.gov/}{data.seattle.gov}\tabularnewline
-Denver & Colorado & 727,211 & \href{https://www.denvergov.org/opendata}{denvergov.org/opendata}\tabularnewline
-Washington & District of Columbia & 705,749 & \href{https://opendata.dc.gov/}{opendata.dc.gov}\tabularnewline
-\bottomrule
-\end{longtable}
-
-\hypertarget{top-counties}{%
-\subsubsection{Top Counties}\label{top-counties}}
-
-\begin{longtable}[]{@{}cccc@{}}
-\toprule
-\begin{minipage}[b]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-County\strut
-\end{minipage} & \begin{minipage}[b]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-State\strut
-\end{minipage} & \begin{minipage}[b]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Population\strut
-\end{minipage} & \begin{minipage}[b]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Open Data Site\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Los Angeles County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-California\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-10,039,107\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{https://data.lacounty.gov/}{data.lacounty.gov}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Cook County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Illinois\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-5,150,233\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{https://datacatalog.cookcountyil.gov/}{datacatalog.cookcountyil.gov}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Harris County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Texas\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-4,713,325\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{https://geo-harriscounty.opendata.arcgis.com/}{geo-harriscounty.opendata.arcgis.com}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Maricopa County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Arizona\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-4,485,414\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{https://data-maricopa.opendata.arcgis.com/}{data-maricopa.opendata.arcgis.com}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-San Diego County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-California\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-3,338,330\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{https://www.sandiegocounty.gov/content/sdc/data.html}{sandiegocounty.gov/content/sdc/data.html}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Orange County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-California\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-3,175,692\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{https://data-ocpw.opendata.arcgis.com/}{data-ocpw.opendata.arcgis.com}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Miami-Dade County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Florida\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-2,716,940\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{https://gis-mdc.opendata.arcgis.com/}{gis-mdc.opendata.arcgis.com}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Dallas County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Texas\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-2,635,516\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{https://data.kingcounty.gov/}{data.kingcounty.gov}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Kings County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-New York\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-2,559,903\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{}{}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Riverside County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-California\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-2,470,546\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{https://data.countyofriverside.us/}{data.countyofriverside.us}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Clark County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Nevada\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-2,266,715\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{}{}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Queens County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-New York\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-2,253,858\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{}{}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-King County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Washington\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-2,252,782\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{}{}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-San Bernardino County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-California\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-2,180,085\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{}{}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Tarrant County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Texas\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-2,102,515\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{}{}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Bexar County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Texas\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-2,003,554\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{}{}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Broward County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Florida\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-1,952,778\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{}{}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Santa Clara County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-California\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-1,927,852\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{}{}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Wayne County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Michigan\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-1,749,343\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{}{}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-Alameda County\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-California\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-1,671,329\strut
-\end{minipage} & \begin{minipage}[t]{(\columnwidth - 3\tabcolsep) * \real{0.25}}\centering
-\href{}{}\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
 
 \hypertarget{use}{%
 \chapter{Use of Open Data}\label{use}}
@@ -519,8 +304,6 @@ California\strut
 
 \hypertarget{peeking-at-data}{%
 \subsection{Peeking at data}\label{peeking-at-data}}
-
-Nobody wants to download 1 million records of taxi rides, but they do want to know why tips increased after a software update.\footnote{\citet{iquantny2020}}
 
 \hypertarget{imagine}{%
 \chapter{Imagining Open Data}\label{imagine}}
