@@ -1,4 +1,4 @@
-welcome
+introduction
 overview
 what-is-open-data
 topics
@@ -8,14 +8,12 @@ reports
 dashboards
 how-is-it-used
 organizational-motivations
-civic-concerns
 who-use-open-data
-top-cities
-roles
-government
-public
+governments
+civic-users
+regional-partners
+summary
 use
-examples-of-usefulness
 measuring-use
 challenges-of-open-data
 searching-for-data

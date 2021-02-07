@@ -78,7 +78,7 @@
 
 \title{A Field Guide to Open Data}
 \author{Alicia Brown}
-\date{2021-02-04}
+\date{2021-02-07}
 
 \begin{document}
 \maketitle
@@ -87,8 +87,8 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{welcome}{%
-\chapter{Welcome!}\label{welcome}}
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
 
 Thank you for joining me on a journey to explore the use of Open Data in the civic world.
 
@@ -104,10 +104,10 @@ The book is organized into 3 parts -
   Part 3 imagines practices to increase the discovery and sharing of Open Data to deliver the promised insights and information for all.
 \end{itemize}
 
-I have had the great honor to work with many amazing organizations, agencies and governments to implement technology solutions that enabled the unleashing of data and analytics to power decision making and transparency.\footnote{\citet{blog5years}} The purpose for this book is to synthesize what I have learned working in the field with customers and present examples and ideas to grow the Open Data ecosystem. I also hope to provide context to the state of data and organizational roles so that there is an understanding of why data may be as it is and perspective on the concerns of the different groups involved in creating a successful program.
+I have had the great honor to work with many amazing organizations, agencies and governments to implement technology solutions that enabled the unleashing of data and analytics to power decision making and transparency.\footnote{\citet{blog5years}} The purpose for this book is to synthesize what I have learned working in the field with customers and colleagues and share both the challenges and triumphs of Open Data programs. I will present examples and ideas to grow the Open Data ecosystem. I hope to provide context to the state of data and organizational roles so that there is an understanding of why data may be as it is and perspective on the concerns of the different groups involved in creating a successful program.
 
 \hypertarget{overview}{%
-\chapter{An Open Data Primer}\label{overview}}
+\chapter{Overview}\label{overview}}
 
 \hypertarget{what-is-open-data}{%
 \section{What is Open Data?}\label{what-is-open-data}}
@@ -121,28 +121,28 @@ I have had the great honor to work with many amazing organizations, agencies and
 \hypertarget{topics}{%
 \subsection{Topics}\label{topics}}
 
-Popular data topics include emergency calls for service, budget, revenue, expenditures, property tax, permits, food inspections, government service calls, lost and found pets, crime incidents, jail bookings, voting registration and election results. When this data includes date, time and location, it can be valuable for performance management and informing staffing decisions. When it includes demographic information it makes it possible to analyze differences in data by gender, ethnicity and age and guide outreach and communication methods.
+Popular data topics include emergency calls for service, budget, revenue, expenditures, property tax, building permits, food inspections, service requests, lost and found pets, crime incidents, jail bookings, voting registration and election results. When this data includes date, time and location, it can be valuable for performance management and informing staffing decisions. When it includes demographic information it makes it possible to analyze differences in data by gender, ethnicity and age and guide outreach and communication methods.
 
 \hypertarget{databases}{%
 \subsection{Databases}\label{databases}}
 
 Data is commonly sourced from the transactional systems used to manage government services from relational databases.
-Spatial data of boundaries and locations of places exist in geodatabases as well as on open data platforms so that non-cartographers within governments and citizens may find where services exist on a map. While transactional data may have a geographic component like an address, it's no easy feat to join non-spatial data with spatial data. Date and time features in transactional data adds an extra twist as multiple years of data requires some consideration before joining to maps as boundaries and locations may change over time or even completely disappear. While it may make sense to have versions of maps by year, the delivery of open data on web servers may be compromised by needing to load a new map as users toggle through different years of data. In my experience when presenting data with a map, the most recent spatial boundaries and point location are used for all years of data to ensure zippy user experience.
+Spatial data of boundaries and locations of places exist in geodatabases as well as on Open Data platforms so that non-cartographers within governments and citizens may find where services exist on a map. While transactional data may have a geographic component like an address, it's no easy feat to join non-spatial data with spatial data. Date and time features in transactional data adds an extra twist as multiple years of data requires some consideration before joining to maps as boundaries and locations may change over time or even completely disappear. While it may make sense to have versions of maps by year, the delivery of Open Data on web servers may be compromised by needing to load a new map as users toggle through different years of data. In my experience when presenting data with a map, the most recent spatial boundaries and point location are used for all years of data to ensure optimal user experience.
 
 \hypertarget{files}{%
 \subsection{Files}\label{files}}
 
-Data is also found in spreadsheets and text files when ad-hoc or short term programs may be created to support some service or business process that may not warrant the involvement of information technology initially. There may not be budget to support the purchase or internal development of software. Department analysts, scientists and administrators may choose to spin up a solution with the business software or statistical programming language they are already experts at to enable the success of these programs and efficiently deliver needed services to internal audiences and the public. Negative consequences from these ventures may only arise when there is a need for reporting data or if files are owned by an individual who leaves their job without saving files to a shared network drive.
+Data is also found in spreadsheets and text files when ad-hoc or short term programs may be created to support some service or business process that may not warrant the involvement of the Information Technology team initially. There may not be budget to support the purchase or internal development of software. Department analysts, scientists and administrators may choose to spin up a solution with the business software or statistical programming language they are already experts at to enable the success of these programs and efficiently deliver needed services to internal audiences and the public. Negative consequences from these ventures may only arise when there is a need for reporting data or if files are owned by an individual who leaves their job without saving files to a shared network drive.
 
 \hypertarget{reports}{%
 \subsection{Reports}\label{reports}}
 
-Departments may publish annual reports to share what they accomplished that year that contain tables and charts of the data they use to measure their performance or as a benchmark against peers or some standard. This is the perfect data to include in performance management which often is made up of annual measures. Reports may be constructed using text editors, Business Intelligence tools or programming languages where data, visualizatiosn and narrative are woven together before exporting as a pdf, document, slide deck or website.
+Departments may publish annual reports to share what they accomplished that year that contain tables and charts of the data they use to measure their performance or as a benchmark against peers or some standard. This is the perfect data to include in performance management which often is made up of annual measures. Reports may be constructed using text editors, Business Intelligence tools or programming languages where data, visualizations and narrative are woven together before exporting as a pdf, document, slide deck or website.
 
 \hypertarget{dashboards}{%
 \subsection{Dashboards}\label{dashboards}}
 
-Departments with a need for reporting data frequently may purchase Business Intelligence and Visualization tools that are powerful and intuitive. These tools connect to many data sources including spreadsheets, text files, web page, pdfs and even from copy/paste operations into a table. Depending on security policies, dashboards published publicly may enable the download of the data presented in it and occasionally be the sole source of some data.
+Departments with a need for reporting data frequently may purchase Business Intelligence and Visualization tools that are powerful and intuitive. These tools connect to many data sources including spreadsheets, text files, web page, pdfs and even from copy/paste operations into a table. Depending on security policies, dashboards published publicly may enable the download of the data presented in it and at times be the sole source of some data to the public and other departments.
 
 \hypertarget{how-is-it-used}{%
 \section{How is it used?}\label{how-is-it-used}}
@@ -150,36 +150,28 @@ Departments with a need for reporting data frequently may purchase Business Inte
 \hypertarget{organizational-motivations}{%
 \subsection{Organizational Motivations}\label{organizational-motivations}}
 
-While government employees may have access to department level data, gaining access to data from other departments may be difficult, even when content is not protected or confidential. By opening up high value departmental datasets, governments help break down silos internally and make it easy to share with the public. When an Open Data portal exists, it is also can be used to publish data requested from Public Information Requests especially for popular data and reduce the overhead required by manually filling these requests.
+While government employees may have access to department level data, gaining access to data from other departments may be difficult, even when content is not protected or confidential. By opening up high value departmental datasets, governments help break down silos internally and make it easy to share with the public. When an Open Data portal exists, it is also can be used to publish data requested from Public Information Requests especially for popular data and reduce the overhead required by manually filling these requests repeatedly.
 
 The software used by departments to manage their operations may not have extensive reporting features and require users to develop their own reports through queries to the underlying database or periodic exports of data files at the convenience of system administrators. Open Data platforms can be used as destination for automated extracts and provide users visualizations to quickly examine their data and gain operation insights. Viewing data on a map or over time makes it possible to fine tune staffing decisions. Datasets on Open Data can also be accessed programatically through APIs (Application Programming Interface) which enable users to use their favorite tools like Excel, Power BI, and Tableau with the ability to refresh data as needed.
 
 Informational Technology teams can leverage Open Data to offset downloads from internal server infrastructure to handle the traffic caused by applications built by civic developers relying on transit, public safety and other large datasets.
 
-\hypertarget{civic-concerns}{%
-\subsection{Civic Concerns}\label{civic-concerns}}
-
-Concerned citizens have used Open Data to dig deeper into news stories like when learning that tips for taxi drivers suddenly increased after a software update.\footnote{\citet{iquantny2020}} Open Payroll sites have made it easy to check the highest paid state employees and see where sports coaches rank in Connecticut.\footnote{\citet{ctpayroll2019}}
-
-\begin{itemize}
-\tightlist
-\item
-  Apps
-\item
-  Grant applications
-\item
-  Contests (Kaggle)
-\end{itemize}
-
 \hypertarget{who-use-open-data}{%
 \section{Who Use Open Data?}\label{who-use-open-data}}
 
-\hypertarget{top-cities}{%
-\subsection{Top Cities}\label{top-cities}}
+\hypertarget{governments}{%
+\subsection{Governments}\label{governments}}
 
-Of the top 20 cities in population as of the 2019 Census American Community Survey\footnote{\citet{acs2019}}, 19 share city data through a portal.\footnote{Jacksonville does have a site with police datasets and maps available on GIS site. \url{https://transparency.jaxsheriff.org/}, \url{https://maps.coj.net/jaxgis/}}
+Specific agencies may be procure Open Data initially to provide transparency around their programs and upon their success, expand to other departments. As data is automated, departments can create performance measures and gather analytics around their operations. Population data may be used to apply for grants and funding. Communications officers get the opportunity to share stories using data and help frame conversations around government spending, investments and priorities with the public. Instead of creating static slide decks and files to present at council meetings, data dashboards may be presented connected to the latest data.
+
+Of the top 20 cities in population as of the 2019 Census American Community Survey\footnote{\citet{acs2019}}, 19 share city data through a portal.\footnote{Jacksonville does have a site with police datasets and maps available on GIS site. \url{https://transparency.jaxsheriff.org/}, \url{https://maps.coj.net/jaxgis/}}.
 
 \begin{longtable}[]{@{}cccc@{}}
+\caption{Open Data portals for top 20 populated US cities}\tabularnewline
+\toprule
+City & State & Population & Open Data Site\tabularnewline
+\midrule
+\endfirsthead
 \toprule
 City & State & Population & Open Data Site\tabularnewline
 \midrule
@@ -207,58 +199,23 @@ Washington & District of Columbia & 705,749 & \href{https://opendata.dc.gov/}{op
 \bottomrule
 \end{longtable}
 
-\hypertarget{roles}{%
-\subsection{Roles}\label{roles}}
+\hypertarget{civic-users}{%
+\subsection{Civic Users}\label{civic-users}}
 
-\hypertarget{government}{%
-\subsubsection{Government}\label{government}}
+Concerned citizens have used Open Data to dig deeper into news stories like when learning that tips for taxi drivers suddenly increased after a software update.\footnote{\citet{iquantny2020}} Open Payroll sites have made it easy to check the highest paid state employees.\footnote{\citet{ctpayroll2019}} Very useful Open Source applications run on Open Data like One Bus Away\footnote{\citet{soundtransitdata}} that allows users to figure out if they missed their bus or how far away the next one is from their location. Hack weeks are popular events often focused on solving a problem like the Opioid crisis.\footnote{\citet{doi:10.1080/14659891.2020.1753833}} Public policy and innovation centers at universities publish data to support their community and share their research through stories.\footnote{\citet{ndsc}}
 
-\begin{itemize}
-\tightlist
-\item
-  Executive sponsor - from IT or business unit
-\item
-  Analysts, Scientists
-\item
-  Program Managers
-\item
-  Managers
-\item
-  Equity officers
-\item
-  Security
-\item
-  Communications
-\item
-  Information technology
-\end{itemize}
+\hypertarget{regional-partners}{%
+\subsection{Regional Partners}\label{regional-partners}}
 
-\hypertarget{public}{%
-\subsubsection{Public}\label{public}}
+Due to the overlap of boundaries between cities, counties, states and other regional jurisdictions, it is common for data sharing to occur between agencies. Through the process of federation, all or a subset of assets may be automatically shared from one agency data portal to another data portal. Data portals may also be configured so that all of their public assets may be harvested through a single API endpoint and appear in central catalogs like data.gov\footnote{\citet{datagov}}.
 
-\begin{itemize}
-\tightlist
-\item
-  Civic advocate
-\item
-  Data journalists
-\item
-  Residents
-\item
-  Students
-\end{itemize}
+\hypertarget{summary}{%
+\section{Summary}\label{summary}}
+
+When governments publish data publicly, it enables use across departments, the region and by citizens across the world (provided they have access to the internet). The next part of this book focuses on going beyond the intentions of Open Data and determine how to measure actual use through analytics and the examination of adoption, challenges and outcomes.
 
 \hypertarget{use}{%
 \chapter{Use of Open Data}\label{use}}
-
-\hypertarget{examples-of-usefulness}{%
-\section{Examples of Usefulness}\label{examples-of-usefulness}}
-
-\begin{itemize}
-\tightlist
-\item
-  Outcomes
-\end{itemize}
 
 \hypertarget{measuring-use}{%
 \section{Measuring Use}\label{measuring-use}}
