@@ -10,41 +10,41 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [permalinks]
     post = "/:year/:month/:day/:slug/"
 
-
+# colors: https://github.com/karthik/wesanderson#the-darjeeling-limited-2007-
 [[menu.main]]
     name = " "
     identifier = "home"
-    pre = "<span style='color: tomato;'><i class='fas fa-home fa-lg'></i></span>"
+    pre = "<span title='blog posts' style='color: DodgerBlue;'><i class='fas fa-feather fa-lg'></i></span>"
     url = "/"
     weight = 1
 [[menu.main]]
     name = " "
     identifier = "data"
-    pre = "<span style='color: orange;'><i class='fas fa-chart-line fa-lg'></i></span>"
+    pre = "<span title='data vizes' style='color: #FF0000;'><i class='fas fa-chart-line fa-lg'></i></span>"
     url = "/data"
     weight = 2
 [[menu.main]]
     name = " "
-    identifier = "github"
-    pre = "<span style='color: gold;'><i class='fab fa-github fa-lg'></i></span>"
-    url = "https://github.com/aliciatb/"
-    weight = 3
-[[menu.main]]
-    name = " "
     identifier = "rstudio"
-    pre = "<span style='color: green;'><i class='fas fa-atlas fa-lg'></i></span>"
+    pre = "<span title='a field guide to open data' style='color: #00A08A;'><i class='fas fa-atlas fa-lg'></i></span>"
     url = "https://open-data-people.github.io/open-data-field-guide/"
     weight = 4
 [[menu.main]]
     name = " "
+    identifier = "github"
+    pre = "<span title='code repo' style='color: #F2AD00;'><i class='fab fa-github fa-lg'></i></span>"
+    url = "https://github.com/aliciatb/"
+    weight = 4
+[[menu.main]]
+    name = " "
     identifier = "linkedin"
-    pre = "<span style='color: DeepSkyBlue;'><i class='fab fa-linkedin fa-lg'></i></span>"
+    pre = "<span title='linked in profile' style='color: #F98400;'><i class='fab fa-linkedin fa-lg'></i></span>"
     url = "https://www.linkedin.com/in/aliciabrown"
     weight = 5
 [[menu.main]]
     name = " "
     identifier = ""
-    pre = "<span style='color: Mediumslateblue;'><i class='far fa-address-card fa-lg'></i></span>"
+    pre = "<span title='about me' style='color: #046C9A;'><i class='far fa-address-card fa-lg'></i></span>"
     url = "/about/"
     weight = 6
 
