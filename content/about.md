@@ -3,7 +3,7 @@ date: "2019-03-06"
 title: About Me
 ---
 
-## My Story
+## My Data Story
 
 - Democratizing data and analytics for the last 6 years in government developing data programs and creating a culture of data sharing to inform decisions and deliver equitable outcomes
 - My journey to data has included a path as a web developer, technical project manager, data analyst and solutions architect
