@@ -54,6 +54,11 @@ code {
   transition: transform 150ms ease-out;
 }
 
+.nav-text {
+  text-align: left;
+  margin-top: -11px;
+}
+
 .nav-logo:hover {
   transform: scale(1.1);
 }

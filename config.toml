@@ -1,7 +1,8 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "A grrrl powered data blog"
+title = "A data and technology blog"
 theme = "hugo-lithium"
+enableEmoji = true
 googleAnalytics = "UA-21866883-2"
 disqusShortname = "msaliciabrown-com"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
@@ -9,21 +10,43 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [permalinks]
     post = "/:year/:month/:day/:slug/"
 
+
 [[menu.main]]
-    name = "About"
-    url = "/about/"
-#[[menu.main]]
-#    name = "Categories"
-#   url = "/categories/"
-#[[menu.main]]
-#    name = "Tags"
-#    url = "/tags/"
+    name = " "
+    identifier = "home"
+    pre = "<span style='color: tomato;'><i class='fas fa-home fa-lg'></i></span>"
+    url = "/"
+    weight = 1
 [[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/msaliciabrown"
+    name = " "
+    identifier = "data"
+    pre = "<span style='color: orange;'><i class='fas fa-chart-line fa-lg'></i></span>"
+    url = "/data"
+    weight = 2
 [[menu.main]]
-    name = "Linked In"
+    name = " "
+    identifier = "github"
+    pre = "<span style='color: gold;'><i class='fab fa-github fa-lg'></i></span>"
+    url = "https://github.com/aliciatb/"
+    weight = 3
+[[menu.main]]
+    name = " "
+    identifier = "rstudio"
+    pre = "<span style='color: green;'><i class='fas fa-atlas fa-lg'></i></span>"
+    url = "https://open-data-people.github.io/open-data-field-guide/"
+    weight = 4
+[[menu.main]]
+    name = " "
+    identifier = "linkedin"
+    pre = "<span style='color: DeepSkyBlue;'><i class='fab fa-linkedin fa-lg'></i></span>"
     url = "https://www.linkedin.com/in/aliciabrown"
+    weight = 5
+[[menu.main]]
+    name = " "
+    identifier = ""
+    pre = "<span style='color: Mediumslateblue;'><i class='far fa-address-card fa-lg'></i></span>"
+    url = "/about/"
+    weight = 6
 
 [params]
     description = "A website built through Hugo and blogdown."
@@ -47,5 +70,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     height = 50
     alt = "Logo"
     
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Enable user to embed HTML snippets in Markdown content.
+
     
 

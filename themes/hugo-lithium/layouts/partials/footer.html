@@ -1,19 +1,14 @@
       <footer class="footer">
         <ul class="footer-links">
           <li>
-            <a href="/resume/">Vitae</a>
+            <a href="/resume/"><i class='fas fa-briefcase fa-lg'></i></a>
+          </li>
+          <li><a href="https://github.com/aliciatb"><i class='fab fa-github fa-lg'></i></a></li>
+          <li>
+            <a href="{{ .Site.RSSLink | relURL }}" type="application/rss+xml" target="_blank"><i class='fas fa-rss fa-lg'></i></a>
           </li>
           <li>
-            <a href="https://github.com/aliciatb">Github</a>
-          </li>
-          <li>
-            <a href="/open-data-book/">An Open Data Field Guide</a>
-          </li>
-          <li>
-            <a href="{{ .Site.RSSLink | relURL }}" type="application/rss+xml" target="_blank">RSS feed</a>
-          </li>
-          <li>
-            Made with <a href="https://gohugo.io/" class="footer-links-kudos"><img src="{{ "images/hugo-logo.png" | relURL }}" alt="Img link to Hugo website" width="25" height="25"></a>/<a href="https://bookdown.org/yihui/blogdown/" class="footer-links-kudos"><img src="{{ "images/blogdown-logo.png" | relURL }}" alt="Img link to Hugo website" width="25" height="25"></a>
+            <i>made with <a href="https://gohugo.io/" class="footer-links-kudos"><img src="{{ "images/hugo-logo.png" | relURL }}" alt="Img link to Hugo website" width="25" height="25"></a> & <a href="https://bookdown.org/yihui/blogdown/" class="footer-links-kudos"><img src="{{ "images/blogdown-logo.png" | relURL }}" alt="Img link to Hugo website" width="25" height="25"></a></i>
             
           </li>
         </ul>
