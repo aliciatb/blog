@@ -26,9 +26,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[menu.main]]
     name = " "
     identifier = "rstudio"
-    pre = "<span title='a field guide to open data' style='color: #00A08A;'><i class='fas fa-atlas fa-lg'></i></span>"
+    pre = "<span title='a field guide to open data' style='color: #00A08A;'><i class='fas fa-book fa-lg'></i></span>"
     url = "https://open-data-people.github.io/open-data-field-guide/"
-    weight = 4
+    weight = 3
 [[menu.main]]
     name = " "
     identifier = "github"
@@ -44,7 +44,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[menu.main]]
     name = " "
     identifier = ""
-    pre = "<span title='about me' style='color: #046C9A;'><i class='far fa-address-card fa-lg'></i></span>"
+    pre = "<span title='about me' style='color: #046C9A;'><i class='fas fa-info-circle fa-lg'></i></span>"
     url = "/about/"
     weight = 6
 
