@@ -10,6 +10,9 @@ tags:
 output:
   blogdown::html_page:
     toc: true
+    toc_float:
+    collapsed: false
+    theme: united
 ---
 
 # San Francisco is awesome!
