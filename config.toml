@@ -51,7 +51,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     name = " "
     identifier = ""
     pre = "<span title='about me' style='color: #046C9A;'><i class='fas fa-microscope fa-lg'></i></span>"
-    url = "/research/poster.pdf"
+    url = "research/"
     weight = 7
 
 
