@@ -51,7 +51,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     name = " "
     identifier = "research"
     pre = "<span title='research' style='color: #F2300F;'><i class='fas fa-microscope fa-lg'></i></span>"
-    url = "/research.html"
+    url = "/research/"
     weight = 7
 
 
