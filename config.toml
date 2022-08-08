@@ -19,39 +19,39 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 1
 [[menu.main]]
     name = " "
-    identifier = "data"
-    pre = "<span title='data vizes' style='color: #FF0000;'><i class='fas fa-chart-line fa-lg'></i></span>"
-    url = "/data"
+    identifier = "research"
+    pre = "<span title='research' style='color: DodgerBlue;'><i class='fas fa-microscope fa-lg'></i></span>"
+    url = "/research/"
     weight = 2
 [[menu.main]]
     name = " "
-    identifier = "rstudio"
-    pre = "<span title='a field guide to open data' style='color: #00A08A;'><i class='fas fa-book fa-lg'></i></span>"
-    url = "https://open-data-people.github.io/open-data-field-guide/"
+    identifier = "data"
+    pre = "<span title='data vizes' style='color: DodgerBlue;'><i class='fas fa-chart-line fa-lg'></i></span>"
+    url = "/data"
     weight = 3
 [[menu.main]]
     name = " "
-    identifier = "github"
-    pre = "<span title='code repo' style='color: #F2AD00;'><i class='fab fa-github fa-lg'></i></span>"
-    url = "https://github.com/aliciatb/"
+    identifier = "rstudio"
+    pre = "<span title='a field guide to open data' style='color: DodgerBlue;'><i class='fas fa-book fa-lg'></i></span>"
+    url = "https://open-data-people.github.io/open-data-field-guide/"
     weight = 4
 [[menu.main]]
     name = " "
-    identifier = "linkedin"
-    pre = "<span title='linked in profile' style='color: #F98400;'><i class='fab fa-linkedin fa-lg'></i></span>"
-    url = "https://www.linkedin.com/in/aliciabrown"
+    identifier = "github"
+    pre = "<span title='code repo' style='color: DodgerBlue;'><i class='fab fa-github fa-lg'></i></span>"
+    url = "https://github.com/aliciatb/"
     weight = 5
 [[menu.main]]
     name = " "
-    identifier = "about"
-    pre = "<span title='about me' style='color: #046C9A;'><i class='fas fa-info-circle fa-lg'></i></span>"
-    url = "/about/"
+    identifier = "linkedin"
+    pre = "<span title='linked in profile' style='color: DodgerBlue;'><i class='fab fa-linkedin fa-lg'></i></span>"
+    url = "https://www.linkedin.com/in/aliciabrown"
     weight = 6
 [[menu.main]]
     name = " "
-    identifier = "research"
-    pre = "<span title='research' style='color: #F2300F;'><i class='fas fa-microscope fa-lg'></i></span>"
-    url = "/research/"
+    identifier = "about"
+    pre = "<span title='about me' style='color: DodgerBlue;'><i class='fas fa-info-circle fa-lg'></i></span>"
+    url = "/about/"
     weight = 7
 
 

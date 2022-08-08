@@ -4,6 +4,57 @@ title: Research
 output:
   blogdown::html_page:
     toc: false
+bibliography: references.bib
 ---
 
-Hello there!
+## Research Question
+
+> How are agencies withing local governments using data and emerging technologies to target services where they will make the greatest impact for society and evaluate outcomes?
+
+## Research Objectives
+
+1.  Learn how agencies are using data and decision-making tools to improve their community while (a) respecting individual privacy and data sovereignty, (b) eliminating human and machine bias, and (c) navigating the changing political landscape across the United States.
+2.  Determine the level of community participation and shared decision-making power.
+
+## Research Methods
+
+1.  Locate successful programs & initiatives across the US
+2.  Analysis of program and policy language to identify themes and values across regions.
+3.  Interview stakeholders about programming decisions, community engagement, and results.
+4.  Case Study of an innovative community program.
+5.  Action Research with agency at my employer, King County (Seattle).
+
+## Research Problems
+
+1.  Government transparency
+2.  Data privacy & sovereignty
+3.  Algorithm bias & quality
+
+## Research Outcomes
+
+1.  Governance guidelines
+2.  Community participation & power in local government
+
+## Literature
+
+### Public Administration & Policy
+
+1.  [@frederickson2005]
+2.  [@wooldridge2009]
+3.  [@powell2009]
+4.  [@guy2012]
+5.  [@pastor2018]
+
+### Feminist Theory
+
+1.  [@hooks2000a]
+2.  [@cottom2018]
+
+### Critical Data & Technology
+
+1.  [@reardon2012]
+2.  [@lewis2018]
+3.  [@noble2018]
+4.  [@criado-perez2019]
+5.  [@dignazio2020]
+6.  [@madianou2019]
