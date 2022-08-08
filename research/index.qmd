@@ -1,5 +1,0 @@
-# Research
-
-research / index
-
-[poster](/research/poster.pdf)
