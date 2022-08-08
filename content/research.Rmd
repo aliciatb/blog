@@ -1,3 +1,6 @@
 # Research
 
-[poster](/research/poster.pdf)
+research.html
+
+
+all the research here....
