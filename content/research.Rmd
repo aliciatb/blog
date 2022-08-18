@@ -1,6 +1,6 @@
 ---
 date: "2022-08-07"
-title: Research
+title: Democratizing data & decision making
 output:
   blogdown::html_page:
     toc: false
@@ -9,31 +9,27 @@ bibliography: references.bib
 
 ## Research Question
 
-> How are agencies withing local governments using data and emerging technologies to target services where they will make the greatest impact for society and evaluate outcomes?
+What are local government agencies and departments doing to enable community members to use open data for making decisions?
 
-## Research Objectives
+## Research Problem(s)
 
-1.  Learn how agencies are using data and decision-making tools to improve their community while (a) respecting individual privacy and data sovereignty, (b) eliminating human and machine bias, and (c) navigating the changing political landscape across the United States.
-2.  Determine the level of community participation and shared decision-making power.
+-   While making open data available is a great first step for agencies, it doesn't mean that they have made it accessible and usable for everyone.
 
-## Research Methods
+-   I think that there is a gap in how local governments provide data to the public so they can analyze it and make informed decisions.
 
-1.  Locate successful programs & initiatives across the US
-2.  Analysis of program and policy language to identify themes and values across regions.
-3.  Interview stakeholders about programming decisions, community engagement, and results.
-4.  Case Study of an innovative community program.
-5.  Action Research with agency at my employer, King County (Seattle).
+-   I believe that there are ways that agencies can successfully enable the public to use open data through training and community partnerships.
 
-## Research Problems
+-   I think that information technology teams can contribute significantly to community enablement and that their participation is critical to support less resourced agencies and organizations.
 
-1.  Government transparency
-2.  Data privacy & sovereignty
-3.  Algorithm bias & quality
+## Research Plan/Methods
+
+1.  **Literature review** to see what research has been done on enabling the public to use open data for decision making. Learn where I can contribute new knowledge on how to increase the use of open data by the public.
+2.  **Identify** and **Interview** people involved with initiatives across the US where local government agencies are actively engaged with community members to support their use of open data. From these interviews I want to learn what drives successful community enablement and open data utilization.
+3.  **Synthesize** what I learn to develop a plan for **participatory action research** in partnership with a King County agency or organization in the Puget Sound region for a data related initiative to validate new ways of enabling people to use government data. This will also give me the opportunity to contribute to my community by developing technical and analytic capacity.
 
 ## Research Outcomes
 
-1.  Governance guidelines
-2.  Community participation & power in local government
+The products of my research will result in a dissertation by portfolio consisting of research articles and an educational component about community engagement and enablement on open data.
 
 ## Literature
 
