@@ -13,13 +13,10 @@ What are local government agencies and departments doing to enable community mem
 
 ## Research Problem(s)
 
--   While making open data available is a great first step for agencies, it doesn't mean that they have made it accessible and usable for everyone.
-
--   I think that there is a gap in how local governments provide data to the public so they can analyze it and make informed decisions.
-
--   I believe that there are ways that agencies can successfully enable the public to use open data through training and community partnerships.
-
--   I think that information technology teams can contribute significantly to community enablement and that their participation is critical to support less resourced agencies and organizations.
+1.  While making open data available is a great first step for agencies, it doesn't mean that they have made it accessible and usable for everyone.
+2.  I think that there is a gap in how local governments provide data to the public so they can analyze it and make informed decisions.
+3.  I believe that there are ways that agencies can successfully enable the public to use open data through training and community partnerships.
+4.  I think that information technology teams can contribute significantly to community enablement and that their participation is critical to support less resourced agencies and organizations.
 
 ## Research Plan/Methods
 
