@@ -10,19 +10,19 @@ output:
 Aside
 ================================================================================
 
-Contact Info {#contact}
+Connect{#connect}
 --------------------------------------------------------------------------------
 
-- <i class="fa fa-linkedin"></i> [linkedin.com/in/aliciabrown](https://www.linkedin.com/in/aliciabrown/)
-- <i class="fa fa-rss"></i> [msaliciabrown.com](https://msaliciabrown.com)
-- <i class="fa fa-github"></i> [github.com/aliciatb](https://github.com/aliciatb)
+- [linkedin.com/in/aliciabrown](https://www.linkedin.com/in/aliciabrown/)
+- [github.com/aliciatb](https://github.com/aliciatb)
+- +1 206-265-9090
 
-Skills / Tools {#skills}
+Toolset {#toolset}
 --------------------------------------------------------------------------------
 
-- R, Python, Jupyter, Markdown, SQL, Microsoft Power BI, Excel, Tableau, Shiny, Cloud Solutions
+- R, Python, SQL, Notebooks, Microsoft Power BI, Tableau, Power Platform, ArcGIS Pro, ArcGIS Online, FME, Informatica
 
-- Data Engineering, Analysis, Visualization, Storytelling, Governance, Contextualization
+- Data Engineering, Spatial Analysis, Visualization, Storytelling, Governance, Contextualization
 
 - Agile Development, Scrum, Kanban, Design Thinking
 
@@ -34,8 +34,8 @@ Alicia Brown {#title}
 
 ### 
 
-- Data and Analytics Evangelist
-- 5+ years consulting experience for government data programs
+- Champion of Business Intelligence dashboards and spatial data tools 
+- 8+ years consulting experience for government data programs
 - 10+ years leading technical and data architecture projects
 - 10+ years web and data application development experience
 
@@ -44,13 +44,14 @@ Experience {data-icon=suitcase}
 
 ### Solutions Architect
 
-King County, WA - Data Services
+King County, WA - Data & Analytics
 
 Seattle, WA
 
 present - 2020
 
-- Criminal Justice and Equity & Social Justice data hubs
+- Criminal Justice Azure data hubs
+- Equity & Social Justice ArcGIS hub and Azure data hub
 - PPE allocation algorithm and reporting development 
 
 ### Technical Solution Architect
@@ -104,17 +105,38 @@ Dallas, TX
 Projects {data-icon=globe}
 --------------------------------------------------------------------------------
 
+### Determinants of Equity Report
+
+[kingcounty.gov](https://kingcounty.gov/en/legacy/elected/executive/equity-social-justice/determinantsofequity)
+
+King County, WA
+
+2023
+
+Interactive report built on ArcGIS Online products to provide information about equity across King County based on the 15 Determinants of Equity.
+
+### Data-Driven PPE Allocation Algorithm
+
+[doi.org/10.1089/hs.2022.0115](https://doi.org/10.1089/hs.2022.0115)
+
+King County, WA
+
+2022 - 2020
+
+Supported and contributed to the code of the allocation algorithm and reports used by the Health Medical Area Command (HMAC) and Public Health Seattle-King County (PHSKC) to distribute PPE across the county.
+
 ###  California State Auditor's Local Government High-Risk Dashboard
 
-[highriskcities.auditor.ca.gov](https://highriskcities.auditor.ca.gov)
+[]()
 
 Sacramento, CA
 
 2019
 
-Fiscal Health Indicator Dashboard for California cities
 
-### Pierce County Performance Dashboard
+Fiscal Health Indicator Map and Dashboard showing the fiscal health of California cities.
+
+### Pierce County Performance Dashboards
 
 [open.piercecountywa.gov](https://open.piercecountywa.gov)
 
@@ -122,7 +144,7 @@ Pierce County, WA
 
 2018
 
-Performance Management Data and Dashboards for County Services and Community Indicators
+Performance Management Data and Dashboards for County Services and Community Indicators.
 
 ### Oakland Equity Indicators
 
@@ -154,14 +176,31 @@ Lansing, MI
 
 Dashboards built for the Michigan Department of Treasury / Schools to monitor financial and enrollment data across localities and educational entities
 
-Certifications {data-icon=certificate}
+
+Education {data-icon=graduation-cap}
 --------------------------------------------------------------------------------
 
-### AWS Certified Cloud Practitioner
+### Royal Roads University
 
-Amazon Web Services
+Doctoral Candidate - Social Sciences
 
-Seattle, WA
+Victoria, BC
+
+### Texas Christian University
+
+Masters of Business Administration
+
+Fort Worth, TX
+
+
+### Texas A&M University
+
+Bachelors of Arts - Anthropology
+
+College Station, TX
+
+Certifications {data-icon=certificate}
+--------------------------------------------------------------------------------
 
 ### Certified Scrum Master (CSM®)
 
@@ -174,25 +213,3 @@ Seattle, WA
 University of Washington
 
 Seattle, WA
-
-### FME Certified Professional
-
-Safe Software
-
-Vancouver, BC
-
-Education {data-icon=graduation-cap}
---------------------------------------------------------------------------------
-
-### Texas Christian University
-
-Masters of Business Administration (MBA)
-
-Fort Worth, TX
-
-
-### Texas A&M University
-
-Bachelors of Arts - Anthropology
-
-College Station, TX

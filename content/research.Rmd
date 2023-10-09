@@ -9,7 +9,7 @@ bibliography: references.bib
 
 ## Research Question
 
-What are local government agencies and departments doing to enable community members to use open data for making decisions?
+What are local government agencies and departments doing to enable the public to use open data for making decisions? Is it working?
 
 ## Research Problem(s)
 
