@@ -43,9 +43,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 5
 [[menu.main]]
     name = " "
-    identifier = "scholar"
-    pre = "<span title='google scholar' style='color: DodgerBlue;'><i class='fas fa-book fa-lg'></i></span>"
-    url = "https://scholar.google.com/citations?user=VoEkGNcAAAAJ&hl=en"
+    identifier = "research"
+    pre = "<span title='research' style='color: DodgerBlue;'><i class='fas fa-pen fa-lg'></i></span>"
+    url = "/research/"
     weight = 6
 [[menu.main]]
     name = " "
